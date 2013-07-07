@@ -50,4 +50,6 @@ See the AbstractDecider class for an example implementation.
 
 ## Example
 
-Example app coming soon.
+Very crude example now included!
+
+<img src="https://dl.dropboxusercontent.com/u/10407794/amalon.PNG" alt="Amalon" title="Amalon">

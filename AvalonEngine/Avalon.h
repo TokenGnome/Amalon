@@ -40,9 +40,13 @@ typedef NS_ENUM(NSUInteger, AvalonGameState) {
     GameStateNotStarted = 0,
     GameStateRolesAssigned,
     GameStateProposing,
+    GameStateProposingCompleted,
     GameStateVoting,
+    GameStateVotingCompleted,
     GameStateQuesting,
+    GameStateQuestingCompleted,
     GameStateAssassinating,
+    GameStateAssassinatingCompleted,
     GameStateEnded
 };
 

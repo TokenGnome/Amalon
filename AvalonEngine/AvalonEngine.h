@@ -25,9 +25,9 @@
 
 - (void)removePlayer:(NSString *)playerId fromGame:(AvalonGame *)game;
 
-- (void)runGame:(AvalonGame *)game withVariant:(AvalonGameVariant)variant;
+- (void)startGame:(AvalonGame *)game withVariant:(AvalonGameVariant)variant;
 
-- (AvalonGame *)gameStateForPlayer:(NSString *)playerId game:(AvalonGame *)game;
+- (void)step:(AvalonGame *)game;
 
 @end
 

@@ -25,6 +25,7 @@
 		68913FDB1788BD5000ED0EDE /* AvalonPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 68913FD31788BD5000ED0EDE /* AvalonPlayer.m */; };
 		68913FDC1788BD5000ED0EDE /* AvalonQuest.m in Sources */ = {isa = PBXBuildFile; fileRef = 68913FD51788BD5000ED0EDE /* AvalonQuest.m */; };
 		68913FDD1788BD5000ED0EDE /* AvalonRole.m in Sources */ = {isa = PBXBuildFile; fileRef = 68913FD71788BD5000ED0EDE /* AvalonRole.m */; };
+		68913FEC17890BCA00ED0EDE /* ReplayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68913FEB17890BCA00ED0EDE /* ReplayViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,8 @@
 		68913FD51788BD5000ED0EDE /* AvalonQuest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AvalonQuest.m; sourceTree = "<group>"; };
 		68913FD61788BD5000ED0EDE /* AvalonRole.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AvalonRole.h; sourceTree = "<group>"; };
 		68913FD71788BD5000ED0EDE /* AvalonRole.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AvalonRole.m; sourceTree = "<group>"; };
+		68913FEA17890BCA00ED0EDE /* ReplayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReplayViewController.h; sourceTree = "<group>"; };
+		68913FEB17890BCA00ED0EDE /* ReplayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReplayViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +132,8 @@
 			children = (
 				68913FAA1788BCE400ED0EDE /* AppDelegate.h */,
 				68913FAB1788BCE400ED0EDE /* AppDelegate.m */,
+				68913FEA17890BCA00ED0EDE /* ReplayViewController.h */,
+				68913FEB17890BCA00ED0EDE /* ReplayViewController.m */,
 				68913FAD1788BCE400ED0EDE /* Images.xcassets */,
 				68913FA21788BCE400ED0EDE /* Supporting Files */,
 			);
@@ -286,6 +291,7 @@
 				68913FA81788BCE400ED0EDE /* main.m in Sources */,
 				68913FDA1788BD5000ED0EDE /* AvalonGame.m in Sources */,
 				68913FD81788BD5000ED0EDE /* AbstractDecider.m in Sources */,
+				68913FEC17890BCA00ED0EDE /* ReplayViewController.m in Sources */,
 				68913FDC1788BD5000ED0EDE /* AvalonQuest.m in Sources */,
 				68913FDB1788BD5000ED0EDE /* AvalonPlayer.m in Sources */,
 			);
@@ -484,6 +490,7 @@
 				68913FC61788BCE500ED0EDE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		68913FC71788BCE500ED0EDE /* Build configuration list for PBXNativeTarget "AmalonAppTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +499,7 @@
 				68913FC91788BCE500ED0EDE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

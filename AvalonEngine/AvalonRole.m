@@ -59,7 +59,7 @@ NSString *NameForRoleType(AvalonRoleType role)
     switch (role) {
             
         case AvalonRoleServant:
-            name = @"Loyal Servant of Arthas";
+            name = @"Loyal Servant of Arthur";
             break;
             
         case AvalonRoleMinion:
