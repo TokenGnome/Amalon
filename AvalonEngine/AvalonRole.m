@@ -131,4 +131,11 @@ NSString *NameForRoleType(AvalonRoleType role)
     return self.name;
 }
 
+#pragma mark - JSON
+
+- (NSDictionary *)toJSON
+{
+    return @{@"name" : self.name, @"type" : @(self.type)};
+}
+
 @end

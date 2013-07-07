@@ -26,13 +26,13 @@
 {
     self.textView.text = @"";
     self.game = [AvalonEngine newGame];
-    [self.engine addPlayer:@"Player1" toGame:self.game decider:[AbstractDecider deciderWithId:@"Player1"]];
-    [self.engine addPlayer:@"Player2" toGame:self.game decider:[AbstractDecider deciderWithId:@"Player2"]];
-    [self.engine addPlayer:@"Player3" toGame:self.game decider:[AbstractDecider deciderWithId:@"Player3"]];
-    [self.engine addPlayer:@"Player4" toGame:self.game decider:[AbstractDecider deciderWithId:@"Player4"]];
-    [self.engine addPlayer:@"Player5" toGame:self.game decider:[AbstractDecider deciderWithId:@"Player5"]];
-    [self.engine addPlayer:@"Player6" toGame:self.game decider:[AbstractDecider deciderWithId:@"Player6"]];
-    [self.engine addPlayer:@"Player7" toGame:self.game decider:[AbstractDecider deciderWithId:@"Player7"]];
+    [self.engine addPlayer:@"Native Bot 1" toGame:self.game decider:[AbstractDecider deciderWithId:@"Native Bot 1"]];
+    [self.engine addPlayer:@"Native Bot 2" toGame:self.game decider:[AbstractDecider deciderWithId:@"Native Bot 2"]];
+    [self.engine addPlayer:@"Native Bot 3" toGame:self.game decider:[AbstractDecider deciderWithId:@"Native Bot 3"]];
+    [self.engine addPlayer:@"Native Bot 4" toGame:self.game decider:[AbstractDecider deciderWithId:@"Native Bot 4"]];
+    [self.engine addPlayer:@"JS Bot 1" toGame:self.game decider:[AbstractDecider deciderWithId:@"JS Bot 1"]];
+    [self.engine addPlayer:@"JS Bot 2" toGame:self.game decider:[AbstractDecider deciderWithId:@"JS Bot 2"]];
+    [self.engine addPlayer:@"JS Bot 3" toGame:self.game decider:[AbstractDecider deciderWithId:@"JS Bot 3"]];
     [self.engine startGame:self.game withVariant:AvalonVariantNoOberon];
 }
 
@@ -62,7 +62,7 @@
         }
         case GameStateVotingCompleted: {            
             NSMutableArray *b = [NSMutableArray new];
-            for (NSString *playerId in self.game.currentQuest.votes.allKeys) {
+            for (NSString *playerId in [self.game.currentQuest.votes.allKeys sortedArrayUsingSelector:@selector(compare:)]) {
                 NSString *result = [self.game.currentQuest.votes[playerId] boolValue] ? @"Accept" : @"Reject";
                 [b addObject:[NSString stringWithFormat:@"%@ : %@", playerId, result]];
             }

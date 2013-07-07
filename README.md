@@ -30,6 +30,8 @@ NSLog(@"Assassinated player: %@", game.assassinatedPlayer);
 
 ## Creating deciders
 
+### Native Deciders
+
 All deciders must implement the AvalonDecider protocol:
 
 ```objective-c
@@ -47,6 +49,12 @@ All deciders must implement the AvalonDecider protocol:
 ```
 
 See the AbstractDecider class for an example implementation.
+
+### JavaScript Deciders
+
+Deciders can also be implemented in javascript.  See the [wiki page][https://github.com/TokenGnome/Amalon/wiki/Using-JavaScript-for-Deciders]
+
+random_bot.js is a very simple implementation in javascript.
 
 ## Example
 

@@ -7,11 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "AvalonJSExports.h"
 #import "Avalon.h"
 
 @class AvalonPlayer, AvalonQuest;
 
-@interface AvalonGame : NSObject
+@interface AvalonGame : NSObject <AvalonGameExport>
 
 // This is a state object, but it is still kinda lazy to expose everything...
 @property (nonatomic, strong) AvalonPlayer *currentLeader;
@@ -38,3 +39,4 @@
 - (instancetype)sanitizedCopyForPlayer:(AvalonPlayer *)player;
 
 @end
+

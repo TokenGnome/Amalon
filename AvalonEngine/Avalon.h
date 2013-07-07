@@ -61,5 +61,6 @@ extern NSString *NameForRoleType(AvalonRoleType type);
 extern AvalonRoleType KnownRolesForRoleType(AvalonRoleType type);
 extern NSUInteger TeamSizeForQuestNumber(NSUInteger questNumber, NSUInteger playerCount);
 extern NSUInteger FailsRequiredForQuestNumber(NSUInteger questNumber, NSUInteger playerCount);
+extern NSString *BundledScript(NSString *nameWithoutExtension);
 
 #endif

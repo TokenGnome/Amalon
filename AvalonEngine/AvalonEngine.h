@@ -13,8 +13,6 @@
 
 @protocol AvalonDecider;
 
-
-
 @interface AvalonEngine : NSObject
 
 + (instancetype)engine;

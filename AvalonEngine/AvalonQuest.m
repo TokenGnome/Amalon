@@ -112,4 +112,20 @@
             self.questNumber, self.voteNumber, [self numberOfAccepts], [self.votes.allKeys count], result];
 }
 
+#pragma mark - JSON
+
+- (NSDictionary *)toJSON
+{
+    return @{@"proposer" : [self.proposer toJSON],
+             @"questNumber" : @(self.questNumber),
+             @"voteNumber" : @(self.voteNumber),
+             @"failsRequired" : @(self.failsRequired),
+             @"players" : [self.players toJSON],
+             @"votes" : [self.votes toJSON],
+             @"results" : [self.results toJSON],
+             @"accepted" : @(self.accepted),
+             @"complete" : @(self.complete),
+             @"succeeded" : @(self.succeeded)};
+}
+
 @end

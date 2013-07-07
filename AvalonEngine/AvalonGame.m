@@ -133,4 +133,21 @@
     return game;
 }
 
+#pragma mark - JSON
+
+- (NSDictionary *)toJSON
+{
+    return @{@"currentLeader" : self.currentLeader ? [self.currentLeader toJSON] : [NSNull null],
+             @"questNumber" : @(self.questNumber),
+             @"voteNumber" : @(self.voteNumber),
+             @"currentQuest" : self.currentQuest ? [self.currentQuest toJSON] : [NSNull null],
+             @"players" : [self.players toJSON],
+             @"quests" : [self.quests toJSON],
+             @"roles" : self.roles ? [self.roles toJSON] : @[],
+             @"finished" : @(self.finished),
+             @"state" : @(self.state),
+             @"passedQuestCount" : @(self.passedQuestCount),
+             @"failedQuestCount" : @(self.failedQuestCount)};
+}
+
 @end

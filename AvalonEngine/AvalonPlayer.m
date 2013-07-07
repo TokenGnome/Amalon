@@ -58,4 +58,12 @@
     return [[NSString stringWithFormat:@"%@:%@", [self class], self.playerId] hash];
 }
 
+#pragma mark - JSON
+
+- (NSDictionary *)toJSON
+{
+    return @{@"playerId" : self.playerId,
+             @"role" : [self.role toJSON]};
+}
+
 @end

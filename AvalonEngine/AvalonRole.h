@@ -8,8 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import "Avalon.h"
+#import "AvalonJSExports.h"
 
-@interface AvalonRole : NSObject
+@interface AvalonRole : NSObject <AvalonRoleExport>
 
 + (instancetype)roleWithType:(AvalonRoleType)type;
 

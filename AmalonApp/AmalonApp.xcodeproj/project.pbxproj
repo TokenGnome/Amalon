@@ -26,6 +26,9 @@
 		68913FDC1788BD5000ED0EDE /* AvalonQuest.m in Sources */ = {isa = PBXBuildFile; fileRef = 68913FD51788BD5000ED0EDE /* AvalonQuest.m */; };
 		68913FDD1788BD5000ED0EDE /* AvalonRole.m in Sources */ = {isa = PBXBuildFile; fileRef = 68913FD71788BD5000ED0EDE /* AvalonRole.m */; };
 		68913FEC17890BCA00ED0EDE /* ReplayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68913FEB17890BCA00ED0EDE /* ReplayViewController.m */; };
+		68913FEE1789AFF500ED0EDE /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68913FED1789AFF500ED0EDE /* JavaScriptCore.framework */; };
+		68913FF21789C17C00ED0EDE /* JavaScriptDecider.m in Sources */ = {isa = PBXBuildFile; fileRef = 68913FF11789C17C00ED0EDE /* JavaScriptDecider.m */; };
+		68913FF51789C93E00ED0EDE /* random_bot.js in Resources */ = {isa = PBXBuildFile; fileRef = 68913FF41789C90600ED0EDE /* random_bot.js */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +73,11 @@
 		68913FD71788BD5000ED0EDE /* AvalonRole.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AvalonRole.m; sourceTree = "<group>"; };
 		68913FEA17890BCA00ED0EDE /* ReplayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReplayViewController.h; sourceTree = "<group>"; };
 		68913FEB17890BCA00ED0EDE /* ReplayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReplayViewController.m; sourceTree = "<group>"; };
+		68913FED1789AFF500ED0EDE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		68913FEF1789B51200ED0EDE /* AvalonJSExports.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AvalonJSExports.h; sourceTree = "<group>"; };
+		68913FF01789C17C00ED0EDE /* JavaScriptDecider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JavaScriptDecider.h; sourceTree = "<group>"; };
+		68913FF11789C17C00ED0EDE /* JavaScriptDecider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JavaScriptDecider.m; sourceTree = "<group>"; };
+		68913FF41789C90600ED0EDE /* random_bot.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = random_bot.js; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68913FEE1789AFF500ED0EDE /* JavaScriptCore.framework in Frameworks */,
 				68913F9E1788BCE400ED0EDE /* CoreGraphics.framework in Frameworks */,
 				68913FA01788BCE400ED0EDE /* UIKit.framework in Frameworks */,
 				68913F9C1788BCE400ED0EDE /* Foundation.framework in Frameworks */,
@@ -99,6 +108,7 @@
 		68913F8F1788BCE400ED0EDE = {
 			isa = PBXGroup;
 			children = (
+				68913FF31789C90600ED0EDE /* ExampleBots */,
 				68913FCA1788BD5000ED0EDE /* AvalonEngine */,
 				68913FA11788BCE400ED0EDE /* AmalonApp */,
 				68913FBA1788BCE500ED0EDE /* AmalonAppTests */,
@@ -119,6 +129,7 @@
 		68913F9A1788BCE400ED0EDE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				68913FED1789AFF500ED0EDE /* JavaScriptCore.framework */,
 				68913F9B1788BCE400ED0EDE /* Foundation.framework */,
 				68913F9D1788BCE400ED0EDE /* CoreGraphics.framework */,
 				68913F9F1788BCE400ED0EDE /* UIKit.framework */,
@@ -174,6 +185,7 @@
 			children = (
 				68913FCB1788BD5000ED0EDE /* AbstractDecider.h */,
 				68913FCC1788BD5000ED0EDE /* AbstractDecider.m */,
+				68913FEF1789B51200ED0EDE /* AvalonJSExports.h */,
 				68913FCD1788BD5000ED0EDE /* Avalon.h */,
 				68913FCE1788BD5000ED0EDE /* AvalonEngine.h */,
 				68913FCF1788BD5000ED0EDE /* AvalonEngine.m */,
@@ -185,9 +197,20 @@
 				68913FD51788BD5000ED0EDE /* AvalonQuest.m */,
 				68913FD61788BD5000ED0EDE /* AvalonRole.h */,
 				68913FD71788BD5000ED0EDE /* AvalonRole.m */,
+				68913FF01789C17C00ED0EDE /* JavaScriptDecider.h */,
+				68913FF11789C17C00ED0EDE /* JavaScriptDecider.m */,
 			);
 			name = AvalonEngine;
 			path = ../AvalonEngine;
+			sourceTree = "<group>";
+		};
+		68913FF31789C90600ED0EDE /* ExampleBots */ = {
+			isa = PBXGroup;
+			children = (
+				68913FF41789C90600ED0EDE /* random_bot.js */,
+			);
+			name = ExampleBots;
+			path = ../ExampleBots;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,6 +288,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68913FF51789C93E00ED0EDE /* random_bot.js in Resources */,
 				68913FA61788BCE400ED0EDE /* InfoPlist.strings in Resources */,
 				68913FAE1788BCE400ED0EDE /* Images.xcassets in Resources */,
 			);
@@ -290,6 +314,7 @@
 				68913FDD1788BD5000ED0EDE /* AvalonRole.m in Sources */,
 				68913FA81788BCE400ED0EDE /* main.m in Sources */,
 				68913FDA1788BD5000ED0EDE /* AvalonGame.m in Sources */,
+				68913FF21789C17C00ED0EDE /* JavaScriptDecider.m in Sources */,
 				68913FD81788BD5000ED0EDE /* AbstractDecider.m in Sources */,
 				68913FEC17890BCA00ED0EDE /* ReplayViewController.m in Sources */,
 				68913FDC1788BD5000ED0EDE /* AvalonQuest.m in Sources */,
