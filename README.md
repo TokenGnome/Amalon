@@ -12,16 +12,20 @@ The AbstractDecider (seen below) implements the AvalonDecider protocol, but acts
 ```objective-c
 AvalonEngine *engine = [AvalonEngine engine];
 AvalonGame *game = [AvalonEngine newGame];
+JavaScriptDecider *bot = [JavaScriptDecider deciderWithScript:BundledScript(@"simple_bot")];
 
-[engine addPlayer:@"Player1" toGame:game decider:[AbstractDecider deciderWithId:@"Player1"]];
-[engine addPlayer:@"Player2" toGame:game decider:[AbstractDecider deciderWithId:@"Player2"]];
-[engine addPlayer:@"Player3" toGame:game decider:[AbstractDecider deciderWithId:@"Player3"]];
-[engine addPlayer:@"Player4" toGame:game decider:[AbstractDecider deciderWithId:@"Player4"]];
-[engine addPlayer:@"Player5" toGame:game decider:[AbstractDecider deciderWithId:@"Player5"]];
-[engine addPlayer:@"Player6" toGame:game decider:[AbstractDecider deciderWithId:@"Player6"]];
-[engine addPlayer:@"Player7" toGame:game decider:[AbstractDecider deciderWithId:@"Player7"]];
+[engine addPlayer:@"Player1" toGame:game decider:bot];
+[engine addPlayer:@"Player2" toGame:game decider:bot];
+[engine addPlayer:@"Player3" toGame:game decider:bot];
+[engine addPlayer:@"Player4" toGame:game decider:bot];
+[engine addPlayer:@"Player5" toGame:game decider:bot];
+[engine addPlayer:@"Player6" toGame:game decider:bot];
+[engine addPlayer:@"Player7" toGame:game decider:bot];
 
-[engine runGame:game withVariant:AvalonVariantNoOberon];
+[e startGame:g withVariant:variant];
+while (! [g isFinished]) {
+    [e step:g];
+}
 
 NSLog(@"Good: %d | Evil: %d", game.passedQuestCount, game.failedQuestCount);
 NSLog(@"Outcome:\n\t%@", [game.quests componentsJoinedByString:@"\n\t"]);
