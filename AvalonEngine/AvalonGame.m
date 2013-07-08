@@ -130,6 +130,7 @@
     game.questNumber = self.questNumber;
     game.passedQuestCount = self.passedQuestCount;
     game.failedQuestCount = self.failedQuestCount;
+    game.observer = player;
     return game;
 }
 

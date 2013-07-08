@@ -14,16 +14,6 @@
 
 @implementation AbstractDecider
 
-@synthesize playerId, role;
-
-+ (instancetype)deciderWithId:(NSString *)playerId
-{
-    AbstractDecider *d = [self new];
-    d.playerId = playerId;
-    d.role = [AvalonRole roleWithType:AvalonRoleNone];
-    return d;
-}
-
 - (NSArray *)questProposalOfSize:(NSUInteger)size gameState:(AvalonGame *)game
 {
     NSMutableSet *set = [NSMutableSet new];
@@ -44,13 +34,13 @@
 
 - (BOOL)passQuest:(AvalonQuest *)proposal gameState:(AvalonGame *)game
 {
-    BOOL passing = (self.role.type & AvalonRoleGood);
+    BOOL passing = (game.observer.role.type & AvalonRoleGood);
     return passing || arc4random() % 2;
 }
 
 - (NSString *)playerIdToAssassinateForGameState:(AvalonGame *)game
 {
-    AvalonPlayer *p = game.players[arc4random()%game.players.count];
+    AvalonPlayer *p = game.players[arc4random() % game.players.count];
     return p.playerId;
 }
 

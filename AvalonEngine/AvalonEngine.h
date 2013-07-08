@@ -31,10 +31,6 @@
 
 @protocol AvalonDecider <NSObject>
 
-@property (nonatomic, strong) AvalonRole *role;
-
-@property (nonatomic, copy) NSString *playerId;
-
 - (NSArray *)questProposalOfSize:(NSUInteger)size gameState:(AvalonGame *)state;
 
 - (BOOL)acceptProposal:(AvalonQuest *)quest gameState:(AvalonGame *)state;

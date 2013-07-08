@@ -29,6 +29,7 @@
 		68913FEE1789AFF500ED0EDE /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68913FED1789AFF500ED0EDE /* JavaScriptCore.framework */; };
 		68913FF21789C17C00ED0EDE /* JavaScriptDecider.m in Sources */ = {isa = PBXBuildFile; fileRef = 68913FF11789C17C00ED0EDE /* JavaScriptDecider.m */; };
 		68913FF51789C93E00ED0EDE /* random_bot.js in Resources */ = {isa = PBXBuildFile; fileRef = 68913FF41789C90600ED0EDE /* random_bot.js */; };
+		68913FF71789F8DE00ED0EDE /* simple_bot.js in Resources */ = {isa = PBXBuildFile; fileRef = 68913FF61789F8C700ED0EDE /* simple_bot.js */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,7 @@
 		68913FF01789C17C00ED0EDE /* JavaScriptDecider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JavaScriptDecider.h; sourceTree = "<group>"; };
 		68913FF11789C17C00ED0EDE /* JavaScriptDecider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JavaScriptDecider.m; sourceTree = "<group>"; };
 		68913FF41789C90600ED0EDE /* random_bot.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = random_bot.js; sourceTree = "<group>"; };
+		68913FF61789F8C700ED0EDE /* simple_bot.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = simple_bot.js; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,6 +209,7 @@
 		68913FF31789C90600ED0EDE /* ExampleBots */ = {
 			isa = PBXGroup;
 			children = (
+				68913FF61789F8C700ED0EDE /* simple_bot.js */,
 				68913FF41789C90600ED0EDE /* random_bot.js */,
 			);
 			name = ExampleBots;
@@ -288,6 +291,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68913FF71789F8DE00ED0EDE /* simple_bot.js in Resources */,
 				68913FF51789C93E00ED0EDE /* random_bot.js in Resources */,
 				68913FA61788BCE400ED0EDE /* InfoPlist.strings in Resources */,
 				68913FAE1788BCE400ED0EDE /* Images.xcassets in Resources */,

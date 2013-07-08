@@ -10,8 +10,6 @@
 
 @interface JavaScriptDecider : AbstractDecider
 
-+ (instancetype)deciderWithId:(NSString *)playerId script:(NSString *)script;
-
-- (NSString *)dumpState:(AvalonGame *)game;
++ (instancetype)deciderWithScript:(NSString *)script;
 
 @end

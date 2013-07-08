@@ -10,6 +10,4 @@
 
 @interface AbstractDecider : NSObject <AvalonDecider>
 
-+ (instancetype)deciderWithId:(NSString *)playerId;
-
 @end

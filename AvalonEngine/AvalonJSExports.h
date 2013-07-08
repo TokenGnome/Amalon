@@ -27,6 +27,7 @@
 @property (nonatomic, assign) NSInteger questNumber;
 @property (nonatomic, assign) NSUInteger passedQuestCount;
 @property (nonatomic, assign) NSUInteger failedQuestCount;
+@property (nonatomic, strong) AvalonPlayer *observer;
 
 - (NSDictionary *)toJSON;
 

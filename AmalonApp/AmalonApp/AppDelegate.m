@@ -11,6 +11,7 @@
 #import "AvalonEngine.h"
 #import "AvalonGame.h"
 #import "AvalonPlayer.h"
+#import "AvalonRole.h"
 #import "AbstractDecider.h"
 #import "JavaScriptDecider.h"
 
@@ -25,32 +26,83 @@ NSString *BundledScript(NSString *nameWithoutExtension)
     return [NSString stringWithContentsOfFile:script encoding:NSUTF8StringEncoding error:nil];
 };
 
+@interface AppDelegate ()
+@property (nonatomic, strong) NSMutableDictionary *results;
+@property (nonatomic, strong) AvalonEngine *engine;
+@property (nonatomic, assign) NSUInteger goodWins;
+@property (nonatomic, assign) NSUInteger evilWins;
+@end
+
 @implementation AppDelegate
 
-- (void)runSampleGame
+- (void)runSampleGame:(id<AvalonDecider>)bot playerCount:(NSUInteger)size variant:(AvalonGameVariant)variant
 {
-    AvalonEngine *e = [AvalonEngine engine];
+    AvalonEngine *e = self.engine;
     AvalonGame *g = [AvalonEngine newGame];
+    
+    AbstractDecider *rnd = [AbstractDecider new];
         
-    JavaScriptDecider *j = [JavaScriptDecider deciderWithId:@"JSBot" script:BundledScript(@"random_bot")];
-    [e addPlayer:@"JSBot" toGame:g decider:j];
-    
-    [e addPlayer:@"Bot 1" toGame:g decider:[AbstractDecider deciderWithId:@"Bot 1"]];
-    [e addPlayer:@"Bot 2" toGame:g decider:[AbstractDecider deciderWithId:@"Bot 2"]];
-    [e addPlayer:@"Bot 3" toGame:g decider:[AbstractDecider deciderWithId:@"Bot 3"]];
-    [e addPlayer:@"Bot 4" toGame:g decider:[AbstractDecider deciderWithId:@"Bot 4"]];
-    
-    [e startGame:g withVariant:AvalonVariantDefault];
+    for (int i = 1; i <= size; i++) {
+        id<AvalonDecider> d = (i % 2 == 0) ? rnd : bot;
+        [e addPlayer:[NSString stringWithFormat:@"%@ %d", (i%2 == 0) ? @"RND" : @"SMP", i] toGame:g decider:d];
+    }
+    [e startGame:g withVariant:variant];
     
     while (! [g isFinished]) {
         [e step:g];
     }
     
-    NSLog(@"%@", [j dumpState:g]);
+    BOOL goodWin = (g.passedQuestCount > g.failedQuestCount) && (g.assassinatedPlayer.role.type != AvalonRoleMerlin);
+    goodWin ? self.goodWins++ : self.evilWins++;
+    
+    for (AvalonPlayer *p in g.players) {
+        if (!self.results[p.playerId]) self.results[p.playerId] = [NSMutableDictionary new];
+         NSMutableDictionary *roles = self.results[p.playerId];
+        
+        if (!roles[p.role.name]) self.results[p.playerId][p.role.name] = [NSMutableDictionary dictionaryWithDictionary:@{@"wins": @(0), @"total" : @(0)}];
+        NSMutableDictionary *role = self.results[p.playerId][p.role.name];
+        
+        if (((p.role.type & AvalonRoleGood) && goodWin) || ((p.role.type & AvalonRoleEvil) && !goodWin)) {
+            self.results[p.playerId][p.role.name][@"wins"] = @([role[@"wins"] intValue] + 1);
+        }
+        self.results[p.playerId][p.role.name][@"total"] = @([role[@"total"] intValue] + 1);
+    }
+    
+}
+
+- (void)runAllGames
+{
+    self.engine = [AvalonEngine engine];
+    JavaScriptDecider *bot = [JavaScriptDecider deciderWithScript:BundledScript(@"simple_bot")];
+    
+    NSArray *vars = @[@(AvalonVariantDefault), @(AvalonVariantPercival), @(AvalonVariantMorgana), @(AvalonVariantMordred), @(AvalonVariantNoOberon)];
+    NSString *result = @"";
+
+    for (int numPlayers = 5; numPlayers < 11; numPlayers++) {
+        for (NSNumber *var in vars) {
+            self.results = [NSMutableDictionary new];
+            for (int i = 1; i <= 100; i++) {
+                @autoreleasepool {
+                    [self runSampleGame:bot playerCount:numPlayers variant:[var intValue]];
+                }
+            }
+
+            for (NSString *pid in self.results.allKeys) {
+                for (NSString *role in [self.results[pid] allKeys]) {
+                    result = [result stringByAppendingFormat:
+                              @"%@, %d, %@, %@, %@, %@\n",
+                              var, numPlayers, pid, role, self.results[pid][role][@"wins"], self.results[pid][role][@"total"]];
+                }
+            }
+        }
+    }
+    
+    NSLog(@"\n%@", result);
+    
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{    
+{
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
     

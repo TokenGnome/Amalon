@@ -9,15 +9,19 @@
 #import "JavaScriptDecider.h"
 #import <JavaScriptCore/JavaScriptCore.h>
 
+#import "AvalonGame.h"
+#import "AvalonPlayer.h"
+#import "AvalonRole.h"
+
 @interface JavaScriptDecider ()
 @property (nonatomic, strong) JSContext *context;
 @end
 
 @implementation JavaScriptDecider
 
-+ (instancetype)deciderWithId:(NSString *)playerId script:(NSString *)script
++ (instancetype)deciderWithScript:(NSString *)script
 {
-    JavaScriptDecider *d = [self deciderWithId:playerId];
+    JavaScriptDecider *d = [self new];
     d.context = [JSContext new];
     [d.context evaluateScript:script];
     return d;
@@ -47,13 +51,6 @@
 - (NSString *)playerIdToAssassinateForGameState:(AvalonGame *)state
 {
     JSValue *func = self.context[@"assassinatePlayer"];
-    JSValue *result = [func callWithArguments:@[state]];
-    return [result toString];
-}
-
-- (NSString *)dumpState:(AvalonGame *)state
-{
-    JSValue *func = self.context[@"dumpState"];
     JSValue *result = [func callWithArguments:@[state]];
     return [result toString];
 }

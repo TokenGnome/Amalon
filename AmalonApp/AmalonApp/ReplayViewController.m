@@ -12,6 +12,7 @@
 #import "AvalonQuest.h"
 #import "AvalonPlayer.h"
 #import "AbstractDecider.h"
+#import "JavaScriptDecider.h"
 
 @interface ReplayViewController () <UITextViewDelegate>
 @property (nonatomic, strong) AvalonEngine *engine;
@@ -26,13 +27,16 @@
 {
     self.textView.text = @"";
     self.game = [AvalonEngine newGame];
-    [self.engine addPlayer:@"Native Bot 1" toGame:self.game decider:[AbstractDecider deciderWithId:@"Native Bot 1"]];
-    [self.engine addPlayer:@"Native Bot 2" toGame:self.game decider:[AbstractDecider deciderWithId:@"Native Bot 2"]];
-    [self.engine addPlayer:@"Native Bot 3" toGame:self.game decider:[AbstractDecider deciderWithId:@"Native Bot 3"]];
-    [self.engine addPlayer:@"Native Bot 4" toGame:self.game decider:[AbstractDecider deciderWithId:@"Native Bot 4"]];
-    [self.engine addPlayer:@"JS Bot 1" toGame:self.game decider:[AbstractDecider deciderWithId:@"JS Bot 1"]];
-    [self.engine addPlayer:@"JS Bot 2" toGame:self.game decider:[AbstractDecider deciderWithId:@"JS Bot 2"]];
-    [self.engine addPlayer:@"JS Bot 3" toGame:self.game decider:[AbstractDecider deciderWithId:@"JS Bot 3"]];
+    AbstractDecider *ad = [AbstractDecider new];
+    JavaScriptDecider *jd = [JavaScriptDecider deciderWithScript:BundledScript(@"simple_bot")];
+    
+    [self.engine addPlayer:@"Native Bot 1" toGame:self.game decider:ad];
+    [self.engine addPlayer:@"Native Bot 2" toGame:self.game decider:ad];
+    [self.engine addPlayer:@"Native Bot 3" toGame:self.game decider:ad];
+    [self.engine addPlayer:@"Native Bot 4" toGame:self.game decider:ad];
+    [self.engine addPlayer:@"JS Bot 1" toGame:self.game decider:ad];
+    [self.engine addPlayer:@"JS Bot 2" toGame:self.game decider:ad];
+    [self.engine addPlayer:@"JS Bot 3" toGame:self.game decider:ad];
     [self.engine startGame:self.game withVariant:AvalonVariantNoOberon];
 }
 
