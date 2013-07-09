@@ -62,6 +62,10 @@ random_bot.js is a very simple implementation in javascript.
 
 ## Example
 
+Update, getting prettier:
+
+<img src="https://dl.dropboxusercontent.com/u/10407794/amalon2.PNG" alt="Amalon2" title="Amalon2">
+
 Very crude example now included!
 
 <img src="https://dl.dropboxusercontent.com/u/10407794/amalon.PNG" alt="Amalon" title="Amalon">

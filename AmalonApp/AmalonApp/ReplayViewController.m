@@ -7,6 +7,7 @@
 //
 
 #import "ReplayViewController.h"
+#import "QuestCell.h"
 #import "AvalonEngine.h"
 #import "AvalonGame.h"
 #import "AvalonQuest.h"
@@ -14,29 +15,34 @@
 #import "AbstractDecider.h"
 #import "JavaScriptDecider.h"
 
-@interface ReplayViewController () <UITextViewDelegate>
+@interface ReplayViewController ()
 @property (nonatomic, strong) AvalonEngine *engine;
+@property (nonatomic, strong) id<AvalonDecider> decider;
 @property (nonatomic, strong) AvalonGame *game;
 
-@property (nonatomic, strong) UITextView *textView;
 @end
 
 @implementation ReplayViewController
 
 - (void)startNewGame
 {
-    self.textView.text = @"";
     self.game = [AvalonGame new];
-    AbstractDecider *ad = [AbstractDecider new];
-    JavaScriptDecider *jd = [JavaScriptDecider deciderWithScript:BundledScript(@"simple_bot")];
     
-    [self.engine addPlayer:@"Native Bot 1" toGame:self.game decider:ad];
-    [self.engine addPlayer:@"Native Bot 2" toGame:self.game decider:ad];
-    [self.engine addPlayer:@"Native Bot 3" toGame:self.game decider:ad];
-    [self.engine addPlayer:@"Native Bot 4" toGame:self.game decider:ad];
-    [self.engine addPlayer:@"JS Bot 1" toGame:self.game decider:ad];
-    [self.engine addPlayer:@"JS Bot 2" toGame:self.game decider:ad];
-    [self.engine addPlayer:@"JS Bot 3" toGame:self.game decider:ad];
+    [self.tableView reloadData];
+    
+    if (!self.decider) self.decider = [AbstractDecider new];
+    
+    [self.engine addPlayer:@"JT Bot 1" toGame:self.game decider:self.decider];
+    [self.engine addPlayer:@"JT Bot 2" toGame:self.game decider:self.decider];
+    [self.engine addPlayer:@"JT Bot 3" toGame:self.game decider:self.decider];
+    [self.engine addPlayer:@"JT Bot 4" toGame:self.game decider:self.decider];
+    [self.engine addPlayer:@"JT Bot 5" toGame:self.game decider:self.decider];
+    [self.engine addPlayer:@"JS Bot 1" toGame:self.game decider:self.decider];
+    [self.engine addPlayer:@"JS Bot 2" toGame:self.game decider:self.decider];
+    [self.engine addPlayer:@"JS Bot 3" toGame:self.game decider:self.decider];
+    [self.engine addPlayer:@"JS Bot 4" toGame:self.game decider:self.decider];
+    [self.engine addPlayer:@"JS Bot 5" toGame:self.game decider:self.decider];
+    
     [self.engine startGame:self.game withVariant:AvalonVariantNoOberon];
 }
 
@@ -44,75 +50,54 @@
 {
     if (! self.game) [self startNewGame];
     
-    [self.engine step:self.game];
+    NSInteger num = [[self proposals] count]
+            , i = 10;
     
-    BOOL textAppended = NO;
-    switch (self.game.state) {
-        case GameStateRolesAssigned:
-            [self appendText:[NSString stringWithFormat:
-                              @"Game started:\n\t%@\n",
-                              [self.game.players componentsJoinedByString:@"\n\t"]]];
-            textAppended = YES;
-            break;
-            
-        case GameStateProposingCompleted: {
-            [self appendText:[NSString stringWithFormat:
-                              @"[%d.%d] Proposed by %@:\n\t%@\n",
-                              self.game.questNumber, self.game.voteNumber,
-                              self.game.currentLeader.playerId,
-                              [[self.game.currentQuest valueForKeyPath:@"players.playerId"] componentsJoinedByString:@"\n\t"]]];
-            textAppended = YES;
-            break;
-        }
-        case GameStateVotingCompleted: {            
-            NSMutableArray *b = [NSMutableArray new];
-            for (NSString *playerId in [self.game.currentQuest.currentProposal.votes.allKeys sortedArrayUsingSelector:@selector(compare:)]) {
-                NSString *result = [self.game.currentQuest.currentProposal.votes[playerId] boolValue] ? @"Accept" : @"Reject";
-                [b addObject:[NSString stringWithFormat:@"%@ : %@", playerId, result]];
-            }
-            
-            [self appendText:[NSString stringWithFormat:
-                              @"[%d.%d] Votes:\n\t%@\n",
-                              self.game.questNumber, self.game.voteNumber, [b componentsJoinedByString:@"\n\t"]]];
-            textAppended = YES;
-            break;
-        }
-        case GameStateQuestingCompleted: {
-            NSMutableArray *b = [NSMutableArray new];
-            for (NSNumber *result in self.game.currentQuest.currentProposal.results.allValues) {
-                NSString *s = [result boolValue] ? @"PASS" : @"FAIL";
-                [b addObject:s];
-            }
-            [self appendText:[NSString stringWithFormat:
-                              @"[%d.%d] Result:\n\t%@\n",
-                              self.game.questNumber, self.game.voteNumber, [b componentsJoinedByString:@"\n\t"]]];
-            textAppended = YES;
-            break;
-        }
-        case GameStateAssassinatingCompleted: {
-            [self appendText:[NSString stringWithFormat:
-                              @"%@ was assassinated\n",
-                              self.game.assassinatedPlayer]];
-            textAppended = YES;
-            break;
-        }
-        case GameStateEnded: {
-            [self appendText:[NSString stringWithFormat:
-                              @"Game over.  Good: %d - Evil: %d",
-                              self.game.passedQuestCount, self.game.failedQuestCount]];
-            textAppended = YES;
-            break;
-        }
-        default:
-            break;
+    while (i-- > 0 && num == [[self proposals] count]) {
+        [self.engine step:self.game];
     }
-    if (! textAppended) [self stepGame];
+    
+    [self.tableView reloadData];
+    [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:[[self proposals] count]-1 inSection:0] atScrollPosition:UITableViewScrollPositionBottom animated:YES];
 }
 
-- (void)appendText:(NSString *)text
+- (NSArray *)proposals
 {
-    NSString *currentText = self.textView.text;
-    self.textView.text = [currentText stringByAppendingString:text];
+    NSMutableArray *prps = [NSMutableArray new];
+    for (AvalonQuest *q in self.game.quests) {
+        for (AvalonProposal *p in q.proposals) {
+            [prps addObject:p];
+        }
+    }
+    return prps;
+}
+
+- (NSArray *)votesforProposal:(AvalonProposal *)proposal
+{
+    NSMutableArray *a = [@[@0, @0, @0, @0, @0, @0, @0, @0, @0, @0] mutableCopy];
+    
+    NSInteger i = 0;
+    for (AvalonPlayer *p in self.game.players) {
+        if (proposal.votes[p.playerId]) {
+            a[i] = [proposal.votes[p.playerId] boolValue] ? @1 : @2;
+        }
+        i++;
+    }
+    return [a copy];
+}
+
+- (NSArray *)playersOnProposal:(AvalonProposal *)proposal
+{
+    NSMutableArray *a = [@[@NO, @NO, @NO, @NO, @NO, @NO, @NO, @NO, @NO, @NO] mutableCopy];
+    
+    NSInteger i = 0;
+    for (AvalonPlayer *p in self.game.players) {
+        if ([proposal.players indexOfObject:p] != NSNotFound) {
+            a[i] = @YES;
+        }
+        i++;
+    }
+    return [a copy];
 }
 
 - (void)viewDidLoad
@@ -136,14 +121,29 @@
     [button sizeToFit];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:button];
     
-    // Text view showing players
-    self.textView = [[UITextView alloc] initWithFrame:self.view.bounds];
-    self.textView.editable = NO;
-    self.textView.delegate = self;
-    self.textView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-    self.textView.backgroundColor = [UIColor colorWithRed:48.0f/255.0f green:48.0f/255.0f blue:48.0f/255.0f alpha:1.0f];
-    self.textView.textColor = [UIColor colorWithRed:207.0f/255.0f green:207.0f/255.0f blue:207.0f/255.0f alpha:1.0f];
-    [self.view addSubview:self.textView];
+    [self.tableView registerClass:[QuestCell class] forCellReuseIdentifier:@"CELL"];
+    self.tableView.rowHeight = 100.0f;
+}
+
+#pragma mark - UITableView data source
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return [[self proposals] count];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString * cellID = @"CELL";
+    
+    AvalonProposal *prop = [self proposals][indexPath.row];
+    QuestCell *cell = [self.tableView dequeueReusableCellWithIdentifier:cellID forIndexPath:indexPath];
+    cell.playersView.playerCount = [self.game.players count];
+    cell.playersView.approved = [self votesforProposal:prop];
+    cell.playersView.selected = [self playersOnProposal:prop];
+    cell.questLabel.text = [NSString stringWithFormat:@"Quest: %d, Vote: %d", prop.questNumber, prop.voteNumber];
+    
+    return cell;
 }
 
 @end

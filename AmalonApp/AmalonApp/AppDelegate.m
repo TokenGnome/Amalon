@@ -107,14 +107,13 @@ NSString *BundledScript(NSString *nameWithoutExtension)
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
     
-    self.engine = [AvalonEngine engine];
+//    self.engine = [AvalonEngine engine];
+//    [self runSampleGame:[JavaScriptDecider deciderWithScript:BundledScript(@"simple_bot")] playerCount:10 variant:AvalonVariantDefault];
     
-    [self runSampleGame:[JavaScriptDecider deciderWithScript:BundledScript(@"simple_bot")] playerCount:10 variant:AvalonVariantDefault];
+    ReplayViewController *gvc = [[ReplayViewController alloc] initWithStyle:UITableViewStylePlain];
     
-//    ReplayViewController *gvc = [[ReplayViewController alloc] initWithNibName:nil bundle:nil];
-//    
-//    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:gvc];
-//    self.window.rootViewController = nav;
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:gvc];
+    self.window.rootViewController = nav;
     
     [self.window makeKeyAndVisible];
     return YES;

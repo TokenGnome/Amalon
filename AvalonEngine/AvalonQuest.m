@@ -21,7 +21,7 @@
     self = [super init];
     if (self) {
         _failsRequired = 1;
-        _questNumber = 1;
+        _questNumber = num;
         _playerCount = numPlayers;
         _proposals = [NSMutableArray new];
     }
@@ -31,6 +31,7 @@
 - (void)addProposal:(AvalonProposal *)proposal
 {
     proposal.voteNumber = [self.proposals count] + 1;
+    proposal.questNumber = self.questNumber;
     proposal.failsRequired = self.failsRequired;
     [self.proposals addObject:proposal];
 }

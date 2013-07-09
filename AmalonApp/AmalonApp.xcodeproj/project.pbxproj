@@ -31,6 +31,8 @@
 		68913FF51789C93E00ED0EDE /* random_bot.js in Resources */ = {isa = PBXBuildFile; fileRef = 68913FF41789C90600ED0EDE /* random_bot.js */; };
 		68913FF71789F8DE00ED0EDE /* simple_bot.js in Resources */ = {isa = PBXBuildFile; fileRef = 68913FF61789F8C700ED0EDE /* simple_bot.js */; };
 		68D5C3B1178B94DF005BC281 /* AvalonProposal.m in Sources */ = {isa = PBXBuildFile; fileRef = 68D5C3B0178B94DF005BC281 /* AvalonProposal.m */; };
+		68D5C3B6178BCDE3005BC281 /* QuestCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 68D5C3B3178BCDE3005BC281 /* QuestCell.m */; };
+		68D5C3B7178BCDE3005BC281 /* QuestPlayersView.m in Sources */ = {isa = PBXBuildFile; fileRef = 68D5C3B5178BCDE3005BC281 /* QuestPlayersView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +85,10 @@
 		68913FF61789F8C700ED0EDE /* simple_bot.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = simple_bot.js; sourceTree = "<group>"; };
 		68D5C3AF178B94DF005BC281 /* AvalonProposal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AvalonProposal.h; sourceTree = "<group>"; };
 		68D5C3B0178B94DF005BC281 /* AvalonProposal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AvalonProposal.m; sourceTree = "<group>"; };
+		68D5C3B2178BCDE3005BC281 /* QuestCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestCell.h; sourceTree = "<group>"; };
+		68D5C3B3178BCDE3005BC281 /* QuestCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestCell.m; sourceTree = "<group>"; };
+		68D5C3B4178BCDE3005BC281 /* QuestPlayersView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestPlayersView.h; sourceTree = "<group>"; };
+		68D5C3B5178BCDE3005BC281 /* QuestPlayersView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestPlayersView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +152,10 @@
 		68913FA11788BCE400ED0EDE /* AmalonApp */ = {
 			isa = PBXGroup;
 			children = (
+				68D5C3B2178BCDE3005BC281 /* QuestCell.h */,
+				68D5C3B3178BCDE3005BC281 /* QuestCell.m */,
+				68D5C3B4178BCDE3005BC281 /* QuestPlayersView.h */,
+				68D5C3B5178BCDE3005BC281 /* QuestPlayersView.m */,
 				68913FAA1788BCE400ED0EDE /* AppDelegate.h */,
 				68913FAB1788BCE400ED0EDE /* AppDelegate.m */,
 				68913FEA17890BCA00ED0EDE /* ReplayViewController.h */,
@@ -322,7 +332,9 @@
 				68913FAC1788BCE400ED0EDE /* AppDelegate.m in Sources */,
 				68913FDD1788BD5000ED0EDE /* AvalonRole.m in Sources */,
 				68913FA81788BCE400ED0EDE /* main.m in Sources */,
+				68D5C3B6178BCDE3005BC281 /* QuestCell.m in Sources */,
 				68D5C3B1178B94DF005BC281 /* AvalonProposal.m in Sources */,
+				68D5C3B7178BCDE3005BC281 /* QuestPlayersView.m in Sources */,
 				68913FDA1788BD5000ED0EDE /* AvalonGame.m in Sources */,
 				68913FF21789C17C00ED0EDE /* JavaScriptDecider.m in Sources */,
 				68913FD81788BD5000ED0EDE /* AbstractDecider.m in Sources */,

@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ReplayViewController : UIViewController
+@interface ReplayViewController : UITableViewController
 
 @end

@@ -52,11 +52,6 @@
 {
     JSValue *func = self.context[@"assassinatePlayer"];
     JSValue *result = [func callWithArguments:@[state]];
-    
-    JSValue *dFunc = self.context[@"dumpState"];
-    JSValue *dump = [dFunc callWithArguments:@[state]];
-    NSLog(@"%@", [dump toString]);
-    
     return [result toString];
 }
 
