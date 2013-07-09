@@ -34,14 +34,14 @@
     return [result toArray];
 }
 
-- (BOOL)acceptProposal:(AvalonQuest *)quest gameState:(AvalonGame *)state
+- (BOOL)acceptProposalForGameState:(AvalonGame *)state
 {
     JSValue *func = self.context[@"acceptProposal"];
     JSValue *result = [func callWithArguments:@[state]];
     return [result toBool];
 }
 
-- (BOOL)passQuest:(AvalonQuest *)quest gameState:(AvalonGame *)state
+- (BOOL)passQuestForGameState:(AvalonGame *)state
 {
     JSValue *func = self.context[@"passQuest"];
     JSValue *result = [func callWithArguments:@[state]];
@@ -52,6 +52,11 @@
 {
     JSValue *func = self.context[@"assassinatePlayer"];
     JSValue *result = [func callWithArguments:@[state]];
+    
+    JSValue *dFunc = self.context[@"dumpState"];
+    JSValue *dump = [dFunc callWithArguments:@[state]];
+    NSLog(@"%@", [dump toString]);
+    
     return [result toString];
 }
 

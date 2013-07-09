@@ -10,7 +10,7 @@
 #import <JavaScriptCore/JavaScriptCore.h>
 #import "Avalon.h"
 
-@class AvalonGame, AvalonPlayer, AvalonQuest, AvalonRole;
+@class AvalonGame, AvalonPlayer, AvalonProposal, AvalonQuest, AvalonRole;
 
 
 @protocol AvalonGameExport <JSExport>
@@ -56,6 +56,19 @@
 
 @protocol AvalonQuestExport <JSExport>
 
+@property (nonatomic, readonly) NSUInteger questNumber;
+@property (nonatomic, readonly) NSUInteger failsRequired;
+@property (nonatomic, readonly) NSUInteger playerCount;
+@property (nonatomic, strong) NSMutableArray *proposals;
+@property (nonatomic, assign, getter = isComplete) BOOL complete;
+@property (nonatomic, assign, getter = isPass) BOOL passed;
+
+- (NSDictionary *)toJSON;
+
+@end
+
+@protocol AvalonProposalExport <JSExport>
+
 @property (nonatomic, strong) AvalonPlayer *proposer;
 @property (nonatomic, assign) NSUInteger questNumber;
 @property (nonatomic, assign) NSUInteger voteNumber;
@@ -65,16 +78,17 @@
 @property (nonatomic, strong) NSMutableDictionary *results;
 @property (nonatomic, assign, getter = isAccepted) BOOL accepted;
 @property (nonatomic, assign, getter = isComplete) BOOL complete;
-@property (nonatomic, assign, getter = isSuccess) BOOL succeeded;
+@property (nonatomic, assign, getter = isPass) BOOL passed;
 
 - (NSDictionary *)toJSON;
 
 @end
 
 @protocol AvalonJSON <NSObject>
-
 - (id)toJSON;
+@end
 
+@interface NSObject (AvalonJSON) <AvalonJSON>
 @end
 
 @interface NSArray (AvalonJSON) <AvalonJSON>

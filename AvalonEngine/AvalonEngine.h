@@ -17,8 +17,6 @@
 
 + (instancetype)engine;
 
-+ (AvalonGame *)newGame;
-
 - (void)addPlayer:(NSString *)playerId toGame:(AvalonGame *)game decider:(id<AvalonDecider>)controller;
 
 - (void)removePlayer:(NSString *)playerId fromGame:(AvalonGame *)game;
@@ -33,9 +31,9 @@
 
 - (NSArray *)questProposalOfSize:(NSUInteger)size gameState:(AvalonGame *)state;
 
-- (BOOL)acceptProposal:(AvalonQuest *)quest gameState:(AvalonGame *)state;
+- (BOOL)acceptProposalForGameState:(AvalonGame *)state;
 
-- (BOOL)passQuest:(AvalonQuest *)quest gameState:(AvalonGame *)state;
+- (BOOL)passQuestForGameState:(AvalonGame *)state;
 
 - (NSString *)playerIdToAssassinateForGameState:(AvalonGame *)state;
 

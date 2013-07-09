@@ -32,7 +32,7 @@ var playerIsEvil = function(player) {
 };
 
 var numberOfSpysOnQuest = function(quest) {
-    return quest.players
+    return quest.currentProposal.players
         .filter(function(player) { return playerIsEvil(player); })
         .length;
 };

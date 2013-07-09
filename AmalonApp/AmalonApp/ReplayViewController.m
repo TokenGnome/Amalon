@@ -26,7 +26,7 @@
 - (void)startNewGame
 {
     self.textView.text = @"";
-    self.game = [AvalonEngine newGame];
+    self.game = [AvalonGame new];
     AbstractDecider *ad = [AbstractDecider new];
     JavaScriptDecider *jd = [JavaScriptDecider deciderWithScript:BundledScript(@"simple_bot")];
     
@@ -66,8 +66,8 @@
         }
         case GameStateVotingCompleted: {            
             NSMutableArray *b = [NSMutableArray new];
-            for (NSString *playerId in [self.game.currentQuest.votes.allKeys sortedArrayUsingSelector:@selector(compare:)]) {
-                NSString *result = [self.game.currentQuest.votes[playerId] boolValue] ? @"Accept" : @"Reject";
+            for (NSString *playerId in [self.game.currentQuest.currentProposal.votes.allKeys sortedArrayUsingSelector:@selector(compare:)]) {
+                NSString *result = [self.game.currentQuest.currentProposal.votes[playerId] boolValue] ? @"Accept" : @"Reject";
                 [b addObject:[NSString stringWithFormat:@"%@ : %@", playerId, result]];
             }
             
@@ -79,7 +79,7 @@
         }
         case GameStateQuestingCompleted: {
             NSMutableArray *b = [NSMutableArray new];
-            for (NSNumber *result in self.game.currentQuest.results.allValues) {
+            for (NSNumber *result in self.game.currentQuest.currentProposal.results.allValues) {
                 NSString *s = [result boolValue] ? @"PASS" : @"FAIL";
                 [b addObject:s];
             }

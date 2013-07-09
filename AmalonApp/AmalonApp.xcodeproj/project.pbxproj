@@ -30,6 +30,7 @@
 		68913FF21789C17C00ED0EDE /* JavaScriptDecider.m in Sources */ = {isa = PBXBuildFile; fileRef = 68913FF11789C17C00ED0EDE /* JavaScriptDecider.m */; };
 		68913FF51789C93E00ED0EDE /* random_bot.js in Resources */ = {isa = PBXBuildFile; fileRef = 68913FF41789C90600ED0EDE /* random_bot.js */; };
 		68913FF71789F8DE00ED0EDE /* simple_bot.js in Resources */ = {isa = PBXBuildFile; fileRef = 68913FF61789F8C700ED0EDE /* simple_bot.js */; };
+		68D5C3B1178B94DF005BC281 /* AvalonProposal.m in Sources */ = {isa = PBXBuildFile; fileRef = 68D5C3B0178B94DF005BC281 /* AvalonProposal.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,8 @@
 		68913FF11789C17C00ED0EDE /* JavaScriptDecider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JavaScriptDecider.m; sourceTree = "<group>"; };
 		68913FF41789C90600ED0EDE /* random_bot.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = random_bot.js; sourceTree = "<group>"; };
 		68913FF61789F8C700ED0EDE /* simple_bot.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = simple_bot.js; sourceTree = "<group>"; };
+		68D5C3AF178B94DF005BC281 /* AvalonProposal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AvalonProposal.h; sourceTree = "<group>"; };
+		68D5C3B0178B94DF005BC281 /* AvalonProposal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AvalonProposal.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,6 +200,8 @@
 				68913FD31788BD5000ED0EDE /* AvalonPlayer.m */,
 				68913FD41788BD5000ED0EDE /* AvalonQuest.h */,
 				68913FD51788BD5000ED0EDE /* AvalonQuest.m */,
+				68D5C3AF178B94DF005BC281 /* AvalonProposal.h */,
+				68D5C3B0178B94DF005BC281 /* AvalonProposal.m */,
 				68913FD61788BD5000ED0EDE /* AvalonRole.h */,
 				68913FD71788BD5000ED0EDE /* AvalonRole.m */,
 				68913FF01789C17C00ED0EDE /* JavaScriptDecider.h */,
@@ -317,6 +322,7 @@
 				68913FAC1788BCE400ED0EDE /* AppDelegate.m in Sources */,
 				68913FDD1788BD5000ED0EDE /* AvalonRole.m in Sources */,
 				68913FA81788BCE400ED0EDE /* main.m in Sources */,
+				68D5C3B1178B94DF005BC281 /* AvalonProposal.m in Sources */,
 				68913FDA1788BD5000ED0EDE /* AvalonGame.m in Sources */,
 				68913FF21789C17C00ED0EDE /* JavaScriptDecider.m in Sources */,
 				68913FD81788BD5000ED0EDE /* AbstractDecider.m in Sources */,

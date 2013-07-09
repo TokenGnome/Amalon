@@ -9,6 +9,7 @@
 #import "AbstractDecider.h"
 #import "AvalonGame.h"
 #import "AvalonPlayer.h"
+#import "AvalonProposal.h"
 #import "AvalonQuest.h"
 #import "AvalonRole.h"
 
@@ -24,15 +25,15 @@
     return [set allObjects];
 }
 
-- (BOOL)acceptProposal:(AvalonQuest *)proposal gameState:(AvalonGame *)game
+- (BOOL)acceptProposalForGameState:(AvalonGame *)game
 {
     BOOL vote = arc4random() % 2 == 0;
     vote = vote && (arc4random() % 2 == 0);
-    if (proposal.voteNumber == 5) vote = YES;
+    if (game.currentQuest.currentProposal.voteNumber == 5) vote = YES;
     return vote;
 }
 
-- (BOOL)passQuest:(AvalonQuest *)proposal gameState:(AvalonGame *)game
+- (BOOL)passQuestForGameState:(AvalonGame *)game
 {
     BOOL passing = (game.observer.role.type & AvalonRoleGood);
     return passing || arc4random() % 2;

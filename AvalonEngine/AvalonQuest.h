@@ -9,27 +9,24 @@
 #import <Foundation/Foundation.h>
 #import "Avalon.h"
 #import "AvalonJSExports.h"
+#import "AvalonProposal.h"
 
 @class AvalonPlayer;
 
 @interface AvalonQuest : NSObject <AvalonQuestExport>
 
-+ (instancetype)questWithPlayers:(NSArray *)players proposer:(AvalonPlayer *)proposer;
++ (instancetype)questWithSize:(NSUInteger)numPlayers number:(NSUInteger)num failsRequired:(NSUInteger)numFails;
 
-@property (nonatomic, strong) AvalonPlayer *proposer;
-@property (nonatomic, assign) NSUInteger questNumber;
-@property (nonatomic, assign) NSUInteger voteNumber;
-@property (nonatomic, assign) NSUInteger failsRequired;
-@property (nonatomic, strong) NSArray *players;
-@property (nonatomic, strong) NSMutableDictionary *votes;
-@property (nonatomic, strong) NSMutableDictionary *results;
-@property (nonatomic, assign, getter = isAccepted) BOOL accepted;
+@property (nonatomic, readonly) NSUInteger questNumber;
+@property (nonatomic, readonly) NSUInteger failsRequired;
+@property (nonatomic, readonly) NSUInteger playerCount;
+@property (nonatomic, strong) NSMutableArray *proposals;
 @property (nonatomic, assign, getter = isComplete) BOOL complete;
-@property (nonatomic, assign, getter = isSuccess) BOOL succeeded;
+@property (nonatomic, assign, getter = isPass) BOOL passed;
 
-- (void)setVote:(BOOL)vote forPlayer:(AvalonPlayer *)player;
+@property (nonatomic, readonly) AvalonProposal *currentProposal;
 
-- (void)setPass:(BOOL)vote forPlayer:(AvalonPlayer *)player;
+- (void)addProposal:(AvalonProposal *)proposal;
 
 - (instancetype)sanitizedForPlayer:(AvalonPlayer *)player;
 

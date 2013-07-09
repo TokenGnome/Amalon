@@ -38,12 +38,12 @@ NSString *BundledScript(NSString *nameWithoutExtension)
 - (void)runSampleGame:(id<AvalonDecider>)bot playerCount:(NSUInteger)size variant:(AvalonGameVariant)variant
 {
     AvalonEngine *e = self.engine;
-    AvalonGame *g = [AvalonEngine newGame];
+    AvalonGame *g = [AvalonGame new];
     
     AbstractDecider *rnd = [AbstractDecider new];
         
     for (int i = 1; i <= size; i++) {
-        id<AvalonDecider> d = (i % 2 == 0) ? rnd : bot;
+        id<AvalonDecider> d = (i % 2 == 0) ? bot : bot;
         [e addPlayer:[NSString stringWithFormat:@"%@ %d", (i%2 == 0) ? @"RND" : @"SMP", i] toGame:g decider:d];
     }
     [e startGame:g withVariant:variant];
@@ -51,6 +51,7 @@ NSString *BundledScript(NSString *nameWithoutExtension)
     while (! [g isFinished]) {
         [e step:g];
     }
+    [e step:g];
     
     BOOL goodWin = (g.passedQuestCount > g.failedQuestCount) && (g.assassinatedPlayer.role.type != AvalonRoleMerlin);
     goodWin ? self.goodWins++ : self.evilWins++;
@@ -106,10 +107,14 @@ NSString *BundledScript(NSString *nameWithoutExtension)
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
     
-    ReplayViewController *gvc = [[ReplayViewController alloc] initWithNibName:nil bundle:nil];
+    self.engine = [AvalonEngine engine];
     
-    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:gvc];
-    self.window.rootViewController = nav;
+    [self runSampleGame:[JavaScriptDecider deciderWithScript:BundledScript(@"simple_bot")] playerCount:10 variant:AvalonVariantDefault];
+    
+//    ReplayViewController *gvc = [[ReplayViewController alloc] initWithNibName:nil bundle:nil];
+//    
+//    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:gvc];
+//    self.window.rootViewController = nav;
     
     [self.window makeKeyAndVisible];
     return YES;
@@ -141,4 +146,12 @@ NSString *BundledScript(NSString *nameWithoutExtension)
     }
     return [NSDictionary dictionaryWithDictionary:dict];
 }
+@end
+
+@implementation NSObject (AvalonJSON)
+- (id)toJSON
+{
+    return [self description];
+}
+
 @end
