@@ -86,8 +86,9 @@
 {
     return @{@"questNumber" : @(self.questNumber),
              @"failsRequired" : @(self.failsRequired),
-             @"proposals" : [self.proposals toJSON],
-             @"currentProposal" : [self.currentProposal toJSON],
+             @"playerCount" : @(self.playerCount),
+             @"proposals" : self.proposals ? [self.proposals toJSON] : [NSNull null],
+             @"currentProposal" : self.currentProposal ? [self.currentProposal toJSON] : [NSNull null],
              @"complete" : @(self.complete),
              @"passed" : @(self.passed)};
 }

@@ -15,9 +15,10 @@
 
 @implementation AbstractDecider
 
-- (NSArray *)questProposalOfSize:(NSUInteger)size gameState:(AvalonGame *)game
+- (NSArray *)questProposalForGameState:(AvalonGame *)game
 {
     NSMutableSet *set = [NSMutableSet new];
+    NSUInteger size = game.currentQuest.playerCount;
     while ([set count] < size) {
         AvalonPlayer *p = game.players[arc4random()%game.players.count];
         [set addObject:p.playerId];

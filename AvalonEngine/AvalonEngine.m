@@ -125,9 +125,8 @@ NSString *kAvalonRuleErrorDomain = @"com.tokengnome.avalon.error.rules";
 - (NSArray *)proposalForGame:(AvalonGame *)game
 {
     id<AvalonDecider> controller = self.deciders[game.currentLeader.playerId];
-    NSInteger teamSize = TeamSizeForQuestNumber(game.questNumber, [game.players count]);
     AvalonGame *state = [self gameStateForPlayer:game.currentLeader.playerId game:game];
-    return [controller questProposalOfSize:teamSize gameState:state];
+    return [controller questProposalForGameState:state];
 }
 
 - (BOOL)voteForPlayer:(AvalonPlayer *)player game:(AvalonGame *)game

@@ -27,10 +27,10 @@
     return d;
 }
 
-- (NSArray *)questProposalOfSize:(NSUInteger)size gameState:(AvalonGame *)state
+- (NSArray *)questProposalForGameState:(AvalonGame *)state
 {
     JSValue *func = self.context[@"proposeQuest"];
-    JSValue *result = [func callWithArguments:@[@(size), state]];
+    JSValue *result = [func callWithArguments:@[state]];
     return [result toArray];
 }
 

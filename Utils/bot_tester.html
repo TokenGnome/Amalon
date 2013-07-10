@@ -1,0 +1,128 @@
+<!DOCTYPE html> 
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <style type="text/css">
+      td {padding:10px;}
+    </style>
+  </head>
+  <body>
+    <h1>Paste your bot's code:</h1>
+    <textarea id="js_area" rows="20" cols="90">
+/* private stuff here */
+
+var myRole = function(state) {
+  return state.observer.role.name;
+};
+
+var amGood = function(state) {
+  return (state.observer.role.type & ( 2 | 8 | 32 )) !== 0;
+};
+
+/* implement bot API */
+
+var bot = {
+
+  acceptProposal : function(state) { return (amGood(state) && state.voteNumber < 5) ? false : true; },
+
+  passQuest : function(state) { return amGood(state); },
+
+  assassinatePlayer : function(state) { return state.players[0].playerId; },
+
+  proposeQuest : function(state) { return state.players.map(function(p) { return p.playerId; }).slice(0,3); }
+
+};  
+
+return bot;
+    </textarea>
+    <br />
+    <button id="eval_button">Test</button>
+    <div id="result_area"></div>
+    <script type="text/javascript" src="testStates.js"></script>
+    <script type="text/javascript">
+
+      var validate_interface = function(callback) {
+        var bot = window.bot;
+
+        if (bot === undefined) callback(false, "Bot is undefined!");
+        if (! bot.hasOwnProperty("acceptProposal")) callback(false, "Missing requried method: acceptProposal");
+        if (! bot.hasOwnProperty("passQuest")) callback(false, "Missing required method: passQuest");
+        if (! bot.hasOwnProperty("assassinatePlayer")) callback(false, "Missing required method: assassinatePlayer");
+        if (! bot.hasOwnProperty("proposeQuest")) callback(false, "Missing required method: proposeQuest");
+
+        callback(true);
+      };
+
+      var summary_of_state = function(state) {
+        var q = state.game.questNumber
+          , v = state.game.voteNumber
+          , p = state.game.passedQuestCount
+          , f = state.game.failedQuestCount
+          , o = state.game.observer.role.name;
+          return "["+q+"."+v+"] ("+p+"-"+f+") " + o;
+      };
+
+      var test = function(method, state) {
+        return window.bot[method](state);
+      };
+
+      var run_tests = function(callback) {
+        window.testStates.map(function(state) {
+          callback(state.method, summary_of_state(state), test(state.method, state.game));
+        });
+      };
+
+      var reset_results = function() {
+        var c = document.getElementById("result_area")
+          , tbl = document.createElement("table");
+        c.innerHTML = "";
+        add_header_row(tbl);
+        c.appendChild(tbl);
+      };
+
+      var add_header_row = function(table) {
+        var tr = table.insertRow(0)
+          , rd = tr.insertCell()
+          , sd = tr.insertCell()
+          , md = tr.insertCell();
+        md.appendChild(document.createTextNode("Method"));
+        md.setAttribute('colspan', '2');
+        sd.appendChild(document.createTextNode("Game State"));
+        sd.setAttribute('colspan', '2');
+        rd.appendChild(document.createTextNode("Result"));
+        return tr;
+      };
+
+      var add_result_row = function(table, method, summary, result) {
+        var tr = table.insertRow(-1)
+          , rd = tr.insertCell()
+          , sd = tr.insertCell()
+          , md = tr.insertCell();
+        md.appendChild(document.createTextNode(method));
+        md.setAttribute('colspan', '2');
+        sd.appendChild(document.createTextNode(summary));
+        sd.setAttribute('colspan', '2');
+        rd.appendChild(document.createTextNode(result));
+        return tr;
+      };
+
+      document.getElementById("eval_button").onclick = function() { 
+        var js = document.getElementById("js_area").value;
+        eval("window.bot = (function(){ " + js + " })();");
+
+        validate_interface(function(isValid, errorMessage) {
+           if (isValid) console.log("Your bot has implemented the required interface!");
+           else console.log(errorMessage);
+        });
+
+        reset_results();
+        var tbl = document.getElementById("result_area").children[0];
+
+        run_tests(function(method, summary, result) {
+          add_result_row(tbl, method, summary, result);
+        });
+      };
+
+    </script>
+  </body>
+</html>

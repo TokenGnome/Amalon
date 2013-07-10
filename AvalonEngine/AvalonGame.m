@@ -148,7 +148,8 @@
              @"finished" : @(self.finished),
              @"state" : @(self.state),
              @"passedQuestCount" : @(self.passedQuestCount),
-             @"failedQuestCount" : @(self.failedQuestCount)};
+             @"failedQuestCount" : @(self.failedQuestCount),
+             @"observer" : self.observer ? [self.observer toJSON] : [NSNull null]};
 }
 
 @end

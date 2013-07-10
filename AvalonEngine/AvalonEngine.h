@@ -29,7 +29,7 @@
 
 @protocol AvalonDecider <NSObject>
 
-- (NSArray *)questProposalOfSize:(NSUInteger)size gameState:(AvalonGame *)state;
+- (NSArray *)questProposalForGameState:(AvalonGame *)state;
 
 - (BOOL)acceptProposalForGameState:(AvalonGame *)state;
 
