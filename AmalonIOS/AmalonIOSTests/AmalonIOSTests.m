@@ -1,18 +1,18 @@
 //
-//  AmalonAppTests.m
-//  AmalonAppTests
+//  AmalonIOSTests.m
+//  AmalonIOSTests
 //
-//  Created by Brandon Smith on 7/6/13.
-//  Copyright (c) 2013 Brandon Smith. All rights reserved.
+//  Created by Nathaniel Troutman on 7/9/13.
+//  Copyright (c) 2013 TokenGnomeLLC. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>
 
-@interface AmalonAppTests : XCTestCase
+@interface AmalonIOSTests : XCTestCase
 
 @end
 
-@implementation AmalonAppTests
+@implementation AmalonIOSTests
 
 - (void)setUp
 {
