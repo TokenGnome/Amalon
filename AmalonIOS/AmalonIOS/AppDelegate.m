@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "Avalon.h"
+#import <Avalon.h>
 #import "AvalonEngine.h"
 #import "AvalonGameController.h"
 #import "AvalonGame.h"
