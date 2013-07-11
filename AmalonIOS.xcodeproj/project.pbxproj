@@ -391,7 +391,7 @@
 					"$(SRCROOT)/../../../Library/Developer/Xcode/DerivedData/Amalon-fpwigmrsewsythastgoraebxhxku/Build/Products/Debug-iphoneos",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				USER_HEADER_SEARCH_PATHS = ../AmalonEngine/AmalonEngine;
+				USER_HEADER_SEARCH_PATHS = AmalonEngine/;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -410,7 +410,7 @@
 					"$(SRCROOT)/../../../Library/Developer/Xcode/DerivedData/Amalon-fpwigmrsewsythastgoraebxhxku/Build/Products/Debug-iphoneos",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				USER_HEADER_SEARCH_PATHS = ../AmalonEngine/AmalonEngine;
+				USER_HEADER_SEARCH_PATHS = AmalonEngine/;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
