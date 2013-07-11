@@ -6,6 +6,19 @@
 //  Copyright (c) 2013 Brandon Smith. All rights reserved.
 //
 
+@protocol AvalonJSON <NSObject>
+- (id)toJSON;
+@end
+
+@interface NSObject (AvalonJSON) <AvalonJSON>
+@end
+
+@interface NSArray (AvalonJSON) <AvalonJSON>
+@end
+
+@interface NSDictionary (AvalonJSON) <AvalonJSON>
+@end
+
 #ifndef Avalon_h
 #define Avalon_h
 

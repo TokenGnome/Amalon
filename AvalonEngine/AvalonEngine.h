@@ -11,30 +11,39 @@
 
 @class AvalonGame, AvalonPlayer, AvalonQuest, AvalonRole;
 
-@protocol AvalonDecider;
+@protocol AvalonEngineDelegate;
 
 @interface AvalonEngine : NSObject
 
 + (instancetype)engine;
 
-- (void)addPlayer:(NSString *)playerId toGame:(AvalonGame *)game decider:(id<AvalonDecider>)controller;
-
-- (void)removePlayer:(NSString *)playerId fromGame:(AvalonGame *)game;
-
-- (void)startGame:(AvalonGame *)game withVariant:(AvalonGameVariant)variant;
+@property (nonatomic, weak) id<AvalonEngineDelegate> delegate;
+@property (nonatomic, strong) NSMutableDictionary *deciders;
 
 - (void)step:(AvalonGame *)game;
 
+- (AvalonGame *)gameStateForPlayer:(NSString *)playerId game:(AvalonGame *)game;
+
+- (NSString *)playerIdForRole:(AvalonRoleType)role game:(AvalonGame *)game;
+
+- (NSError *)proposeQuest:(NSArray *)playerIds proposer:(NSString *)playerId game:(AvalonGame *)game;
+
+- (NSError *)acceptProposal:(BOOL)vote voter:(NSString *)playerId game:(AvalonGame *)game;
+
+- (NSError *)assassinatePlayer:(NSString *)playerId assassin:(NSString *)assassinId game:(AvalonGame *)game;
+
+- (NSError *)passQuest:(BOOL)vote voter:(NSString *)playerId game:(AvalonGame *)game;
+
 @end
 
-@protocol AvalonDecider <NSObject>
+@protocol AvalonEngineDelegate <NSObject>
 
-- (NSArray *)questProposalForGameState:(AvalonGame *)state;
+- (void)gameNeedsProposal:(AvalonGame *)game;
 
-- (BOOL)acceptProposalForGameState:(AvalonGame *)state;
+- (void)gameNeedsVotes:(AvalonGame *)game;
 
-- (BOOL)passQuestForGameState:(AvalonGame *)state;
+- (void)gameNeedsPass:(AvalonGame *)game;
 
-- (NSString *)playerIdToAssassinateForGameState:(AvalonGame *)state;
+- (void)gameNeedsAssassinationTarget:(AvalonGame *)game;
 
 @end

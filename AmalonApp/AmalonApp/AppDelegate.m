@@ -9,8 +9,10 @@
 #import "AppDelegate.h"
 #import "Avalon.h"
 #import "AvalonEngine.h"
+#import "AvalonGameController.h"
 #import "AvalonGame.h"
 #import "AvalonPlayer.h"
+#import "AvalonQuest.h"
 #import "AvalonRole.h"
 #import "AbstractDecider.h"
 #import "JavaScriptDecider.h"
@@ -27,31 +29,25 @@ NSString *BundledScript(NSString *nameWithoutExtension)
 };
 
 @interface AppDelegate ()
+@property (nonatomic, strong) AvalonGameController *controller;
 @property (nonatomic, strong) NSMutableDictionary *results;
-@property (nonatomic, strong) AvalonEngine *engine;
 @property (nonatomic, assign) NSUInteger goodWins;
 @property (nonatomic, assign) NSUInteger evilWins;
 @end
 
 @implementation AppDelegate
 
-- (void)runSampleGame:(id<AvalonDecider>)bot playerCount:(NSUInteger)size variant:(AvalonGameVariant)variant
+- (void)runSampleGameWithPlayerCount:(NSUInteger)size variant:(AvalonGameVariant)variant
 {
-    AvalonEngine *e = self.engine;
-    AvalonGame *g = [AvalonGame new];
-    
-    AbstractDecider *rnd = [AbstractDecider new];
-        
+    AvalonGame *g = [AvalonGame gameWithVariant:variant];
     for (int i = 1; i <= size; i++) {
-        id<AvalonDecider> d = (i % 2 == 0) ? bot : bot;
-        [e addPlayer:[NSString stringWithFormat:@"%@ %d", (i%2 == 0) ? @"RND" : @"SMP", i] toGame:g decider:d];
+        AvalonPlayer *p = [AvalonPlayer playerWithId:[NSString stringWithFormat:@"BOT %d", i]];
+        [g addPlayer:p];
     }
-    [e startGame:g withVariant:variant];
-    
     while (! [g isFinished]) {
-        [e step:g];
+        [self.controller.engine step:g];
     }
-    [e step:g];
+    [self.controller.engine step:g];
     
     BOOL goodWin = (g.passedQuestCount > g.failedQuestCount) && (g.assassinatedPlayer.role.type != AvalonRoleMerlin);
     goodWin ? self.goodWins++ : self.evilWins++;
@@ -73,8 +69,8 @@ NSString *BundledScript(NSString *nameWithoutExtension)
 
 - (void)runAllGames
 {
-    self.engine = [AvalonEngine engine];
-    JavaScriptDecider *bot = [JavaScriptDecider deciderWithScript:BundledScript(@"simple_bot")];
+    //self.engine = [AvalonEngine engine];
+    //JavaScriptDecider *bot = [JavaScriptDecider deciderWithScript:BundledScript(@"simple_bot")];
     
     NSArray *vars = @[@(AvalonVariantDefault), @(AvalonVariantPercival), @(AvalonVariantMorgana), @(AvalonVariantMordred), @(AvalonVariantNoOberon)];
     NSString *result = @"";
@@ -84,7 +80,7 @@ NSString *BundledScript(NSString *nameWithoutExtension)
             self.results = [NSMutableDictionary new];
             for (int i = 1; i <= 100; i++) {
                 @autoreleasepool {
-                    [self runSampleGame:bot playerCount:numPlayers variant:[var intValue]];
+                    [self runSampleGameWithPlayerCount:numPlayers variant:[var intValue]];
                 }
             }
 
@@ -107,13 +103,17 @@ NSString *BundledScript(NSString *nameWithoutExtension)
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
     
-//    self.engine = [AvalonEngine engine];
-//    [self runSampleGame:[JavaScriptDecider deciderWithScript:BundledScript(@"simple_bot")] playerCount:10 variant:AvalonVariantDefault];
+    self.controller = [AvalonGameController new];
+    self.controller.engine = [AvalonEngine engine];
+    self.controller.engine.delegate = self.controller;
+    self.controller.bot = [JavaScriptDecider deciderWithScript:BundledScript(@"simple_bot")];
     
-    ReplayViewController *gvc = [[ReplayViewController alloc] initWithStyle:UITableViewStylePlain];
+    [self runSampleGameWithPlayerCount:10 variant:AvalonVariantDefault];
     
-    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:gvc];
-    self.window.rootViewController = nav;
+//    ReplayViewController *gvc = [[ReplayViewController alloc] initWithStyle:UITableViewStylePlain];
+//    
+//    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:gvc];
+//    self.window.rootViewController = nav;
     
     [self.window makeKeyAndVisible];
     return YES;

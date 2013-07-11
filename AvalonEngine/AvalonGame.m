@@ -12,9 +12,93 @@
 
 @interface AvalonGame ()
 @property (nonatomic, strong) NSMutableDictionary *playerMap;
+
+@property (nonatomic, strong) NSMutableArray *mutablePlayers;
+@property (nonatomic, strong) NSMutableArray *mutableQuests;
+@property (nonatomic, strong) NSMutableArray *mutableRoles;
+
 @end
 
 @implementation AvalonGame
+
++ (instancetype)gameWithVariant:(AvalonGameVariant)variant
+{
+    return [[self alloc] initWithVariant:variant];
+}
+
++ (instancetype)gameWithPlayers:(NSArray *)players quests:(NSArray *)quests roles:(NSArray *)roles
+{
+    AvalonGame *game = [AvalonGame new];
+    game.mutablePlayers = [players mutableCopy];
+    game.mutableQuests = [quests mutableCopy];
+    game.mutableRoles = [roles mutableCopy];
+    return game;
+}
+
+- (id)initWithVariant:(AvalonGameVariant)variant
+{
+    self = [super init];
+    if (self) {
+        _mutablePlayers = [NSMutableArray new];
+        _mutableQuests = [NSMutableArray new];
+        _mutableRoles = [NSMutableArray new];
+        _voteNumber = 1;
+        _questNumber = 1;
+        _passedQuestCount = 0;
+        _failedQuestCount = 0;
+        _variant = variant;
+        _state = GameStateNotStarted;
+    }
+    return self;
+}
+
+- (id)init
+{
+    return [self initWithVariant:AvalonVariantDefault];
+}
+
+- (instancetype)sanitizedCopyForPlayer:(AvalonPlayer *)player
+{
+    NSMutableArray *players = [NSMutableArray new];
+    NSMutableArray *roles = [NSMutableArray new];
+    for (AvalonPlayer *knownPlayer in self.players) {
+        AvalonPlayer *unknownPlayer = [knownPlayer sanitizedForPlayer:player];
+        [players addObject:unknownPlayer];
+        [roles addObject:knownPlayer.role];
+    }
+    NSMutableArray *quests = [NSMutableArray new];
+    for (AvalonQuest *quest in self.quests) {
+        [quests addObject:[quest sanitizedForPlayer:player]];
+    }
+    
+    AvalonGame *game = [AvalonGame gameWithPlayers:players quests:quests roles:roles];
+    game.currentLeader = [self.currentLeader sanitizedForPlayer:player];
+    game.finished = self.finished;
+    game.state = self.state;
+    game.voteNumber = self.voteNumber;
+    game.questNumber = self.questNumber;
+    game.passedQuestCount = self.passedQuestCount;
+    game.failedQuestCount = self.failedQuestCount;
+    game.observer = player;
+    return game;
+}
+
+#pragma mark - Mutations
+
+- (void)addPlayer:(AvalonPlayer *)player
+{
+    [self.mutablePlayers addObject:player];
+}
+
+- (void)removePlayer:(AvalonPlayer *)player
+{
+    [self.mutablePlayers removeObject:player];
+}
+
+- (NSArray *)players
+{
+    return [self.mutablePlayers copy];
+}
 
 - (BOOL)hasPlayer:(AvalonPlayer *)player
 {
@@ -74,64 +158,24 @@
     _state = state;
 }
 
-- (NSMutableArray *)roles
+- (NSArray *)roles
 {
-    if (_roles) return _roles;
-    NSMutableArray *roles = [NSMutableArray new];
-    for (AvalonPlayer *player in self.players) {
-        [roles addObject:player.role];
-    }
-    return roles;
+    return [self.mutableRoles copy];
 }
 
-+ (instancetype)gameWithPlayers:(NSArray *)players quests:(NSArray *)quests roles:(NSArray *)roles
+- (void)addQuest:(AvalonQuest *)quest
 {
-    AvalonGame *game = [AvalonGame new];
-    game.players = [players mutableCopy];
-    game.quests = [players mutableCopy];
-    game.roles = [roles mutableCopy];
-    return game;
+    [self.mutableQuests addObject:quest];
 }
 
-- (id)init
+- (NSArray *)quests
 {
-    self = [super init];
-    if (self) {
-        _players = [NSMutableArray new];
-        _quests = [NSMutableArray new];
-        _voteNumber = 1;
-        _questNumber = 1;
-        _passedQuestCount = 0;
-        _failedQuestCount = 0;
-    }
-    return self;
+    return [self.mutableQuests copy];
 }
 
-- (instancetype)sanitizedCopyForPlayer:(AvalonPlayer *)player
+- (AvalonQuest *)currentQuest
 {
-    NSMutableArray *players = [NSMutableArray new];
-    NSMutableArray *roles = [NSMutableArray new];
-    for (AvalonPlayer *knownPlayer in self.players) {
-        AvalonPlayer *unknownPlayer = [knownPlayer sanitizedForPlayer:player];
-        [players addObject:unknownPlayer];
-        [roles addObject:knownPlayer.role];
-    }
-    NSMutableArray *quests = [NSMutableArray new];
-    for (AvalonQuest *quest in self.quests) {
-        [quests addObject:[quest sanitizedForPlayer:player]];
-    }
-
-    AvalonGame *game = [AvalonGame gameWithPlayers:players quests:quests roles:roles];
-    game.currentLeader = [self.currentLeader sanitizedForPlayer:player];
-    game.currentQuest = [self.currentQuest sanitizedForPlayer:player];
-    game.finished = self.finished;
-    game.state = self.state;
-    game.voteNumber = self.voteNumber;
-    game.questNumber = self.questNumber;
-    game.passedQuestCount = self.passedQuestCount;
-    game.failedQuestCount = self.failedQuestCount;
-    game.observer = player;
-    return game;
+    return [self.quests lastObject];
 }
 
 #pragma mark - JSON

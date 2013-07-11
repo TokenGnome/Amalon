@@ -33,6 +33,7 @@
 		68D5C3B1178B94DF005BC281 /* AvalonProposal.m in Sources */ = {isa = PBXBuildFile; fileRef = 68D5C3B0178B94DF005BC281 /* AvalonProposal.m */; };
 		68D5C3B6178BCDE3005BC281 /* QuestCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 68D5C3B3178BCDE3005BC281 /* QuestCell.m */; };
 		68D5C3B7178BCDE3005BC281 /* QuestPlayersView.m in Sources */ = {isa = PBXBuildFile; fileRef = 68D5C3B5178BCDE3005BC281 /* QuestPlayersView.m */; };
+		68DE9203178E2B4B0013550C /* AvalonGameController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68DE9202178E2B4B0013550C /* AvalonGameController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +90,8 @@
 		68D5C3B3178BCDE3005BC281 /* QuestCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestCell.m; sourceTree = "<group>"; };
 		68D5C3B4178BCDE3005BC281 /* QuestPlayersView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestPlayersView.h; sourceTree = "<group>"; };
 		68D5C3B5178BCDE3005BC281 /* QuestPlayersView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestPlayersView.m; sourceTree = "<group>"; };
+		68DE9201178E2B4B0013550C /* AvalonGameController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AvalonGameController.h; sourceTree = "<group>"; };
+		68DE9202178E2B4B0013550C /* AvalonGameController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AvalonGameController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,6 +209,8 @@
 				68913FCF1788BD5000ED0EDE /* AvalonEngine.m */,
 				68913FD01788BD5000ED0EDE /* AvalonGame.h */,
 				68913FD11788BD5000ED0EDE /* AvalonGame.m */,
+				68DE9201178E2B4B0013550C /* AvalonGameController.h */,
+				68DE9202178E2B4B0013550C /* AvalonGameController.m */,
 				68913FD21788BD5000ED0EDE /* AvalonPlayer.h */,
 				68913FD31788BD5000ED0EDE /* AvalonPlayer.m */,
 				68913FD41788BD5000ED0EDE /* AvalonQuest.h */,
@@ -336,6 +341,7 @@
 				68D5C3B1178B94DF005BC281 /* AvalonProposal.m in Sources */,
 				68D5C3B7178BCDE3005BC281 /* QuestPlayersView.m in Sources */,
 				68913FDA1788BD5000ED0EDE /* AvalonGame.m in Sources */,
+				68DE9203178E2B4B0013550C /* AvalonGameController.m in Sources */,
 				68913FF21789C17C00ED0EDE /* JavaScriptDecider.m in Sources */,
 				68913FD81788BD5000ED0EDE /* AbstractDecider.m in Sources */,
 				68913FEC17890BCA00ED0EDE /* ReplayViewController.m in Sources */,

@@ -7,11 +7,7 @@
 //
 
 #import "AbstractDecider.h"
-#import "AvalonGame.h"
-#import "AvalonPlayer.h"
-#import "AvalonProposal.h"
-#import "AvalonQuest.h"
-#import "AvalonRole.h"
+#import "AvalonGameController.h"
 
 @implementation AbstractDecider
 

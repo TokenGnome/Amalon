@@ -8,12 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import "Avalon.h"
-#import "AvalonJSExports.h"
 #import "AvalonProposal.h"
 
 @class AvalonPlayer;
 
-@interface AvalonQuest : NSObject <AvalonQuestExport>
+@interface AvalonQuest : NSObject
 
 + (instancetype)questWithSize:(NSUInteger)numPlayers number:(NSUInteger)num failsRequired:(NSUInteger)numFails;
 

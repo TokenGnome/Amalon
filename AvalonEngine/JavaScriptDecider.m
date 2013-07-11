@@ -13,6 +13,21 @@
 #import "AvalonPlayer.h"
 #import "AvalonRole.h"
 
+@implementation AvalonGame (JSDecider)
+@end
+
+@implementation AvalonPlayer (JSDecider)
+@end
+
+@implementation AvalonProposal (JSDecider)
+@end
+
+@implementation AvalonQuest (JSDecider)
+@end
+
+@implementation AvalonRole (JSDecider)
+@end
+
 @interface JavaScriptDecider ()
 @property (nonatomic, strong) JSContext *context;
 @end

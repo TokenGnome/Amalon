@@ -8,6 +8,7 @@
 
 #import "ReplayViewController.h"
 #import "QuestCell.h"
+#import "AvalonGameController.h"
 #import "AvalonEngine.h"
 #import "AvalonGame.h"
 #import "AvalonQuest.h"
@@ -32,18 +33,18 @@
     
     if (!self.decider) self.decider = [AbstractDecider new];
     
-    [self.engine addPlayer:@"JT Bot 1" toGame:self.game decider:self.decider];
-    [self.engine addPlayer:@"JT Bot 2" toGame:self.game decider:self.decider];
-    [self.engine addPlayer:@"JT Bot 3" toGame:self.game decider:self.decider];
-    [self.engine addPlayer:@"JT Bot 4" toGame:self.game decider:self.decider];
-    [self.engine addPlayer:@"JT Bot 5" toGame:self.game decider:self.decider];
-    [self.engine addPlayer:@"JS Bot 1" toGame:self.game decider:self.decider];
-    [self.engine addPlayer:@"JS Bot 2" toGame:self.game decider:self.decider];
-    [self.engine addPlayer:@"JS Bot 3" toGame:self.game decider:self.decider];
-    [self.engine addPlayer:@"JS Bot 4" toGame:self.game decider:self.decider];
-    [self.engine addPlayer:@"JS Bot 5" toGame:self.game decider:self.decider];
-    
-    [self.engine startGame:self.game withVariant:AvalonVariantNoOberon];
+//    [self.engine addPlayer:@"JT Bot 1" toGame:self.game decider:self.decider];
+//    [self.engine addPlayer:@"JT Bot 2" toGame:self.game decider:self.decider];
+//    [self.engine addPlayer:@"JT Bot 3" toGame:self.game decider:self.decider];
+//    [self.engine addPlayer:@"JT Bot 4" toGame:self.game decider:self.decider];
+//    [self.engine addPlayer:@"JT Bot 5" toGame:self.game decider:self.decider];
+//    [self.engine addPlayer:@"JS Bot 1" toGame:self.game decider:self.decider];
+//    [self.engine addPlayer:@"JS Bot 2" toGame:self.game decider:self.decider];
+//    [self.engine addPlayer:@"JS Bot 3" toGame:self.game decider:self.decider];
+//    [self.engine addPlayer:@"JS Bot 4" toGame:self.game decider:self.decider];
+//    [self.engine addPlayer:@"JS Bot 5" toGame:self.game decider:self.decider];
+//    
+//    [self.engine startGame:self.game withVariant:AvalonVariantNoOberon];
 }
 
 - (void)stepGame

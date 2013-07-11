@@ -7,11 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "AvalonJSExports.h"
 
 @class AvalonRole;
 
-@interface AvalonPlayer : NSObject <AvalonPlayerExport>
+@interface AvalonPlayer : NSObject
 
 + (instancetype)playerWithId:(NSString *)playerId role:(AvalonRole *)role;
 

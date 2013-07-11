@@ -7,11 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "AvalonJSExports.h"
+#import "Avalon.h"
 
 @class AvalonPlayer, AvalonQuest;
 
-@interface AvalonProposal : NSObject <AvalonProposalExport>
+@interface AvalonProposal : NSObject
 
 + (instancetype)proposalWithPlayers:(NSArray *)players proposer:(AvalonPlayer *)proposer;
 
