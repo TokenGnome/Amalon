@@ -7,29 +7,22 @@ An Avalon (Resistance) engine for simulating, replaying, or scripting games
 
 Right now the engine can be used to run a non-interactive game using custom deciders (bots).
 
-The AbstractDecider (seen below) implements the AvalonDecider protocol, but acts randomly.  It is intended to be subclassed.
-
 ```objective-c
-AvalonEngine *engine = [AvalonEngine engine];
-AvalonGame *game = [AvalonEngine newGame];
-JavaScriptDecider *bot = [JavaScriptDecider deciderWithScript:BundledScript(@"simple_bot")];
+AvalonGameController *c = [AvalonGameController new];
+c.engine = [AvalonEngine engine];
+c.engine.delegate = c;
+c.bot = [JavaScriptDecider deciderWithScript:BundledScript(@"simple_bot")];
 
-[engine addPlayer:@"Player1" toGame:game decider:bot];
-[engine addPlayer:@"Player2" toGame:game decider:bot];
-[engine addPlayer:@"Player3" toGame:game decider:bot];
-[engine addPlayer:@"Player4" toGame:game decider:bot];
-[engine addPlayer:@"Player5" toGame:game decider:bot];
-[engine addPlayer:@"Player6" toGame:game decider:bot];
-[engine addPlayer:@"Player7" toGame:game decider:bot];
-
-[e startGame:g withVariant:variant];
+AvalonGame *g = [AvalonGame gameWithVariant:AvalonVariantDefault];
+for (int i = 1; i <= 10; i++) {
+    AvalonPlayer *p = [AvalonPlayer playerWithId:[NSString stringWithFormat:@"BOT %d", i]];
+    [g addPlayer:p];
+}
 while (! [g isFinished]) {
-    [e step:g];
+    [c.engine step:g];
 }
 
-NSLog(@"Good: %d | Evil: %d", game.passedQuestCount, game.failedQuestCount);
-NSLog(@"Outcome:\n\t%@", [game.quests componentsJoinedByString:@"\n\t"]);
-NSLog(@"Assassinated player: %@", game.assassinatedPlayer);
+BOOL goodWin = (g.passedQuestCount > g.failedQuestCount) && (g.assassinatedPlayer.role.type != AvalonRoleMerlin);
 ```
 
 ## Creating deciders
@@ -39,28 +32,38 @@ NSLog(@"Assassinated player: %@", game.assassinatedPlayer);
 All deciders must implement the AvalonDecider protocol:
 
 ```objective-c
-@property (nonatomic, strong) AvalonRole *role;
+@protocol AvalonDecider <NSObject>
 
-@property (nonatomic, copy) NSString *playerId;
+- (NSArray *)questProposalForGameState:(AvalonGame *)state;
 
-- (NSArray *)questProposalOfSize:(NSUInteger)size gameState:(AvalonGame *)state;
+- (BOOL)acceptProposalForGameState:(AvalonGame *)state;
 
-- (BOOL)acceptProposal:(AvalonQuest *)quest gameState:(AvalonGame *)state;
-
-- (BOOL)passQuest:(AvalonQuest *)quest gameState:(AvalonGame *)state;
+- (BOOL)passQuestForGameState:(AvalonGame *)state;
 
 - (NSString *)playerIdToAssassinateForGameState:(AvalonGame *)state;
+
+@end
 ```
 
 See the AbstractDecider class for an example implementation.
 
 ### JavaScript Deciders
 
-Deciders can also be implemented in javascript.  See the [wiki page](https://github.com/TokenGnome/Amalon/wiki/Using-JavaScript-for-Deciders)
+Deciders can also be implemented in javascript using a similar interface:
 
-random_bot.js is a very simple implementation in javascript.
+```javascript
+var proposeQuest = function(state) { /* array of player id strings */ };
 
-## Example
+var acceptProposal = function(state) { /* boolean for vote */ };
+
+var passQuest = function(state) { /* boolean for pass */ };
+
+var assassinatePlayer = function(state) { /* player id string to assassinate */ };
+```
+
+See the [wiki page](https://github.com/TokenGnome/Amalon/wiki/Using-JavaScript-for-Deciders)
+
+## Example of iOS version
 
 Update, getting prettier:
 
