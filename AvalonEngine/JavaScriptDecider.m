@@ -7,11 +7,6 @@
 //
 
 #import "JavaScriptDecider.h"
-#import <JavaScriptCore/JavaScriptCore.h>
-
-#import "AvalonGame.h"
-#import "AvalonPlayer.h"
-#import "AvalonRole.h"
 
 @implementation AvalonGame (JSDecider)
 @end

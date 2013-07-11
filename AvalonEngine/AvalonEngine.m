@@ -7,11 +7,6 @@
 //
 
 #import "AvalonEngine.h"
-#import "AvalonGame.h"
-#import "AvalonQuest.h"
-#import "AvalonPlayer.h"
-#import "AvalonProposal.h"
-#import "AvalonRole.h"
 
 NSArray * GenerateRoles(AvalonGameVariant mask, NSUInteger playerCount)
 {
@@ -92,6 +87,43 @@ NSUInteger FailsRequiredForQuestNumber(NSUInteger questNumber, NSUInteger player
     if (questNumber == 4 && playerCount > 6) return 2;
     return 1;
 }
+
+AvalonRoleType RoleAsSeenByRole(AvalonRoleType targetRole, AvalonRoleType observerRole)
+{
+    AvalonRoleType knownRole;
+    
+    switch (observerRole) {
+        case AvalonRoleServant:
+        case AvalonRoleOberon:
+            knownRole = AvalonRoleNone;
+            break;
+            
+        case AvalonRoleMinion:
+        case AvalonRoleAssassin:
+        case AvalonRoleMordred:
+        case AvalonRoleMorgana:
+            if (targetRole & AvalonRoleEvilNotOberon) knownRole = AvalonRoleEvilNotOberon;
+            else if (targetRole & AvalonRoleGoodOrOberon) knownRole = AvalonRoleGoodOrOberon;
+            else knownRole = AvalonRoleNone;
+            break;
+            
+        case AvalonRoleMerlin:
+            if (targetRole & AvalonRoleEvilNotMordred) knownRole = AvalonRoleEvilNotMordred;
+            else if (targetRole & AvalonRoleGoodOrMordred) knownRole = AvalonRoleGoodOrMordred;
+            else knownRole = AvalonRoleNone;
+            break;
+            
+        case AvalonRolePercival:
+            if (targetRole & AvalonRoleMerlinOrMorgana) knownRole = AvalonRoleMerlinOrMorgana;
+            else knownRole = AvalonRoleNone;
+            break;
+            
+        default:
+            knownRole = AvalonRoleNone;
+            break;
+    }
+    return knownRole;
+};
 
 NSString *kAvalonRuleErrorDomain = @"com.tokengnome.avalon.error.rules";
 
@@ -203,7 +235,7 @@ NSString *kAvalonRuleErrorDomain = @"com.tokengnome.avalon.error.rules";
         }
             
         case GameStateEnded: {
-            NSLog(@"Good: %d | Evil: %d", game.passedQuestCount, game.failedQuestCount);
+            NSLog(@"Good: %lu | Evil: %lu", (unsigned long)game.passedQuestCount, (unsigned long)game.failedQuestCount);
             NSLog(@"Outcome:\n\t%@", [game.quests componentsJoinedByString:@"\n\t"]);
             NSLog(@"Assassinated player: %@", game.assassinatedPlayer);
             break;

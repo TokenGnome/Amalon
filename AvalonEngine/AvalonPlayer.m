@@ -28,8 +28,7 @@
 
 - (instancetype)sanitizedForPlayer:(AvalonPlayer *)observer
 {
-    AvalonRoleType knownRoles = KnownRolesForRoleType(observer.role.type);
-    AvalonRoleType sanitizedRole = (knownRoles & self.role.type) ? knownRoles : AvalonRoleNone;
+    AvalonRoleType sanitizedRole = RoleAsSeenByRole(self.role.type, observer.role.type);
     return [AvalonPlayer playerWithId:self.playerId role:[AvalonRole roleWithType:sanitizedRole]];
 }
 

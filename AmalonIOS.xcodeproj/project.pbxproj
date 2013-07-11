@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F141568B178F13290077CD29 /* random_bot.js in Sources */ = {isa = PBXBuildFile; fileRef = F1415689178F13290077CD29 /* random_bot.js */; };
-		F141568C178F13290077CD29 /* simple_bot.js in Sources */ = {isa = PBXBuildFile; fileRef = F141568A178F13290077CD29 /* simple_bot.js */; };
 		F141568D178F13AC0077CD29 /* random_bot.js in Resources */ = {isa = PBXBuildFile; fileRef = F1415689178F13290077CD29 /* random_bot.js */; };
 		F141568E178F13AC0077CD29 /* simple_bot.js in Resources */ = {isa = PBXBuildFile; fileRef = F141568A178F13290077CD29 /* simple_bot.js */; };
 		F1C028CD178E5AAF00D87BD3 /* libAvalonEngineIOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F1C028CC178E5AAF00D87BD3 /* libAvalonEngineIOS.a */; };
@@ -288,11 +286,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F141568C178F13290077CD29 /* simple_bot.js in Sources */,
 				F1D2627A178D1C190076AF97 /* AppDelegate.m in Sources */,
 				F1D26279178D1C190076AF97 /* QuestPlayersView.m in Sources */,
 				F1D2627B178D1C190076AF97 /* ReplayViewController.m in Sources */,
-				F141568B178F13290077CD29 /* random_bot.js in Sources */,
 				F1D26278178D1C190076AF97 /* QuestCell.m in Sources */,
 				F1D2623C178D1BFB0076AF97 /* main.m in Sources */,
 			);

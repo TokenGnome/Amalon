@@ -8,11 +8,6 @@
 
 #import <Foundation/Foundation.h>
 #import "AvalonEngine.h"
-#import "AvalonGame.h"
-#import "AvalonQuest.h"
-#import "AvalonPlayer.h"
-#import "AvalonProposal.h"
-#import "AvalonRole.h"
 
 @protocol AvalonDecider;
 

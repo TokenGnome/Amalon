@@ -7,9 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Avalon.h"
-
-@class AvalonGame, AvalonPlayer, AvalonQuest, AvalonRole;
+#import "AvalonTypes.h"
+#import "AvalonGame.h"
+#import "AvalonQuest.h"
+#import "AvalonPlayer.h"
+#import "AvalonProposal.h"
+#import "AvalonRole.h"
 
 @protocol AvalonEngineDelegate;
 

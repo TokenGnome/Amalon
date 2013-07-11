@@ -8,6 +8,7 @@
 
 #import "AvalonProposal.h"
 #import "AvalonPlayer.h"
+#import "AvalonTypes.h"
 
 @implementation AvalonProposal
 
@@ -84,7 +85,7 @@
         if ([playerId isEqualToString:player.playerId]) {
             prop.results[playerId] = self.results[playerId];
         } else {
-            NSString *anonymousId = [NSString stringWithFormat:@"Anonymous %d", idx];
+            NSString *anonymousId = [NSString stringWithFormat:@"Anonymous %lu", (unsigned long)idx];
             prop.results[anonymousId] = self.results[playerId];
             idx++;
         }

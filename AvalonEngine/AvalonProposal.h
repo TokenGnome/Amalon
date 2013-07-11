@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Avalon.h"
 
 @class AvalonPlayer, AvalonQuest;
 

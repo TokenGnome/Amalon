@@ -8,50 +8,6 @@
 
 #import "AvalonRole.h"
 
-AvalonRoleType KnownRolesForRoleType(AvalonRoleType role)
-{
-    AvalonRoleType knownRoleTypes;
-    
-    switch (role) {
-        case AvalonRoleServant:
-            knownRoleTypes = AvalonRoleNone;
-            break;
-            
-        case AvalonRoleMinion:
-            knownRoleTypes = AvalonRoleEvilNotOberon;
-            break;
-            
-        case AvalonRoleAssassin:
-            knownRoleTypes = AvalonRoleEvilNotOberon;
-            break;
-            
-        case AvalonRoleMerlin:
-            knownRoleTypes = AvalonRoleEvilNotMordred;
-            break;
-            
-        case AvalonRoleMordred:
-            knownRoleTypes = AvalonRoleEvilNotOberon;
-            break;
-            
-        case AvalonRoleMorgana:
-            knownRoleTypes = AvalonRoleEvilNotOberon;
-            break;
-            
-        case AvalonRolePercival:
-            knownRoleTypes = AvalonRoleMerlinOrMorgana;
-            break;
-            
-        case AvalonRoleOberon:
-            knownRoleTypes = AvalonRoleNone;
-            break;
-            
-        default:
-            knownRoleTypes = AvalonRoleNone;
-            break;
-    }
-    return knownRoleTypes;
-}
-
 NSString *NameForRoleType(AvalonRoleType role)
 {
     NSString *name;
@@ -91,11 +47,19 @@ NSString *NameForRoleType(AvalonRoleType role)
             break;
             
         case AvalonRoleEvilNotOberon:
-            name = @"Non-Oberon Minion";
+            name = @"Non-Oberon Evil";
+            break;
+            
+        case AvalonRoleGoodOrOberon:
+            name = @"Oberon or Good";
             break;
             
         case AvalonRoleEvilNotMordred:
-            name = @"Non-Mordred Minion";
+            name = @"Non-Mordred Evil";
+            break;
+        
+        case AvalonRoleGoodOrMordred:
+            name = @"Mordred or Good";
             break;
             
         case AvalonRoleMerlinOrMorgana:

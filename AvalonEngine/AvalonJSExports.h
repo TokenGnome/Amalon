@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <JavaScriptCore/JavaScriptCore.h>
-#import "Avalon.h"
+#import "AvalonTypes.h"
 
 @class AvalonGame, AvalonPlayer, AvalonProposal, AvalonRole, AvalonQuest;
 

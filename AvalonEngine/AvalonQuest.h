@@ -7,10 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Avalon.h"
-#import "AvalonProposal.h"
 
-@class AvalonPlayer;
+@class AvalonPlayer, AvalonProposal;
 
 @interface AvalonQuest : NSObject
 

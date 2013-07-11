@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Avalon.h"
+#import "AvalonTypes.h"
 
 @interface AvalonRole : NSObject
 

@@ -8,6 +8,8 @@
 
 #import "AvalonQuest.h"
 #import "AvalonPlayer.h"
+#import "AvalonProposal.h"
+#import "AvalonTypes.h"
 
 @implementation AvalonQuest
 

@@ -8,19 +8,11 @@
 
 #import "AppDelegate.h"
 #import <Avalon.h>
-#import "AvalonEngine.h"
-#import "AvalonGameController.h"
-#import "AvalonGame.h"
-#import "AvalonPlayer.h"
-#import "AvalonQuest.h"
-#import "AvalonRole.h"
+
 #import "AbstractDecider.h"
 #import "JavaScriptDecider.h"
 
 #import "ReplayViewController.h"
-
-#import <JavaScriptCore/JavaScriptCore.h>
-#import "AvalonJSExports.h"
 
 NSString *BundledScript(NSString *nameWithoutExtension)
 {
