@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F141568B178F13290077CD29 /* random_bot.js in Sources */ = {isa = PBXBuildFile; fileRef = F1415689178F13290077CD29 /* random_bot.js */; };
+		F141568C178F13290077CD29 /* simple_bot.js in Sources */ = {isa = PBXBuildFile; fileRef = F141568A178F13290077CD29 /* simple_bot.js */; };
+		F141568D178F13AC0077CD29 /* random_bot.js in Resources */ = {isa = PBXBuildFile; fileRef = F1415689178F13290077CD29 /* random_bot.js */; };
+		F141568E178F13AC0077CD29 /* simple_bot.js in Resources */ = {isa = PBXBuildFile; fileRef = F141568A178F13290077CD29 /* simple_bot.js */; };
 		F1C028CD178E5AAF00D87BD3 /* libAvalonEngineIOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F1C028CC178E5AAF00D87BD3 /* libAvalonEngineIOS.a */; };
 		F1D26230178D1BFB0076AF97 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1D2622F178D1BFB0076AF97 /* Foundation.framework */; };
 		F1D26232178D1BFB0076AF97 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1D26231178D1BFB0076AF97 /* CoreGraphics.framework */; };
@@ -36,9 +40,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		F1C02873178E541500D87BD3 /* libAvalonEngineIOS.a */ = {isa = PBXFileReference; lastKnownFileType = file; name = libAvalonEngineIOS.a; path = "build/Debug-iphoneos/libAvalonEngineIOS.a"; sourceTree = "<group>"; };
-		F1C028CA178E572E00D87BD3 /* libAvalonEngineIOS.a */ = {isa = PBXFileReference; lastKnownFileType = file; name = libAvalonEngineIOS.a; path = "build/Debug-iphoneos/libAvalonEngineIOS.a"; sourceTree = "<group>"; };
-		F1C028CC178E5AAF00D87BD3 /* libAvalonEngineIOS.a */ = {isa = PBXFileReference; lastKnownFileType = file; name = libAvalonEngineIOS.a; path = "build/Debug-iphoneos/libAvalonEngineIOS.a"; sourceTree = "<group>"; };
+		F1415689178F13290077CD29 /* random_bot.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = random_bot.js; sourceTree = "<group>"; };
+		F141568A178F13290077CD29 /* simple_bot.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = simple_bot.js; sourceTree = "<group>"; };
+		F1C02873178E541500D87BD3 /* libAvalonEngineIOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAvalonEngineIOS.a; path = "build/Debug-iphoneos/libAvalonEngineIOS.a"; sourceTree = "<group>"; };
+		F1C028CA178E572E00D87BD3 /* libAvalonEngineIOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAvalonEngineIOS.a; path = "build/Debug-iphoneos/libAvalonEngineIOS.a"; sourceTree = "<group>"; };
+		F1C028CC178E5AAF00D87BD3 /* libAvalonEngineIOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAvalonEngineIOS.a; path = "build/Debug-iphoneos/libAvalonEngineIOS.a"; sourceTree = "<group>"; };
 		F1D2622C178D1BFB0076AF97 /* AmalonIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AmalonIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1D2622F178D1BFB0076AF97 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F1D26231178D1BFB0076AF97 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -90,9 +96,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F1415688178F13290077CD29 /* ExampleBots */ = {
+			isa = PBXGroup;
+			children = (
+				F1415689178F13290077CD29 /* random_bot.js */,
+				F141568A178F13290077CD29 /* simple_bot.js */,
+			);
+			path = ExampleBots;
+			sourceTree = "<group>";
+		};
 		F1D26223178D1BFB0076AF97 = {
 			isa = PBXGroup;
 			children = (
+				F1415688178F13290077CD29 /* ExampleBots */,
 				F1D26235178D1BFB0076AF97 /* AmalonIOS */,
 				F1D26257178D1BFB0076AF97 /* AmalonIOSTests */,
 				F1D2622E178D1BFB0076AF97 /* Frameworks */,
@@ -250,6 +266,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F141568D178F13AC0077CD29 /* random_bot.js in Resources */,
+				F141568E178F13AC0077CD29 /* simple_bot.js in Resources */,
 				F1D2624B178D1BFB0076AF97 /* Images.xcassets in Resources */,
 				F1D2623A178D1BFB0076AF97 /* InfoPlist.strings in Resources */,
 			);
@@ -270,9 +288,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F141568C178F13290077CD29 /* simple_bot.js in Sources */,
 				F1D2627A178D1C190076AF97 /* AppDelegate.m in Sources */,
 				F1D26279178D1C190076AF97 /* QuestPlayersView.m in Sources */,
 				F1D2627B178D1C190076AF97 /* ReplayViewController.m in Sources */,
+				F141568B178F13290077CD29 /* random_bot.js in Sources */,
 				F1D26278178D1C190076AF97 /* QuestCell.m in Sources */,
 				F1D2623C178D1BFB0076AF97 /* main.m in Sources */,
 			);
