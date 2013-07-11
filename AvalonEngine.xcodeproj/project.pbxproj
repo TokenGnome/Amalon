@@ -7,12 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F1D2628B178D1CC40076AF97 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1D2628A178D1CC40076AF97 /* Cocoa.framework */; };
-		F1D2629C178D1CC40076AF97 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1D2629B178D1CC40076AF97 /* XCTest.framework */; };
-		F1D2629D178D1CC40076AF97 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1D2628A178D1CC40076AF97 /* Cocoa.framework */; };
-		F1D262A0178D1CC40076AF97 /* libAmalonEngine.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F1D26287178D1CC40076AF97 /* libAmalonEngine.a */; };
-		F1D262A6178D1CC40076AF97 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F1D262A4178D1CC40076AF97 /* InfoPlist.strings */; };
-		F1D262A8178D1CC40076AF97 /* AmalonEngineTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F1D262A7178D1CC40076AF97 /* AmalonEngineTests.m */; };
+		F1C02877178E54B000D87BD3 /* AvalonGameController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1C02876178E549E00D87BD3 /* AvalonGameController.m */; };
+		F1C0287F178E569500D87BD3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1C0287E178E569500D87BD3 /* Foundation.framework */; };
+		F1C028BE178E56EF00D87BD3 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1D262DE178D1D000076AF97 /* JavaScriptCore.framework */; };
+		F1C028BF178E571A00D87BD3 /* AvalonGameController.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = F1C02875178E549E00D87BD3 /* AvalonGameController.h */; };
+		F1C028C0178E571A00D87BD3 /* AbstractDecider.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = F1D262BA178D1CE00076AF97 /* AbstractDecider.h */; };
+		F1C028C1178E571A00D87BD3 /* AvalonJSExports.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = F1D262BC178D1CE00076AF97 /* AvalonJSExports.h */; };
+		F1C028C2178E571A00D87BD3 /* Avalon.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = F1D262BD178D1CE00076AF97 /* Avalon.h */; };
+		F1C028C3178E571A00D87BD3 /* AvalonEngine.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = F1D262BE178D1CE00076AF97 /* AvalonEngine.h */; };
+		F1C028C4178E571A00D87BD3 /* AvalonGame.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = F1D262C0178D1CE00076AF97 /* AvalonGame.h */; };
+		F1C028C5178E571A00D87BD3 /* AvalonPlayer.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = F1D262C2178D1CE00076AF97 /* AvalonPlayer.h */; };
+		F1C028C6178E571A00D87BD3 /* AvalonQuest.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = F1D262C4178D1CE00076AF97 /* AvalonQuest.h */; };
+		F1C028C7178E571A00D87BD3 /* AvalonProposal.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = F1D262C6178D1CE00076AF97 /* AvalonProposal.h */; };
+		F1C028C8178E571A00D87BD3 /* AvalonRole.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = F1D262C8178D1CE00076AF97 /* AvalonRole.h */; };
+		F1C028C9178E571A00D87BD3 /* JavaScriptDecider.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = F1D262CA178D1CE00076AF97 /* JavaScriptDecider.h */; };
+		F1C028CE178E62F000D87BD3 /* AvalonGameController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1C02876178E549E00D87BD3 /* AvalonGameController.m */; };
+		F1C028CF178E62F000D87BD3 /* AbstractDecider.m in Sources */ = {isa = PBXBuildFile; fileRef = F1D262BB178D1CE00076AF97 /* AbstractDecider.m */; };
+		F1C028D0178E62F000D87BD3 /* AvalonEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = F1D262BF178D1CE00076AF97 /* AvalonEngine.m */; };
+		F1C028D1178E62F000D87BD3 /* AvalonGame.m in Sources */ = {isa = PBXBuildFile; fileRef = F1D262C1178D1CE00076AF97 /* AvalonGame.m */; };
+		F1C028D2178E62F000D87BD3 /* AvalonPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F1D262C3178D1CE00076AF97 /* AvalonPlayer.m */; };
+		F1C028D3178E62F000D87BD3 /* AvalonQuest.m in Sources */ = {isa = PBXBuildFile; fileRef = F1D262C5178D1CE00076AF97 /* AvalonQuest.m */; };
+		F1C028D4178E62F000D87BD3 /* AvalonProposal.m in Sources */ = {isa = PBXBuildFile; fileRef = F1D262C7178D1CE00076AF97 /* AvalonProposal.m */; };
+		F1C028D5178E62F000D87BD3 /* AvalonRole.m in Sources */ = {isa = PBXBuildFile; fileRef = F1D262C9178D1CE00076AF97 /* AvalonRole.m */; };
+		F1C028D6178E62F000D87BD3 /* JavaScriptDecider.m in Sources */ = {isa = PBXBuildFile; fileRef = F1D262CB178D1CE00076AF97 /* JavaScriptDecider.m */; };
 		F1D262CC178D1CE00076AF97 /* AbstractDecider.h in Headers */ = {isa = PBXBuildFile; fileRef = F1D262BA178D1CE00076AF97 /* AbstractDecider.h */; };
 		F1D262CD178D1CE00076AF97 /* AbstractDecider.m in Sources */ = {isa = PBXBuildFile; fileRef = F1D262BB178D1CE00076AF97 /* AbstractDecider.m */; };
 		F1D262CE178D1CE00076AF97 /* AvalonJSExports.h in Headers */ = {isa = PBXBuildFile; fileRef = F1D262BC178D1CE00076AF97 /* AvalonJSExports.h */; };
@@ -33,49 +50,45 @@
 		F1D262DD178D1CE00076AF97 /* JavaScriptDecider.m in Sources */ = {isa = PBXBuildFile; fileRef = F1D262CB178D1CE00076AF97 /* JavaScriptDecider.m */; };
 		F1D262DF178D1D000076AF97 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1D262DE178D1D000076AF97 /* JavaScriptCore.framework */; };
 		F1D262E0178D1D070076AF97 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1D2628D178D1CC40076AF97 /* Foundation.framework */; };
-		F1D262E5178D20F80076AF97 /* AvalonRole.m in Sources */ = {isa = PBXBuildFile; fileRef = F1D262C9178D1CE00076AF97 /* AvalonRole.m */; };
-		F1D262E6178D20F80076AF97 /* AvalonProposal.m in Sources */ = {isa = PBXBuildFile; fileRef = F1D262C7178D1CE00076AF97 /* AvalonProposal.m */; };
-		F1D262E7178D20F80076AF97 /* AvalonEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = F1D262BF178D1CE00076AF97 /* AvalonEngine.m */; };
-		F1D262E8178D20F80076AF97 /* AvalonGame.m in Sources */ = {isa = PBXBuildFile; fileRef = F1D262C1178D1CE00076AF97 /* AvalonGame.m */; };
-		F1D262E9178D20F80076AF97 /* AbstractDecider.m in Sources */ = {isa = PBXBuildFile; fileRef = F1D262BB178D1CE00076AF97 /* AbstractDecider.m */; };
-		F1D262EA178D20F80076AF97 /* JavaScriptDecider.m in Sources */ = {isa = PBXBuildFile; fileRef = F1D262CB178D1CE00076AF97 /* JavaScriptDecider.m */; };
-		F1D262EB178D20F80076AF97 /* AvalonPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F1D262C3178D1CE00076AF97 /* AvalonPlayer.m */; };
-		F1D262EC178D20F80076AF97 /* AvalonQuest.m in Sources */ = {isa = PBXBuildFile; fileRef = F1D262C5178D1CE00076AF97 /* AvalonQuest.m */; };
-		F1D262EE178D20F80076AF97 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1D2628D178D1CC40076AF97 /* Foundation.framework */; };
-		F1D262EF178D20F80076AF97 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1D262DE178D1D000076AF97 /* JavaScriptCore.framework */; };
-		F1D262F0178D20F80076AF97 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1D2628A178D1CC40076AF97 /* Cocoa.framework */; };
-		F1D262F2178D20F80076AF97 /* JavaScriptDecider.h in Headers */ = {isa = PBXBuildFile; fileRef = F1D262CA178D1CE00076AF97 /* JavaScriptDecider.h */; };
-		F1D262F3178D20F80076AF97 /* AvalonJSExports.h in Headers */ = {isa = PBXBuildFile; fileRef = F1D262BC178D1CE00076AF97 /* AvalonJSExports.h */; };
-		F1D262F4178D20F80076AF97 /* AbstractDecider.h in Headers */ = {isa = PBXBuildFile; fileRef = F1D262BA178D1CE00076AF97 /* AbstractDecider.h */; };
-		F1D262F5178D20F80076AF97 /* Avalon.h in Headers */ = {isa = PBXBuildFile; fileRef = F1D262BD178D1CE00076AF97 /* Avalon.h */; };
-		F1D262F6178D20F80076AF97 /* AvalonGame.h in Headers */ = {isa = PBXBuildFile; fileRef = F1D262C0178D1CE00076AF97 /* AvalonGame.h */; };
-		F1D262F7178D20F80076AF97 /* AvalonQuest.h in Headers */ = {isa = PBXBuildFile; fileRef = F1D262C4178D1CE00076AF97 /* AvalonQuest.h */; };
-		F1D262F8178D20F80076AF97 /* AvalonRole.h in Headers */ = {isa = PBXBuildFile; fileRef = F1D262C8178D1CE00076AF97 /* AvalonRole.h */; };
-		F1D262F9178D20F80076AF97 /* AvalonPlayer.h in Headers */ = {isa = PBXBuildFile; fileRef = F1D262C2178D1CE00076AF97 /* AvalonPlayer.h */; };
-		F1D262FA178D20F80076AF97 /* AvalonEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = F1D262BE178D1CE00076AF97 /* AvalonEngine.h */; };
-		F1D262FB178D20F80076AF97 /* AvalonProposal.h in Headers */ = {isa = PBXBuildFile; fileRef = F1D262C6178D1CE00076AF97 /* AvalonProposal.h */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		F1D2629E178D1CC40076AF97 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F1D2627F178D1CC40076AF97 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F1D26286178D1CC40076AF97;
-			remoteInfo = AmalonEngine;
+/* Begin PBXCopyFilesBuildPhase section */
+		F1C0287B178E569500D87BD3 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				F1C028BF178E571A00D87BD3 /* AvalonGameController.h in CopyFiles */,
+				F1C028C0178E571A00D87BD3 /* AbstractDecider.h in CopyFiles */,
+				F1C028C1178E571A00D87BD3 /* AvalonJSExports.h in CopyFiles */,
+				F1C028C2178E571A00D87BD3 /* Avalon.h in CopyFiles */,
+				F1C028C3178E571A00D87BD3 /* AvalonEngine.h in CopyFiles */,
+				F1C028C4178E571A00D87BD3 /* AvalonGame.h in CopyFiles */,
+				F1C028C5178E571A00D87BD3 /* AvalonPlayer.h in CopyFiles */,
+				F1C028C6178E571A00D87BD3 /* AvalonQuest.h in CopyFiles */,
+				F1C028C7178E571A00D87BD3 /* AvalonProposal.h in CopyFiles */,
+				F1C028C8178E571A00D87BD3 /* AvalonRole.h in CopyFiles */,
+				F1C028C9178E571A00D87BD3 /* JavaScriptDecider.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
 		};
-/* End PBXContainerItemProxy section */
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		F1D26287178D1CC40076AF97 /* libAmalonEngine.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAmalonEngine.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1C02875178E549E00D87BD3 /* AvalonGameController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AvalonGameController.h; sourceTree = "<group>"; };
+		F1C02876178E549E00D87BD3 /* AvalonGameController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AvalonGameController.m; sourceTree = "<group>"; };
+		F1C0287D178E569500D87BD3 /* libAvalonEngineIOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAvalonEngineIOS.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1C0287E178E569500D87BD3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		F1C0288E178E569500D87BD3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		F1D26287178D1CC40076AF97 /* libAvalonEngine.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAvalonEngine.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1D2628A178D1CC40076AF97 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		F1D2628D178D1CC40076AF97 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F1D2628E178D1CC40076AF97 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		F1D2628F178D1CC40076AF97 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
-		F1D26292178D1CC40076AF97 /* AmalonEngine-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AmalonEngine-Prefix.pch"; sourceTree = "<group>"; };
-		F1D2629A178D1CC40076AF97 /* AmalonEngineTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AmalonEngineTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1D26292178D1CC40076AF97 /* AvalonEngineIOS-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AvalonEngineIOS-Prefix.pch"; sourceTree = "<group>"; };
 		F1D2629B178D1CC40076AF97 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		F1D262A3178D1CC40076AF97 /* AmalonEngineTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AmalonEngineTests-Info.plist"; sourceTree = "<group>"; };
+		F1D262A3178D1CC40076AF97 /* AvalonEngineTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AvalonEngineTests-Info.plist"; sourceTree = "<group>"; };
 		F1D262A5178D1CC40076AF97 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F1D262A7178D1CC40076AF97 /* AmalonEngineTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AmalonEngineTests.m; sourceTree = "<group>"; };
 		F1D262BA178D1CE00076AF97 /* AbstractDecider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractDecider.h; sourceTree = "<group>"; };
@@ -97,37 +110,24 @@
 		F1D262CA178D1CE00076AF97 /* JavaScriptDecider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JavaScriptDecider.h; sourceTree = "<group>"; };
 		F1D262CB178D1CE00076AF97 /* JavaScriptDecider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JavaScriptDecider.m; sourceTree = "<group>"; };
 		F1D262DE178D1D000076AF97 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		F1D262FF178D20F80076AF97 /* libAmalonEngineIOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAmalonEngineIOS.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		F1C0287A178E569500D87BD3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F1C028BE178E56EF00D87BD3 /* JavaScriptCore.framework in Frameworks */,
+				F1C0287F178E569500D87BD3 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F1D26284178D1CC40076AF97 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				F1D262E0178D1D070076AF97 /* Foundation.framework in Frameworks */,
 				F1D262DF178D1D000076AF97 /* JavaScriptCore.framework in Frameworks */,
-				F1D2628B178D1CC40076AF97 /* Cocoa.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F1D26297178D1CC40076AF97 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F1D2629D178D1CC40076AF97 /* Cocoa.framework in Frameworks */,
-				F1D262A0178D1CC40076AF97 /* libAmalonEngine.a in Frameworks */,
-				F1D2629C178D1CC40076AF97 /* XCTest.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F1D262ED178D20F80076AF97 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F1D262EE178D20F80076AF97 /* Foundation.framework in Frameworks */,
-				F1D262EF178D20F80076AF97 /* JavaScriptCore.framework in Frameworks */,
-				F1D262F0178D20F80076AF97 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,8 +137,8 @@
 		F1D2627E178D1CC40076AF97 = {
 			isa = PBXGroup;
 			children = (
-				F1D26290178D1CC40076AF97 /* AmalonEngine */,
-				F1D262A1178D1CC40076AF97 /* AmalonEngineTests */,
+				F1D26290178D1CC40076AF97 /* AvalonEngine */,
+				F1D262A1178D1CC40076AF97 /* AvalonEngineTests */,
 				F1D26289178D1CC40076AF97 /* Frameworks */,
 				F1D26288178D1CC40076AF97 /* Products */,
 			);
@@ -147,9 +147,8 @@
 		F1D26288178D1CC40076AF97 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F1D26287178D1CC40076AF97 /* libAmalonEngine.a */,
-				F1D2629A178D1CC40076AF97 /* AmalonEngineTests.xctest */,
-				F1D262FF178D20F80076AF97 /* libAmalonEngineIOS.a */,
+				F1D26287178D1CC40076AF97 /* libAvalonEngine.a */,
+				F1C0287D178E569500D87BD3 /* libAvalonEngineIOS.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -160,6 +159,8 @@
 				F1D262DE178D1D000076AF97 /* JavaScriptCore.framework */,
 				F1D2628A178D1CC40076AF97 /* Cocoa.framework */,
 				F1D2629B178D1CC40076AF97 /* XCTest.framework */,
+				F1C0287E178E569500D87BD3 /* Foundation.framework */,
+				F1C0288E178E569500D87BD3 /* UIKit.framework */,
 				F1D2628C178D1CC40076AF97 /* Other Frameworks */,
 			);
 			name = Frameworks;
@@ -175,9 +176,11 @@
 			name = "Other Frameworks";
 			sourceTree = "<group>";
 		};
-		F1D26290178D1CC40076AF97 /* AmalonEngine */ = {
+		F1D26290178D1CC40076AF97 /* AvalonEngine */ = {
 			isa = PBXGroup;
 			children = (
+				F1C02875178E549E00D87BD3 /* AvalonGameController.h */,
+				F1C02876178E549E00D87BD3 /* AvalonGameController.m */,
 				F1D262BA178D1CE00076AF97 /* AbstractDecider.h */,
 				F1D262BB178D1CE00076AF97 /* AbstractDecider.m */,
 				F1D262BC178D1CE00076AF97 /* AvalonJSExports.h */,
@@ -198,30 +201,31 @@
 				F1D262CB178D1CE00076AF97 /* JavaScriptDecider.m */,
 				F1D26291178D1CC40076AF97 /* Supporting Files */,
 			);
-			path = AmalonEngine;
+			path = AvalonEngine;
 			sourceTree = "<group>";
 		};
 		F1D26291178D1CC40076AF97 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				F1D26292178D1CC40076AF97 /* AmalonEngine-Prefix.pch */,
+				F1D26292178D1CC40076AF97 /* AvalonEngineIOS-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		F1D262A1178D1CC40076AF97 /* AmalonEngineTests */ = {
+		F1D262A1178D1CC40076AF97 /* AvalonEngineTests */ = {
 			isa = PBXGroup;
 			children = (
 				F1D262A7178D1CC40076AF97 /* AmalonEngineTests.m */,
 				F1D262A2178D1CC40076AF97 /* Supporting Files */,
 			);
+			name = AvalonEngineTests;
 			path = AmalonEngineTests;
 			sourceTree = "<group>";
 		};
 		F1D262A2178D1CC40076AF97 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				F1D262A3178D1CC40076AF97 /* AmalonEngineTests-Info.plist */,
+				F1D262A3178D1CC40076AF97 /* AvalonEngineTests-Info.plist */,
 				F1D262A4178D1CC40076AF97 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
@@ -247,29 +251,29 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F1D262F1178D20F80076AF97 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F1D262F2178D20F80076AF97 /* JavaScriptDecider.h in Headers */,
-				F1D262F3178D20F80076AF97 /* AvalonJSExports.h in Headers */,
-				F1D262F4178D20F80076AF97 /* AbstractDecider.h in Headers */,
-				F1D262F5178D20F80076AF97 /* Avalon.h in Headers */,
-				F1D262F6178D20F80076AF97 /* AvalonGame.h in Headers */,
-				F1D262F7178D20F80076AF97 /* AvalonQuest.h in Headers */,
-				F1D262F8178D20F80076AF97 /* AvalonRole.h in Headers */,
-				F1D262F9178D20F80076AF97 /* AvalonPlayer.h in Headers */,
-				F1D262FA178D20F80076AF97 /* AvalonEngine.h in Headers */,
-				F1D262FB178D20F80076AF97 /* AvalonProposal.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		F1D26286178D1CC40076AF97 /* AmalonEngine */ = {
+		F1C0287C178E569500D87BD3 /* AvalonEngineIOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F1D262AB178D1CC40076AF97 /* Build configuration list for PBXNativeTarget "AmalonEngine" */;
+			buildConfigurationList = F1C0289B178E569500D87BD3 /* Build configuration list for PBXNativeTarget "AvalonEngineIOS" */;
+			buildPhases = (
+				F1C02879178E569500D87BD3 /* Sources */,
+				F1C0287A178E569500D87BD3 /* Frameworks */,
+				F1C0287B178E569500D87BD3 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AvalonEngineIOS;
+			productName = AvalonEngineIOS;
+			productReference = F1C0287D178E569500D87BD3 /* libAvalonEngineIOS.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		F1D26286178D1CC40076AF97 /* AvalonEngine */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F1D262AB178D1CC40076AF97 /* Build configuration list for PBXNativeTarget "AvalonEngine" */;
 			buildPhases = (
 				F1D26283178D1CC40076AF97 /* Sources */,
 				F1D26284178D1CC40076AF97 /* Frameworks */,
@@ -279,44 +283,9 @@
 			);
 			dependencies = (
 			);
-			name = AmalonEngine;
+			name = AvalonEngine;
 			productName = AmalonEngine;
-			productReference = F1D26287178D1CC40076AF97 /* libAmalonEngine.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		F1D26299178D1CC40076AF97 /* AmalonEngineTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F1D262AE178D1CC40076AF97 /* Build configuration list for PBXNativeTarget "AmalonEngineTests" */;
-			buildPhases = (
-				F1D26296178D1CC40076AF97 /* Sources */,
-				F1D26297178D1CC40076AF97 /* Frameworks */,
-				F1D26298178D1CC40076AF97 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				F1D2629F178D1CC40076AF97 /* PBXTargetDependency */,
-			);
-			name = AmalonEngineTests;
-			productName = AmalonEngineTests;
-			productReference = F1D2629A178D1CC40076AF97 /* AmalonEngineTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		F1D262E3178D20F80076AF97 /* AmalonEngineIOS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F1D262FC178D20F80076AF97 /* Build configuration list for PBXNativeTarget "AmalonEngineIOS" */;
-			buildPhases = (
-				F1D262E4178D20F80076AF97 /* Sources */,
-				F1D262ED178D20F80076AF97 /* Frameworks */,
-				F1D262F1178D20F80076AF97 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = AmalonEngineIOS;
-			productName = AmalonEngine;
-			productReference = F1D262FF178D20F80076AF97 /* libAmalonEngineIOS.a */;
+			productReference = F1D26287178D1CC40076AF97 /* libAvalonEngine.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -327,13 +296,8 @@
 			attributes = {
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = TokenGnomeLLC;
-				TargetAttributes = {
-					F1D26299178D1CC40076AF97 = {
-						TestTargetID = F1D26286178D1CC40076AF97;
-					};
-				};
 			};
-			buildConfigurationList = F1D26282178D1CC40076AF97 /* Build configuration list for PBXProject "AmalonEngine" */;
+			buildConfigurationList = F1D26282178D1CC40076AF97 /* Build configuration list for PBXProject "AvalonEngine" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -345,29 +309,34 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F1D26286178D1CC40076AF97 /* AmalonEngine */,
-				F1D26299178D1CC40076AF97 /* AmalonEngineTests */,
-				F1D262E3178D20F80076AF97 /* AmalonEngineIOS */,
+				F1D26286178D1CC40076AF97 /* AvalonEngine */,
+				F1C0287C178E569500D87BD3 /* AvalonEngineIOS */,
 			);
 		};
 /* End PBXProject section */
 
-/* Begin PBXResourcesBuildPhase section */
-		F1D26298178D1CC40076AF97 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
+/* Begin PBXSourcesBuildPhase section */
+		F1C02879178E569500D87BD3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F1D262A6178D1CC40076AF97 /* InfoPlist.strings in Resources */,
+				F1C028CE178E62F000D87BD3 /* AvalonGameController.m in Sources */,
+				F1C028CF178E62F000D87BD3 /* AbstractDecider.m in Sources */,
+				F1C028D0178E62F000D87BD3 /* AvalonEngine.m in Sources */,
+				F1C028D1178E62F000D87BD3 /* AvalonGame.m in Sources */,
+				F1C028D2178E62F000D87BD3 /* AvalonPlayer.m in Sources */,
+				F1C028D3178E62F000D87BD3 /* AvalonQuest.m in Sources */,
+				F1C028D4178E62F000D87BD3 /* AvalonProposal.m in Sources */,
+				F1C028D5178E62F000D87BD3 /* AvalonRole.m in Sources */,
+				F1C028D6178E62F000D87BD3 /* JavaScriptDecider.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-/* End PBXResourcesBuildPhase section */
-
-/* Begin PBXSourcesBuildPhase section */
 		F1D26283178D1CC40076AF97 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1C02877178E54B000D87BD3 /* AvalonGameController.m in Sources */,
 				F1D262DB178D1CE00076AF97 /* AvalonRole.m in Sources */,
 				F1D262D9178D1CE00076AF97 /* AvalonProposal.m in Sources */,
 				F1D262D1178D1CE00076AF97 /* AvalonEngine.m in Sources */,
@@ -379,38 +348,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F1D26296178D1CC40076AF97 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F1D262A8178D1CC40076AF97 /* AmalonEngineTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F1D262E4178D20F80076AF97 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F1D262E5178D20F80076AF97 /* AvalonRole.m in Sources */,
-				F1D262E6178D20F80076AF97 /* AvalonProposal.m in Sources */,
-				F1D262E7178D20F80076AF97 /* AvalonEngine.m in Sources */,
-				F1D262E8178D20F80076AF97 /* AvalonGame.m in Sources */,
-				F1D262E9178D20F80076AF97 /* AbstractDecider.m in Sources */,
-				F1D262EA178D20F80076AF97 /* JavaScriptDecider.m in Sources */,
-				F1D262EB178D20F80076AF97 /* AvalonPlayer.m in Sources */,
-				F1D262EC178D20F80076AF97 /* AvalonQuest.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		F1D2629F178D1CC40076AF97 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = F1D26286178D1CC40076AF97 /* AmalonEngine */;
-			targetProxy = F1D2629E178D1CC40076AF97 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		F1D262A4178D1CC40076AF97 /* InfoPlist.strings */ = {
@@ -424,6 +362,35 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		F1C0289C178E569500D87BD3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/AvalonEngineIOS.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AvalonEngine/AvalonEngineIOS-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		F1C0289D178E569500D87BD3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/AvalonEngineIOS.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AvalonEngine/AvalonEngineIOS-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		F1D262A9178D1CC40076AF97 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -440,6 +407,7 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Nathaniel Troutman (Y7VSPTMA8D)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -456,9 +424,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				PROVISIONING_PROFILE = "85C1879A-414D-42CA-8931-6B7DFE8C15DF";
 				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -478,6 +449,7 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Nathaniel Troutman (Y7VSPTMA8D)";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -489,8 +461,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = NO;
+				PROVISIONING_PROFILE = "85C1879A-414D-42CA-8931-6B7DFE8C15DF";
 				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -501,7 +477,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AmalonEngine/AmalonEngine-Prefix.pch";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = AvalonEngine;
 				PUBLIC_HEADERS_FOLDER_PATH = "include/$(TARGET_NAME)";
 				SDKROOT = macosx;
 			};
@@ -514,80 +490,24 @@
 				DYLIB_CURRENT_VERSION = 1;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AmalonEngine/AmalonEngine-Prefix.pch";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = AvalonEngine;
 				PUBLIC_HEADERS_FOLDER_PATH = "include/$(TARGET_NAME)";
 				SDKROOT = macosx;
-			};
-			name = Release;
-		};
-		F1D262AF178D1CC40076AF97 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/AmalonEngine.dylib";
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "AmalonEngine/AmalonEngine-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "AmalonEngineTests/AmalonEngineTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		F1D262B0178D1CC40076AF97 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/AmalonEngine.dylib";
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "AmalonEngine/AmalonEngine-Prefix.pch";
-				INFOPLIST_FILE = "AmalonEngineTests/AmalonEngineTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Release;
-		};
-		F1D262FD178D20F80076AF97 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "AmalonEngine/AmalonEngine-Prefix.pch";
-				PRODUCT_NAME = AmalonEngineIOS;
-				PUBLIC_HEADERS_FOLDER_PATH = "include/$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		F1D262FE178D20F80076AF97 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "AmalonEngine/AmalonEngine-Prefix.pch";
-				PRODUCT_NAME = AmalonEngineIOS;
-				PUBLIC_HEADERS_FOLDER_PATH = "include/$(TARGET_NAME)";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F1D26282178D1CC40076AF97 /* Build configuration list for PBXProject "AmalonEngine" */ = {
+		F1C0289B178E569500D87BD3 /* Build configuration list for PBXNativeTarget "AvalonEngineIOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F1C0289C178E569500D87BD3 /* Debug */,
+				F1C0289D178E569500D87BD3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F1D26282178D1CC40076AF97 /* Build configuration list for PBXProject "AvalonEngine" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F1D262A9178D1CC40076AF97 /* Debug */,
@@ -596,29 +516,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F1D262AB178D1CC40076AF97 /* Build configuration list for PBXNativeTarget "AmalonEngine" */ = {
+		F1D262AB178D1CC40076AF97 /* Build configuration list for PBXNativeTarget "AvalonEngine" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F1D262AC178D1CC40076AF97 /* Debug */,
 				F1D262AD178D1CC40076AF97 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F1D262AE178D1CC40076AF97 /* Build configuration list for PBXNativeTarget "AmalonEngineTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F1D262AF178D1CC40076AF97 /* Debug */,
-				F1D262B0178D1CC40076AF97 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F1D262FC178D20F80076AF97 /* Build configuration list for PBXNativeTarget "AmalonEngineIOS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F1D262FD178D20F80076AF97 /* Debug */,
-				F1D262FE178D20F80076AF97 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

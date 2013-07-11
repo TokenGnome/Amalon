@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F1C028CD178E5AAF00D87BD3 /* libAvalonEngineIOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F1C028CC178E5AAF00D87BD3 /* libAvalonEngineIOS.a */; };
 		F1D26230178D1BFB0076AF97 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1D2622F178D1BFB0076AF97 /* Foundation.framework */; };
 		F1D26232178D1BFB0076AF97 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1D26231178D1BFB0076AF97 /* CoreGraphics.framework */; };
 		F1D26234178D1BFB0076AF97 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1D26233178D1BFB0076AF97 /* UIKit.framework */; };
@@ -22,7 +23,6 @@
 		F1D26279178D1C190076AF97 /* QuestPlayersView.m in Sources */ = {isa = PBXBuildFile; fileRef = F1D26273178D1C190076AF97 /* QuestPlayersView.m */; };
 		F1D2627A178D1C190076AF97 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F1D26275178D1C190076AF97 /* AppDelegate.m */; };
 		F1D2627B178D1C190076AF97 /* ReplayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1D26277178D1C190076AF97 /* ReplayViewController.m */; };
-		F1E57B2E178D2389004073BC /* libAmalonEngineIOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F1E57B2D178D2389004073BC /* libAmalonEngineIOS.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +36,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F1C02873178E541500D87BD3 /* libAvalonEngineIOS.a */ = {isa = PBXFileReference; lastKnownFileType = file; name = libAvalonEngineIOS.a; path = "build/Debug-iphoneos/libAvalonEngineIOS.a"; sourceTree = "<group>"; };
+		F1C028CA178E572E00D87BD3 /* libAvalonEngineIOS.a */ = {isa = PBXFileReference; lastKnownFileType = file; name = libAvalonEngineIOS.a; path = "build/Debug-iphoneos/libAvalonEngineIOS.a"; sourceTree = "<group>"; };
+		F1C028CC178E5AAF00D87BD3 /* libAvalonEngineIOS.a */ = {isa = PBXFileReference; lastKnownFileType = file; name = libAvalonEngineIOS.a; path = "build/Debug-iphoneos/libAvalonEngineIOS.a"; sourceTree = "<group>"; };
 		F1D2622C178D1BFB0076AF97 /* AmalonIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AmalonIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1D2622F178D1BFB0076AF97 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F1D26231178D1BFB0076AF97 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -67,7 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F1E57B2E178D2389004073BC /* libAmalonEngineIOS.a in Frameworks */,
+				F1C028CD178E5AAF00D87BD3 /* libAvalonEngineIOS.a in Frameworks */,
 				F1D26232178D1BFB0076AF97 /* CoreGraphics.framework in Frameworks */,
 				F1D26234178D1BFB0076AF97 /* UIKit.framework in Frameworks */,
 				F1D26230178D1BFB0076AF97 /* Foundation.framework in Frameworks */,
@@ -109,6 +112,9 @@
 		F1D2622E178D1BFB0076AF97 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F1C028CC178E5AAF00D87BD3 /* libAvalonEngineIOS.a */,
+				F1C028CA178E572E00D87BD3 /* libAvalonEngineIOS.a */,
+				F1C02873178E541500D87BD3 /* libAvalonEngineIOS.a */,
 				F1E57B2D178D2389004073BC /* libAmalonEngineIOS.a */,
 				F1D262E1178D1D800076AF97 /* AmalonEngine.dylib */,
 				F1D2622F178D1BFB0076AF97 /* Foundation.framework */,
@@ -212,6 +218,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = TokenGnomeLLC;
 				TargetAttributes = {
+					F1D2622B178D1BFB0076AF97 = {
+						DevelopmentTeam = AC8ZQ8P8X5;
+					};
 					F1D2624F178D1BFB0076AF97 = {
 						TestTargetID = F1D2622B178D1BFB0076AF97;
 					};
@@ -339,6 +348,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LIBRARY_SEARCH_PATHS = AvalonEngine/;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -371,6 +381,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LIBRARY_SEARCH_PATHS = AvalonEngine/;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -382,6 +393,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AmalonIOS/AmalonIOS-Prefix.pch";
 				INFOPLIST_FILE = "AmalonIOS/AmalonIOS-Info.plist";
@@ -391,7 +403,7 @@
 					"$(SRCROOT)/../../../Library/Developer/Xcode/DerivedData/Amalon-fpwigmrsewsythastgoraebxhxku/Build/Products/Debug-iphoneos",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				USER_HEADER_SEARCH_PATHS = AmalonEngine/;
+				USER_HEADER_SEARCH_PATHS = AvalonEngine/;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -401,6 +413,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AmalonIOS/AmalonIOS-Prefix.pch";
 				INFOPLIST_FILE = "AmalonIOS/AmalonIOS-Info.plist";
@@ -410,7 +423,7 @@
 					"$(SRCROOT)/../../../Library/Developer/Xcode/DerivedData/Amalon-fpwigmrsewsythastgoraebxhxku/Build/Products/Debug-iphoneos",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				USER_HEADER_SEARCH_PATHS = AmalonEngine/;
+				USER_HEADER_SEARCH_PATHS = AvalonEngine/;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:AmalonEngine.xcodeproj">
+      location = "group:AvalonEngine.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:AmalonIOS.xcodeproj">
