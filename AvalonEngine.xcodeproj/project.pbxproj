@@ -88,9 +88,6 @@
 		F1D2628F178D1CC40076AF97 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		F1D26292178D1CC40076AF97 /* AvalonEngineIOS-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AvalonEngineIOS-Prefix.pch"; sourceTree = "<group>"; };
 		F1D2629B178D1CC40076AF97 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		F1D262A3178D1CC40076AF97 /* AvalonEngineTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AvalonEngineTests-Info.plist"; sourceTree = "<group>"; };
-		F1D262A5178D1CC40076AF97 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		F1D262A7178D1CC40076AF97 /* AmalonEngineTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AmalonEngineTests.m; sourceTree = "<group>"; };
 		F1D262BA178D1CE00076AF97 /* AbstractDecider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractDecider.h; sourceTree = "<group>"; };
 		F1D262BB178D1CE00076AF97 /* AbstractDecider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbstractDecider.m; sourceTree = "<group>"; };
 		F1D262BC178D1CE00076AF97 /* AvalonJSExports.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AvalonJSExports.h; sourceTree = "<group>"; };
@@ -138,7 +135,6 @@
 			isa = PBXGroup;
 			children = (
 				F1D26290178D1CC40076AF97 /* AvalonEngine */,
-				F1D262A1178D1CC40076AF97 /* AvalonEngineTests */,
 				F1D26289178D1CC40076AF97 /* Frameworks */,
 				F1D26288178D1CC40076AF97 /* Products */,
 			);
@@ -208,25 +204,6 @@
 			isa = PBXGroup;
 			children = (
 				F1D26292178D1CC40076AF97 /* AvalonEngineIOS-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		F1D262A1178D1CC40076AF97 /* AvalonEngineTests */ = {
-			isa = PBXGroup;
-			children = (
-				F1D262A7178D1CC40076AF97 /* AmalonEngineTests.m */,
-				F1D262A2178D1CC40076AF97 /* Supporting Files */,
-			);
-			name = AvalonEngineTests;
-			path = AmalonEngineTests;
-			sourceTree = "<group>";
-		};
-		F1D262A2178D1CC40076AF97 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				F1D262A3178D1CC40076AF97 /* AvalonEngineTests-Info.plist */,
-				F1D262A4178D1CC40076AF97 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -349,17 +326,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		F1D262A4178D1CC40076AF97 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F1D262A5178D1CC40076AF97 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		F1C0289C178E569500D87BD3 /* Debug */ = {
@@ -506,6 +472,7 @@
 				F1C0289D178E569500D87BD3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F1D26282178D1CC40076AF97 /* Build configuration list for PBXProject "AvalonEngine" */ = {
 			isa = XCConfigurationList;
