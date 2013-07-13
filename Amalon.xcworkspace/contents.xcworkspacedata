@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <Group
+      location = "group:AvalonEngine"
+      name = "AvalonEngine">
+      <FileRef
+         location = "group:AbstractDecider.h">
+      </FileRef>
+      <FileRef
+         location = "group:AbstractDecider.m">
+      </FileRef>
+      <FileRef
+         location = "group:Avalon.h">
+      </FileRef>
+      <FileRef
+         location = "group:AvalonEngine.h">
+      </FileRef>
+      <FileRef
+         location = "group:AvalonEngine.m">
+      </FileRef>
+      <FileRef
+         location = "group:AvalonGame.h">
+      </FileRef>
+      <FileRef
+         location = "group:AvalonGame.m">
+      </FileRef>
+      <FileRef
+         location = "group:AvalonGameController.h">
+      </FileRef>
+      <FileRef
+         location = "group:AvalonGameController.m">
+      </FileRef>
+      <FileRef
+         location = "group:AvalonJSExports.h">
+      </FileRef>
+      <FileRef
+         location = "group:AvalonPlayer.h">
+      </FileRef>
+      <FileRef
+         location = "group:AvalonPlayer.m">
+      </FileRef>
+      <FileRef
+         location = "group:AvalonProposal.h">
+      </FileRef>
+      <FileRef
+         location = "group:AvalonProposal.m">
+      </FileRef>
+      <FileRef
+         location = "group:AvalonQuest.h">
+      </FileRef>
+      <FileRef
+         location = "group:AvalonQuest.m">
+      </FileRef>
+      <FileRef
+         location = "group:AvalonRole.h">
+      </FileRef>
+      <FileRef
+         location = "group:AvalonRole.m">
+      </FileRef>
+      <FileRef
+         location = "group:AvalonTypes.h">
+      </FileRef>
+      <FileRef
+         location = "group:JavaScriptDecider.h">
+      </FileRef>
+      <FileRef
+         location = "group:JavaScriptDecider.m">
+      </FileRef>
+   </Group>
+   <FileRef
+      location = "group:Amalon iOS Example/Amalon iOS Example.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Amalon Mac Example/Amalon Mac Example.xcodeproj">
+   </FileRef>
+</Workspace>
