@@ -86,7 +86,6 @@
 		F1D2628D178D1CC40076AF97 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F1D2628E178D1CC40076AF97 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		F1D2628F178D1CC40076AF97 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
-		F1D26292178D1CC40076AF97 /* AvalonEngineIOS-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AvalonEngineIOS-Prefix.pch"; sourceTree = "<group>"; };
 		F1D2629B178D1CC40076AF97 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		F1D262BA178D1CE00076AF97 /* AbstractDecider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractDecider.h; sourceTree = "<group>"; };
 		F1D262BB178D1CE00076AF97 /* AbstractDecider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbstractDecider.m; sourceTree = "<group>"; };
@@ -195,17 +194,8 @@
 				F1D262C9178D1CE00076AF97 /* AvalonRole.m */,
 				F1D262CA178D1CE00076AF97 /* JavaScriptDecider.h */,
 				F1D262CB178D1CE00076AF97 /* JavaScriptDecider.m */,
-				F1D26291178D1CC40076AF97 /* Supporting Files */,
 			);
 			path = AvalonEngine;
-			sourceTree = "<group>";
-		};
-		F1D26291178D1CC40076AF97 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				F1D26292178D1CC40076AF97 /* AvalonEngineIOS-Prefix.pch */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -333,7 +323,6 @@
 			buildSettings = {
 				DSTROOT = /tmp/AvalonEngineIOS.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "AvalonEngine/AvalonEngineIOS-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -349,7 +338,6 @@
 			buildSettings = {
 				DSTROOT = /tmp/AvalonEngineIOS.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "AvalonEngine/AvalonEngineIOS-Prefix.pch";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -442,7 +430,6 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "AmalonEngine/AmalonEngine-Prefix.pch";
 				PRODUCT_NAME = AvalonEngine;
 				PUBLIC_HEADERS_FOLDER_PATH = "include/$(TARGET_NAME)";
 				SDKROOT = macosx;
@@ -455,7 +442,6 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "AmalonEngine/AmalonEngine-Prefix.pch";
 				PRODUCT_NAME = AvalonEngine;
 				PUBLIC_HEADERS_FOLDER_PATH = "include/$(TARGET_NAME)";
 				SDKROOT = macosx;

@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		F141568D178F13AC0077CD29 /* random_bot.js in Resources */ = {isa = PBXBuildFile; fileRef = F1415689178F13290077CD29 /* random_bot.js */; };
 		F141568E178F13AC0077CD29 /* simple_bot.js in Resources */ = {isa = PBXBuildFile; fileRef = F141568A178F13290077CD29 /* simple_bot.js */; };
-		F1C028CD178E5AAF00D87BD3 /* libAvalonEngineIOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F1C028CC178E5AAF00D87BD3 /* libAvalonEngineIOS.a */; };
 		F1D26230178D1BFB0076AF97 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1D2622F178D1BFB0076AF97 /* Foundation.framework */; };
 		F1D26232178D1BFB0076AF97 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1D26231178D1BFB0076AF97 /* CoreGraphics.framework */; };
 		F1D26234178D1BFB0076AF97 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1D26233178D1BFB0076AF97 /* UIKit.framework */; };
@@ -25,9 +24,6 @@
 /* Begin PBXFileReference section */
 		F1415689178F13290077CD29 /* random_bot.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = random_bot.js; sourceTree = "<group>"; };
 		F141568A178F13290077CD29 /* simple_bot.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = simple_bot.js; sourceTree = "<group>"; };
-		F1C02873178E541500D87BD3 /* libAvalonEngineIOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAvalonEngineIOS.a; path = "build/Debug-iphoneos/libAvalonEngineIOS.a"; sourceTree = "<group>"; };
-		F1C028CA178E572E00D87BD3 /* libAvalonEngineIOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAvalonEngineIOS.a; path = "build/Debug-iphoneos/libAvalonEngineIOS.a"; sourceTree = "<group>"; };
-		F1C028CC178E5AAF00D87BD3 /* libAvalonEngineIOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAvalonEngineIOS.a; path = "build/Debug-iphoneos/libAvalonEngineIOS.a"; sourceTree = "<group>"; };
 		F1D2622C178D1BFB0076AF97 /* AmalonIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AmalonIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1D2622F178D1BFB0076AF97 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F1D26231178D1BFB0076AF97 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -46,8 +42,6 @@
 		F1D26275178D1C190076AF97 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		F1D26276178D1C190076AF97 /* ReplayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReplayViewController.h; sourceTree = "<group>"; };
 		F1D26277178D1C190076AF97 /* ReplayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReplayViewController.m; sourceTree = "<group>"; };
-		F1D262E1178D1D800076AF97 /* AmalonEngine.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = AmalonEngine.dylib; path = "../../../Library/Developer/Xcode/DerivedData/Amalon-fpwigmrsewsythastgoraebxhxku/Build/Products/Debug/AmalonEngine.dylib"; sourceTree = "<group>"; };
-		F1E57B2D178D2389004073BC /* libAmalonEngineIOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAmalonEngineIOS.a; path = "../../../Library/Developer/Xcode/DerivedData/Amalon-fpwigmrsewsythastgoraebxhxku/Build/Products/Debug-iphoneos/libAmalonEngineIOS.a"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +49,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F1C028CD178E5AAF00D87BD3 /* libAvalonEngineIOS.a in Frameworks */,
 				F1D26232178D1BFB0076AF97 /* CoreGraphics.framework in Frameworks */,
 				F1D26234178D1BFB0076AF97 /* UIKit.framework in Frameworks */,
 				F1D26230178D1BFB0076AF97 /* Foundation.framework in Frameworks */,
@@ -95,11 +88,6 @@
 		F1D2622E178D1BFB0076AF97 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F1C028CC178E5AAF00D87BD3 /* libAvalonEngineIOS.a */,
-				F1C028CA178E572E00D87BD3 /* libAvalonEngineIOS.a */,
-				F1C02873178E541500D87BD3 /* libAvalonEngineIOS.a */,
-				F1E57B2D178D2389004073BC /* libAmalonEngineIOS.a */,
-				F1D262E1178D1D800076AF97 /* AmalonEngine.dylib */,
 				F1D2622F178D1BFB0076AF97 /* Foundation.framework */,
 				F1D26231178D1BFB0076AF97 /* CoreGraphics.framework */,
 				F1D26233178D1BFB0076AF97 /* UIKit.framework */,
