@@ -12,6 +12,8 @@
 		6807F3B317910A40004281F0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6807F3B217910A40004281F0 /* UIKit.framework */; };
 		68FE595717910B96007E2D60 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FE595517910B96007E2D60 /* AppDelegate.m */; };
 		68FE595817910B96007E2D60 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FE595617910B96007E2D60 /* main.m */; };
+		F104CE941791EA9A00750E6F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6807F3DD17910B26004281F0 /* Images.xcassets */; };
+		F114FB671791EC1100DC3212 /* Attributions.plist in Resources */ = {isa = PBXBuildFile; fileRef = F114FB661791EC1100DC3212 /* Attributions.plist */; };
 		F1593FE91791D0410008BA89 /* random_bot.js in Resources */ = {isa = PBXBuildFile; fileRef = F1593FE71791D0410008BA89 /* random_bot.js */; };
 		F1593FEA1791D0410008BA89 /* simple_bot.js in Resources */ = {isa = PBXBuildFile; fileRef = F1593FE81791D0410008BA89 /* simple_bot.js */; };
 		FBCAC9B2D4A7472D8CA78F23 /* libPods-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 45C8B197E53B49A59ACF5BB0 /* libPods-ios.a */; };
@@ -30,6 +32,7 @@
 		68FE595417910B96007E2D60 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		68FE595517910B96007E2D60 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		68FE595617910B96007E2D60 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F114FB661791EC1100DC3212 /* Attributions.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Attributions.plist; sourceTree = "<group>"; };
 		F1593FE71791D0410008BA89 /* random_bot.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = random_bot.js; sourceTree = "<group>"; };
 		F1593FE81791D0410008BA89 /* simple_bot.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = simple_bot.js; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -52,6 +55,7 @@
 		6807F3A217910A40004281F0 = {
 			isa = PBXGroup;
 			children = (
+				F114FB661791EC1100DC3212 /* Attributions.plist */,
 				F1593FE61791D0410008BA89 /* ExampleBots */,
 				68FE595317910B96007E2D60 /* Classes */,
 				6807F3DD17910B26004281F0 /* Images.xcassets */,
@@ -155,6 +159,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F114FB671791EC1100DC3212 /* Attributions.plist in Resources */,
+				F104CE941791EA9A00750E6F /* Images.xcassets in Resources */,
 				F1593FE91791D0410008BA89 /* random_bot.js in Resources */,
 				F1593FEA1791D0410008BA89 /* simple_bot.js in Resources */,
 			);
