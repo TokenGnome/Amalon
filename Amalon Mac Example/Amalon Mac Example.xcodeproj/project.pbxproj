@@ -1,355 +1,688 @@
-// !$*UTF8*$!
-{
-	archiveVersion = 1;
-	classes = {
-	};
-	objectVersion = 46;
-	objects = {
-
-/* Begin PBXBuildFile section */
-		6807F399179109D5004281F0 /* AbstractDecider.m in Sources */ = {isa = PBXBuildFile; fileRef = 6807F385179109D5004281F0 /* AbstractDecider.m */; };
-		6807F39A179109D5004281F0 /* AvalonEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 6807F388179109D5004281F0 /* AvalonEngine.m */; };
-		6807F39B179109D5004281F0 /* AvalonGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 6807F38A179109D5004281F0 /* AvalonGame.m */; };
-		6807F39C179109D5004281F0 /* AvalonGameController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6807F38C179109D5004281F0 /* AvalonGameController.m */; };
-		6807F39D179109D5004281F0 /* AvalonPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6807F38F179109D5004281F0 /* AvalonPlayer.m */; };
-		6807F39E179109D5004281F0 /* AvalonProposal.m in Sources */ = {isa = PBXBuildFile; fileRef = 6807F391179109D5004281F0 /* AvalonProposal.m */; };
-		6807F39F179109D5004281F0 /* AvalonQuest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6807F393179109D5004281F0 /* AvalonQuest.m */; };
-		6807F3A0179109D5004281F0 /* AvalonRole.m in Sources */ = {isa = PBXBuildFile; fileRef = 6807F395179109D5004281F0 /* AvalonRole.m */; };
-		6807F3A1179109D5004281F0 /* JavaScriptDecider.m in Sources */ = {isa = PBXBuildFile; fileRef = 6807F398179109D5004281F0 /* JavaScriptDecider.m */; };
-		68EF30BB17910563006753A3 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68EF30BA17910563006753A3 /* Cocoa.framework */; };
-		68FE597C179110F1007E2D60 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FE597A179110F1007E2D60 /* main.m */; };
-		68FE598017911170007E2D60 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68FE597F17911158007E2D60 /* MainMenu.xib */; };
-		68FE598A179111B1007E2D60 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FE5988179111B1007E2D60 /* AppDelegate.m */; };
-/* End PBXBuildFile section */
-
-/* Begin PBXFileReference section */
-		6807F37717910840004281F0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		6807F384179109D5004281F0 /* AbstractDecider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractDecider.h; sourceTree = "<group>"; };
-		6807F385179109D5004281F0 /* AbstractDecider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbstractDecider.m; sourceTree = "<group>"; };
-		6807F386179109D5004281F0 /* Avalon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Avalon.h; sourceTree = "<group>"; };
-		6807F387179109D5004281F0 /* AvalonEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AvalonEngine.h; sourceTree = "<group>"; };
-		6807F388179109D5004281F0 /* AvalonEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AvalonEngine.m; sourceTree = "<group>"; };
-		6807F389179109D5004281F0 /* AvalonGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AvalonGame.h; sourceTree = "<group>"; };
-		6807F38A179109D5004281F0 /* AvalonGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AvalonGame.m; sourceTree = "<group>"; };
-		6807F38B179109D5004281F0 /* AvalonGameController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AvalonGameController.h; sourceTree = "<group>"; };
-		6807F38C179109D5004281F0 /* AvalonGameController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AvalonGameController.m; sourceTree = "<group>"; };
-		6807F38D179109D5004281F0 /* AvalonJSExports.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AvalonJSExports.h; sourceTree = "<group>"; };
-		6807F38E179109D5004281F0 /* AvalonPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AvalonPlayer.h; sourceTree = "<group>"; };
-		6807F38F179109D5004281F0 /* AvalonPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AvalonPlayer.m; sourceTree = "<group>"; };
-		6807F390179109D5004281F0 /* AvalonProposal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AvalonProposal.h; sourceTree = "<group>"; };
-		6807F391179109D5004281F0 /* AvalonProposal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AvalonProposal.m; sourceTree = "<group>"; };
-		6807F392179109D5004281F0 /* AvalonQuest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AvalonQuest.h; sourceTree = "<group>"; };
-		6807F393179109D5004281F0 /* AvalonQuest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AvalonQuest.m; sourceTree = "<group>"; };
-		6807F394179109D5004281F0 /* AvalonRole.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AvalonRole.h; sourceTree = "<group>"; };
-		6807F395179109D5004281F0 /* AvalonRole.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AvalonRole.m; sourceTree = "<group>"; };
-		6807F396179109D5004281F0 /* AvalonTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AvalonTypes.h; sourceTree = "<group>"; };
-		6807F397179109D5004281F0 /* JavaScriptDecider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JavaScriptDecider.h; sourceTree = "<group>"; };
-		6807F398179109D5004281F0 /* JavaScriptDecider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JavaScriptDecider.m; sourceTree = "<group>"; };
-		68CDC42017910821004B01D4 /* Mac-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Mac-Info.plist"; sourceTree = "<group>"; };
-		68EF30B717910563006753A3 /* Amalon Mac Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Amalon Mac Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		68EF30BA17910563006753A3 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
-		68EF30BD17910563006753A3 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
-		68EF30BE17910563006753A3 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		68EF30BF17910563006753A3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		68EF30D917910563006753A3 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		68FE597A179110F1007E2D60 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		68FE597F17911158007E2D60 /* MainMenu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
-		68FE5987179111B1007E2D60 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		68FE5988179111B1007E2D60 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-/* End PBXFileReference section */
-
-/* Begin PBXFrameworksBuildPhase section */
-		68EF30B417910563006753A3 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				68EF30BB17910563006753A3 /* Cocoa.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
-
-/* Begin PBXGroup section */
-		6807F37817910862004281F0 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				68FE5987179111B1007E2D60 /* AppDelegate.h */,
-				68FE5988179111B1007E2D60 /* AppDelegate.m */,
-				68FE597A179110F1007E2D60 /* main.m */,
-				6807F383179109D5004281F0 /* AvalonEngine */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
-		6807F383179109D5004281F0 /* AvalonEngine */ = {
-			isa = PBXGroup;
-			children = (
-				6807F384179109D5004281F0 /* AbstractDecider.h */,
-				6807F385179109D5004281F0 /* AbstractDecider.m */,
-				6807F386179109D5004281F0 /* Avalon.h */,
-				6807F387179109D5004281F0 /* AvalonEngine.h */,
-				6807F388179109D5004281F0 /* AvalonEngine.m */,
-				6807F389179109D5004281F0 /* AvalonGame.h */,
-				6807F38A179109D5004281F0 /* AvalonGame.m */,
-				6807F38B179109D5004281F0 /* AvalonGameController.h */,
-				6807F38C179109D5004281F0 /* AvalonGameController.m */,
-				6807F38D179109D5004281F0 /* AvalonJSExports.h */,
-				6807F38E179109D5004281F0 /* AvalonPlayer.h */,
-				6807F38F179109D5004281F0 /* AvalonPlayer.m */,
-				6807F390179109D5004281F0 /* AvalonProposal.h */,
-				6807F391179109D5004281F0 /* AvalonProposal.m */,
-				6807F392179109D5004281F0 /* AvalonQuest.h */,
-				6807F393179109D5004281F0 /* AvalonQuest.m */,
-				6807F394179109D5004281F0 /* AvalonRole.h */,
-				6807F395179109D5004281F0 /* AvalonRole.m */,
-				6807F396179109D5004281F0 /* AvalonTypes.h */,
-				6807F397179109D5004281F0 /* JavaScriptDecider.h */,
-				6807F398179109D5004281F0 /* JavaScriptDecider.m */,
-			);
-			name = AvalonEngine;
-			path = ../../AvalonEngine;
-			sourceTree = "<group>";
-		};
-		68EF30AE17910563006753A3 = {
-			isa = PBXGroup;
-			children = (
-				68FE597F17911158007E2D60 /* MainMenu.xib */,
-				6807F37817910862004281F0 /* Classes */,
-				6807F37717910840004281F0 /* Images.xcassets */,
-				68CDC42017910821004B01D4 /* Mac-Info.plist */,
-				68EF30B917910563006753A3 /* Frameworks */,
-				68EF30B817910563006753A3 /* Products */,
-			);
-			sourceTree = "<group>";
-		};
-		68EF30B817910563006753A3 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				68EF30B717910563006753A3 /* Amalon Mac Example.app */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		68EF30B917910563006753A3 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				68EF30BA17910563006753A3 /* Cocoa.framework */,
-				68EF30D917910563006753A3 /* XCTest.framework */,
-				68EF30BC17910563006753A3 /* Other Frameworks */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		68EF30BC17910563006753A3 /* Other Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				68EF30BD17910563006753A3 /* AppKit.framework */,
-				68EF30BE17910563006753A3 /* CoreData.framework */,
-				68EF30BF17910563006753A3 /* Foundation.framework */,
-			);
-			name = "Other Frameworks";
-			sourceTree = "<group>";
-		};
-/* End PBXGroup section */
-
-/* Begin PBXNativeTarget section */
-		68EF30B617910563006753A3 /* Amalon Mac Example */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 68EF30E817910563006753A3 /* Build configuration list for PBXNativeTarget "Amalon Mac Example" */;
-			buildPhases = (
-				68EF30B317910563006753A3 /* Sources */,
-				68EF30B417910563006753A3 /* Frameworks */,
-				68EF30B517910563006753A3 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Amalon Mac Example";
-			productName = "Amalon Mac Example";
-			productReference = 68EF30B717910563006753A3 /* Amalon Mac Example.app */;
-			productType = "com.apple.product-type.application";
-		};
-/* End PBXNativeTarget section */
-
-/* Begin PBXProject section */
-		68EF30AF17910563006753A3 /* Project object */ = {
-			isa = PBXProject;
-			attributes = {
-				LastUpgradeCheck = 0500;
-				ORGANIZATIONNAME = "Brandon Smith";
-			};
-			buildConfigurationList = 68EF30B217910563006753A3 /* Build configuration list for PBXProject "Amalon Mac Example" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
-			hasScannedForEncodings = 0;
-			knownRegions = (
-				en,
-				Base,
-			);
-			mainGroup = 68EF30AE17910563006753A3;
-			productRefGroup = 68EF30B817910563006753A3 /* Products */;
-			projectDirPath = "";
-			projectRoot = "";
-			targets = (
-				68EF30B617910563006753A3 /* Amalon Mac Example */,
-			);
-		};
-/* End PBXProject section */
-
-/* Begin PBXResourcesBuildPhase section */
-		68EF30B517910563006753A3 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				68FE598017911170007E2D60 /* MainMenu.xib in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
-/* Begin PBXSourcesBuildPhase section */
-		68EF30B317910563006753A3 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6807F39C179109D5004281F0 /* AvalonGameController.m in Sources */,
-				6807F39A179109D5004281F0 /* AvalonEngine.m in Sources */,
-				6807F3A0179109D5004281F0 /* AvalonRole.m in Sources */,
-				6807F39F179109D5004281F0 /* AvalonQuest.m in Sources */,
-				6807F39D179109D5004281F0 /* AvalonPlayer.m in Sources */,
-				6807F39E179109D5004281F0 /* AvalonProposal.m in Sources */,
-				6807F3A1179109D5004281F0 /* JavaScriptDecider.m in Sources */,
-				68FE598A179111B1007E2D60 /* AppDelegate.m in Sources */,
-				6807F39B179109D5004281F0 /* AvalonGame.m in Sources */,
-				68FE597C179110F1007E2D60 /* main.m in Sources */,
-				6807F399179109D5004281F0 /* AbstractDecider.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXSourcesBuildPhase section */
-
-/* Begin XCBuildConfiguration section */
-		68EF30E617910563006753A3 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "Mac-Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = macosx;
-			};
-			name = Debug;
-		};
-		68EF30E717910563006753A3 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = YES;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = "Mac-Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				SDKROOT = macosx;
-			};
-			name = Release;
-		};
-		68EF30E917910563006753A3 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = Prefix.pch;
-				INFOPLIST_FILE = "$(SRCROOT)/Mac-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = app;
-			};
-			name = Debug;
-		};
-		68EF30EA17910563006753A3 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = Prefix.pch;
-				INFOPLIST_FILE = "$(SRCROOT)/Mac-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = app;
-			};
-			name = Release;
-		};
-/* End XCBuildConfiguration section */
-
-/* Begin XCConfigurationList section */
-		68EF30B217910563006753A3 /* Build configuration list for PBXProject "Amalon Mac Example" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				68EF30E617910563006753A3 /* Debug */,
-				68EF30E717910563006753A3 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		68EF30E817910563006753A3 /* Build configuration list for PBXNativeTarget "Amalon Mac Example" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				68EF30E917910563006753A3 /* Debug */,
-				68EF30EA17910563006753A3 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-/* End XCConfigurationList section */
-	};
-	rootObject = 68EF30AF17910563006753A3 /* Project object */;
-}
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>archiveVersion</key>
+	<string>1</string>
+	<key>classes</key>
+	<dict/>
+	<key>objectVersion</key>
+	<string>46</string>
+	<key>objects</key>
+	<dict>
+		<key>1FABF4AFE9C1409CA548B07F</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>archive.ar</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>libPods-osx.a</string>
+			<key>path</key>
+			<string>libPods-osx.a</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>2B9D69AAE9804D4EA0E734FB</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Check Pods Manifest.lock</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
+if [[ $? != 0 ]] ; then
+    cat &lt;&lt; EOM
+error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
+EOM
+    exit 1
+fi
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>1</string>
+		</dict>
+		<key>36689829075E4C4DB87BA52C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>1FABF4AFE9C1409CA548B07F</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict/>
+		</dict>
+		<key>6807F37717910840004281F0</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>folder.assetcatalog</string>
+			<key>path</key>
+			<string>Images.xcassets</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6807F37817910862004281F0</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>68FE5987179111B1007E2D60</string>
+				<string>68FE5988179111B1007E2D60</string>
+				<string>68FE597A179110F1007E2D60</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>Classes</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>68CDC42017910821004B01D4</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Mac-Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>68EF30AE17910563006753A3</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>68FE597F17911158007E2D60</string>
+				<string>6807F37817910862004281F0</string>
+				<string>6807F37717910840004281F0</string>
+				<string>68CDC42017910821004B01D4</string>
+				<string>68EF30B917910563006753A3</string>
+				<string>68EF30B817910563006753A3</string>
+				<string>772933CD5EEC4E5AAC999699</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>68EF30AF17910563006753A3</key>
+		<dict>
+			<key>attributes</key>
+			<dict>
+				<key>LastUpgradeCheck</key>
+				<string>0500</string>
+				<key>ORGANIZATIONNAME</key>
+				<string>Brandon Smith</string>
+			</dict>
+			<key>buildConfigurationList</key>
+			<string>68EF30B217910563006753A3</string>
+			<key>compatibilityVersion</key>
+			<string>Xcode 3.2</string>
+			<key>developmentRegion</key>
+			<string>English</string>
+			<key>hasScannedForEncodings</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXProject</string>
+			<key>knownRegions</key>
+			<array>
+				<string>en</string>
+				<string>Base</string>
+			</array>
+			<key>mainGroup</key>
+			<string>68EF30AE17910563006753A3</string>
+			<key>productRefGroup</key>
+			<string>68EF30B817910563006753A3</string>
+			<key>projectDirPath</key>
+			<string></string>
+			<key>projectReferences</key>
+			<array/>
+			<key>projectRoot</key>
+			<string></string>
+			<key>targets</key>
+			<array>
+				<string>68EF30B617910563006753A3</string>
+			</array>
+		</dict>
+		<key>68EF30B217910563006753A3</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>68EF30E617910563006753A3</string>
+				<string>68EF30E717910563006753A3</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>68EF30B317910563006753A3</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>68FE598A179111B1007E2D60</string>
+				<string>68FE597C179110F1007E2D60</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>68EF30B417910563006753A3</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>68EF30BB17910563006753A3</string>
+				<string>36689829075E4C4DB87BA52C</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>68EF30B517910563006753A3</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>68FE598017911170007E2D60</string>
+			</array>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>68EF30B617910563006753A3</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>68EF30E817910563006753A3</string>
+			<key>buildPhases</key>
+			<array>
+				<string>2B9D69AAE9804D4EA0E734FB</string>
+				<string>68EF30B317910563006753A3</string>
+				<string>68EF30B417910563006753A3</string>
+				<string>68EF30B517910563006753A3</string>
+				<string>DAFA61B152ED4204A3E29E78</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>Amalon Mac Example</string>
+			<key>productName</key>
+			<string>Amalon Mac Example</string>
+			<key>productReference</key>
+			<string>68EF30B717910563006753A3</string>
+			<key>productType</key>
+			<string>com.apple.product-type.application</string>
+		</dict>
+		<key>68EF30B717910563006753A3</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.application</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>Amalon Mac Example.app</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>68EF30B817910563006753A3</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>68EF30B717910563006753A3</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Products</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>68EF30B917910563006753A3</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>68EF30BA17910563006753A3</string>
+				<string>68EF30D917910563006753A3</string>
+				<string>68EF30BC17910563006753A3</string>
+				<string>1FABF4AFE9C1409CA548B07F</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Frameworks</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>68EF30BA17910563006753A3</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>Cocoa.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/Cocoa.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>68EF30BB17910563006753A3</key>
+		<dict>
+			<key>fileRef</key>
+			<string>68EF30BA17910563006753A3</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>68EF30BC17910563006753A3</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>68EF30BD17910563006753A3</string>
+				<string>68EF30BE17910563006753A3</string>
+				<string>68EF30BF17910563006753A3</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Other Frameworks</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>68EF30BD17910563006753A3</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>AppKit.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/AppKit.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>68EF30BE17910563006753A3</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>CoreData.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/CoreData.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>68EF30BF17910563006753A3</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>Foundation.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/Foundation.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>68EF30D917910563006753A3</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>XCTest.framework</string>
+			<key>path</key>
+			<string>Library/Frameworks/XCTest.framework</string>
+			<key>sourceTree</key>
+			<string>DEVELOPER_DIR</string>
+		</dict>
+		<key>68EF30E617910563006753A3</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>NO</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_DYNAMIC_NO_PIC</key>
+				<string>NO</string>
+				<key>GCC_ENABLE_OBJC_EXCEPTIONS</key>
+				<string>YES</string>
+				<key>GCC_OPTIMIZATION_LEVEL</key>
+				<string>0</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
+				<string>NO</string>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES_ERROR</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>INFOPLIST_FILE</key>
+				<string>Mac-Info.plist</string>
+				<key>MACOSX_DEPLOYMENT_TARGET</key>
+				<string>10.9</string>
+				<key>ONLY_ACTIVE_ARCH</key>
+				<string>YES</string>
+				<key>SDKROOT</key>
+				<string>macosx</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>68EF30E717910563006753A3</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>YES</string>
+				<key>DEBUG_INFORMATION_FORMAT</key>
+				<string>dwarf-with-dsym</string>
+				<key>ENABLE_NS_ASSERTIONS</key>
+				<string>NO</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_ENABLE_OBJC_EXCEPTIONS</key>
+				<string>YES</string>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES_ERROR</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>INFOPLIST_FILE</key>
+				<string>Mac-Info.plist</string>
+				<key>MACOSX_DEPLOYMENT_TARGET</key>
+				<string>10.9</string>
+				<key>SDKROOT</key>
+				<string>macosx</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>68EF30E817910563006753A3</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>68EF30E917910563006753A3</string>
+				<string>68EF30EA17910563006753A3</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>68EF30E917910563006753A3</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>772933CD5EEC4E5AAC999699</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
+				<string>AppIcon</string>
+				<key>COMBINE_HIDPI_IMAGES</key>
+				<string>YES</string>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>$(SRCROOT)/Mac-Info.plist</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>WRAPPER_EXTENSION</key>
+				<string>app</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>68EF30EA17910563006753A3</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>772933CD5EEC4E5AAC999699</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
+				<string>AppIcon</string>
+				<key>COMBINE_HIDPI_IMAGES</key>
+				<string>YES</string>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>$(SRCROOT)/Mac-Info.plist</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>WRAPPER_EXTENSION</key>
+				<string>app</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>68FE597A179110F1007E2D60</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>main.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>68FE597C179110F1007E2D60</key>
+		<dict>
+			<key>fileRef</key>
+			<string>68FE597A179110F1007E2D60</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>68FE597F17911158007E2D60</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.xib</string>
+			<key>path</key>
+			<string>MainMenu.xib</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>68FE598017911170007E2D60</key>
+		<dict>
+			<key>fileRef</key>
+			<string>68FE597F17911158007E2D60</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>68FE5987179111B1007E2D60</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>AppDelegate.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>68FE5988179111B1007E2D60</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>AppDelegate.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>68FE598A179111B1007E2D60</key>
+		<dict>
+			<key>fileRef</key>
+			<string>68FE5988179111B1007E2D60</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>772933CD5EEC4E5AAC999699</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods-osx.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Pods-osx.xcconfig</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>DAFA61B152ED4204A3E29E78</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Copy Pods Resources</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>"${SRCROOT}/Pods/Pods-osx-resources.sh"
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>1</string>
+		</dict>
+	</dict>
+	<key>rootObject</key>
+	<string>68EF30AF17910563006753A3</string>
+</dict>
+</plist>

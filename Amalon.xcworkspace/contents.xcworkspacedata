@@ -74,4 +74,10 @@
    <FileRef
       location = "group:Amalon Mac Example/Amalon Mac Example.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:Amalon Mac Example/Pods/Pods.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Amalon iOS Example/Pods/Pods.xcodeproj">
+   </FileRef>
 </Workspace>

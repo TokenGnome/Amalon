@@ -1,0 +1,13 @@
+xcodeproj 'Amalon Mac Example'
+workspace '../Amalon'
+inhibit_all_warnings!
+
+def import_pods
+  pod 'Amalon', :path => '../'
+end
+
+target :osx do
+  platform :osx, '10.9'
+  link_with 'Amalon Mac Example'
+  import_pods
+end

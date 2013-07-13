@@ -7,8 +7,8 @@
 //
 
 #import "AppDelegate.h"
-#import "Avalon.h"
-#import "AbstractDecider.h"
+#import <Amalon/Avalon.h>
+#import <Amalon/AbstractDecider.h>
 
 @implementation AppDelegate
 

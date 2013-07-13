@@ -1,0 +1,14 @@
+PODS:
+  - Amalon (0.0.1)
+
+DEPENDENCIES:
+  - Amalon (from `../`)
+
+EXTERNAL SOURCES:
+  Amalon:
+    :path: ../
+
+SPEC CHECKSUMS:
+  Amalon: 8b65baabc5f62c94d7b3f2acb5c44776dc1f6a1a
+
+COCOAPODS: 0.19.1
