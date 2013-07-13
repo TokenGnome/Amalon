@@ -3,8 +3,26 @@
 <plist version="1.0">
 <dict>
 	<key>LaunchArt</key>
-	<string>&quot;Desert Wizard&quot; by Johan Jaeger</string>
+	<dict>
+		<key>Name</key>
+		<string>Desert Wizard</string>
+		<key>Artist</key>
+		<string>Johan Jaeger</string>
+		<key>Liscense</key>
+		<string>Creative Commons Attribution-Share Alike 3.0 License</string>
+		<key>Source</key>
+		<string>http://johanjaeger.deviantart.com/art/Desert-wizard-267947314</string>
+	</dict>
 	<key>AppIcon</key>
-	<string>&quot;Desert Wizard&quot; by Johan Jaeger</string>
+	<dict>
+		<key>Name</key>
+		<string>Desert Wizard</string>
+		<key>Artist</key>
+		<string>Johan Jaeger</string>
+		<key>Liscense</key>
+		<string>Creative Commons Attribution-Share Alike 3.0 License</string>
+		<key>Source</key>
+		<string>http://johanjaeger.deviantart.com/art/Desert-wizard-267947314</string>
+	</dict>
 </dict>
 </plist>
