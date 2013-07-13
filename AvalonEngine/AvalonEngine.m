@@ -159,9 +159,11 @@ NSString *kAvalonRuleErrorDomain = @"com.tokengnome.avalon.error.rules";
 - (void)evaluateVotesForGame:(AvalonGame *)game
 {
     if ([game.currentQuest.currentProposal isAccepted]) {
+        NSLog(@"Quest proposal accepted, going on quest");
         game.state = GameStateQuesting;
     } else {
         game.voteNumber++;
+        NSLog(@"Quest proposal rejected, starting next proposal");
         [self prepareForNextQuest:game];
     }
 }
@@ -319,6 +321,7 @@ NSString *kAvalonRuleErrorDomain = @"com.tokengnome.avalon.error.rules";
     NSUInteger teamSize = TeamSizeForQuestNumber(game.questNumber, [game.players count]);
     NSUInteger failsReq = FailsRequiredForQuestNumber(game.questNumber, [game.players count]);
     AvalonQuest *newQuest = [AvalonQuest questWithSize:teamSize number:game.questNumber failsRequired:failsReq];
+    NSLog(@"Beginning quest [%@]", newQuest);
     [game addQuest:newQuest];
     game.state = GameStateProposing;
 }
@@ -363,6 +366,9 @@ NSString *kAvalonRuleErrorDomain = @"com.tokengnome.avalon.error.rules";
     } else if (! [game hasPlayers:playerIds]) {
         *error = [NSError errorWithDomain:kAvalonRuleErrorDomain code:1 userInfo:@{@"message": @"All of the proposed players do not exist"}];
         return NO;
+    } else if ([playerIds count] != game.currentQuest.playerCount) {
+        *error = [NSError errorWithDomain:kAvalonRuleErrorDomain code:1 userInfo:@{@"message": @"Not enough players in the proposal."}];
+        return NO;
     }
     return YES;
 }
@@ -371,6 +377,7 @@ NSString *kAvalonRuleErrorDomain = @"com.tokengnome.avalon.error.rules";
 {
     NSError *error = nil;
     if (! [self canProposeQuest:playerIds proposer:playerId game:game error:&error]) return error;
+    NSLog(@"Player [%@] proposed quest [%@]", game.currentLeader, [[playerIds valueForKey:@"description"] componentsJoinedByString:@", "]);
     
     NSArray *players = [game playersWithIds:playerIds];
     AvalonProposal *prop = [AvalonProposal proposalWithPlayers:players proposer:game.currentLeader];
@@ -402,8 +409,9 @@ NSString *kAvalonRuleErrorDomain = @"com.tokengnome.avalon.error.rules";
 {
     NSError *error = nil;
     if (! [self canVoteWithPlayer:playerId forGame:game error:&error]) return error;
-
+    
     AvalonPlayer *voter = [game playerWithId:playerId];
+    NSLog(@"\tPlayer [%@] voted [%@]", voter, vote ? @"Accept" : @"Reject");
     [game.currentQuest.currentProposal setVote:vote forPlayer:voter];
     
     if ([self isVotingFinishedForGame:game]) {
@@ -423,6 +431,7 @@ NSString *kAvalonRuleErrorDomain = @"com.tokengnome.avalon.error.rules";
 {
     NSError *error = nil;
     if (! [self canAssassinatePlayer:playerId assassin:assassinId game:game error:&error]) return error;
+    NSLog(@"Player [%@] assinated [%@]", assassinId, playerId);
     
     game.assassinatedPlayer = [game playerWithId:playerId];
     game.state = GameStateAssassinatingCompleted;

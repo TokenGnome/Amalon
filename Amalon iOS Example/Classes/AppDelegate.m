@@ -8,22 +8,32 @@
 
 #import "AppDelegate.h"
 #import <Amalon/Avalon.h>
-#import <Amalon/AbstractDecider.h>
+#import <Amalon/AvalonEngine.h>
+#import <Amalon/AvalonMultiBotGameController.h>
+#import <Amalon/JavaScriptDecider.h>
+
+NSString *BundledScript(NSString *nameWithoutExtension)
+{
+    NSString *script = [[NSBundle mainBundle] pathForResource:nameWithoutExtension ofType:@"js"];
+    return [NSString stringWithContentsOfFile:script encoding:NSUTF8StringEncoding error:nil];
+};
 
 @implementation AppDelegate
 
 - (void)runSampleGameWithPlayerCount:(NSUInteger)size variant:(AvalonGameVariant)variant
 {
-    AvalonGameController *controller = [AvalonGameController new];
-    controller.engine = [AvalonEngine engine];
-    controller.engine.delegate = controller;
-    controller.bot = [AbstractDecider new];
-    
-    //controller.bot = [JavaScriptDecider deciderWithScript:BundledScript(@"simple_bot")];
-    
+    AvalonMultiBotGameController *controller = [[AvalonMultiBotGameController alloc] initWithEngine:[AvalonEngine engine]];
+
     AvalonGame *g = [AvalonGame gameWithVariant:variant];
     for (int i = 1; i <= size; i++) {
         AvalonPlayer *p = [AvalonPlayer playerWithId:[NSString stringWithFormat:@"BOT %d", i]];
+        id<AvalonDecider> bot = nil;
+        if (i %2 == 0) {
+            bot = [AbstractDecider new];
+        } else {
+            bot = [JavaScriptDecider deciderWithScript:BundledScript(@"simple_bot")];
+        }
+        [controller setBot:bot forPlayer:p];
         [g addPlayer:p];
     }
     while (! [g isFinished]) {

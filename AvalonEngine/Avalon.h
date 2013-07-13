@@ -9,7 +9,7 @@
 #ifndef __AVALON__
 #define __AVALON__
 
-#import "AvalonGameController.h"
+#import "AvalonDecider.h"
 #import "AvalonEngine.h"
 
 #endif

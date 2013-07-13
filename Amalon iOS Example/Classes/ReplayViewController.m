@@ -8,7 +8,7 @@
 
 #import "ReplayViewController.h"
 #import "QuestCell.h"
-#import "AvalonGameController.h"
+#import "AvalonSimpleGameController.h"
 #import "AvalonEngine.h"
 #import "AvalonGame.h"
 #import "AvalonQuest.h"

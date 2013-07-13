@@ -9,6 +9,6 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  Amalon: 8b65baabc5f62c94d7b3f2acb5c44776dc1f6a1a
+  Amalon: 8739a6ae21f65443e2ba72ea95db682d265e5a76
 
-COCOAPODS: 0.19.1
+COCOAPODS: 0.22.2

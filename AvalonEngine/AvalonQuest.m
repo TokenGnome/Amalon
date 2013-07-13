@@ -82,6 +82,11 @@
     return [self.proposals lastObject];
 }
 
+- (NSString *) description
+{
+    return [NSString stringWithFormat:@"Quest[number=%d, playerCount=%d, failsRequired=%d]", self.questNumber, self.playerCount, self.failsRequired];
+}
+
 #pragma mark - JSON
 
 - (NSDictionary *)toJSON

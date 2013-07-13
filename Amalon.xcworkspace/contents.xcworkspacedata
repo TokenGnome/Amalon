@@ -5,6 +5,21 @@
       location = "group:AvalonEngine"
       name = "AvalonEngine">
       <FileRef
+         location = "group:AvalonDecider.h">
+      </FileRef>
+      <FileRef
+         location = "group:AvalonMultiBotGameController.h">
+      </FileRef>
+      <FileRef
+         location = "group:AvalonMultiBotGameController.m">
+      </FileRef>
+      <FileRef
+         location = "group:AvalonSimpleGameController.h">
+      </FileRef>
+      <FileRef
+         location = "group:AvalonSimpleGameController.m">
+      </FileRef>
+      <FileRef
          location = "group:AbstractDecider.h">
       </FileRef>
       <FileRef
@@ -24,12 +39,6 @@
       </FileRef>
       <FileRef
          location = "group:AvalonGame.m">
-      </FileRef>
-      <FileRef
-         location = "group:AvalonGameController.h">
-      </FileRef>
-      <FileRef
-         location = "group:AvalonGameController.m">
       </FileRef>
       <FileRef
          location = "group:AvalonJSExports.h">

@@ -3,8 +3,8 @@ var rand = function(min, max) {
 };
 
 var proposeQuest = function(state) {
-	var start = rand(0, size-1)
-    , size = state.currentQuest.playerCount;
+	var start = rand(0, size-1);
+    var size = state.currentQuest.playerCount;
 	return state.players.slice(start, start + size).map(function(player) { return player.playerId; });
 };
 

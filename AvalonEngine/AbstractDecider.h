@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 Brandon Smith. All rights reserved.
 //
 
-#import "AvalonGameController.h"
+#import "AvalonSimpleGameController.h"
 
 @interface AbstractDecider : NSObject <AvalonDecider>
 

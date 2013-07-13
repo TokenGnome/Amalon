@@ -7,7 +7,7 @@
 //
 
 #import "AbstractDecider.h"
-#import "AvalonGameController.h"
+#import "AvalonSimpleGameController.h"
 
 @implementation AbstractDecider
 

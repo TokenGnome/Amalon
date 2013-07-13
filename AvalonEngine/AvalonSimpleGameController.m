@@ -6,13 +6,29 @@
 //  Copyright (c) 2013 Brandon Smith. All rights reserved.
 //
 
-#import "AvalonGameController.h"
+#import "AvalonSimpleGameController.h"
 #import "AvalonGame.h"
 #import "AvalonPlayer.h"
 #import "AvalonQuest.h"
 #import "AvalonRole.h"
 
-@implementation AvalonGameController
+@implementation AvalonSimpleGameController
+
+// Initialize the game controller with the engine, this will also associate this controller with the engine.
+- (id) initWithEngine:(AvalonEngine *)engine {
+    self = [super init];
+    
+    if (self) {
+        _engine = engine;
+        _engine.delegate = self;
+    }
+    
+    return self;
+}
+
+- (id) init {
+    return [self initWithEngine:nil];
+}
 
 - (void)gameNeedsProposal:(AvalonGame *)game
 {
