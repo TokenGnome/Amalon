@@ -14,9 +14,7 @@
 
 - (void)runSampleGameWithPlayerCount:(NSUInteger)size variant:(AvalonGameVariant)variant
 {
-    AvalonGameController *controller = [AvalonGameController new];
-    controller.engine = [AvalonEngine engine];
-    controller.engine.delegate = controller;
+    AvalonSimpleGameController *controller = [[AvalonSimpleGameController alloc] initWithEngine:[AvalonEngine new]];
     controller.bot = [AbstractDecider new];
     
     //controller.bot = [JavaScriptDecider deciderWithScript:BundledScript(@"simple_bot")];
