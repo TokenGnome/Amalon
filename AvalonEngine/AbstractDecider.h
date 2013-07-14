@@ -11,3 +11,7 @@
 @interface AbstractDecider : NSObject <AvalonDecider>
 
 @end
+
+@interface AbstractAsyncDecider : AbstractDecider <AvalonAsyncDecider>
+
+@end

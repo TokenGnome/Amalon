@@ -18,7 +18,7 @@
 
 @interface AvalonEngine : NSObject
 
-+ (instancetype)engine;
++ (instancetype)engineWithDelegate:(id<AvalonEngineDelegate>)delegate;
 
 @property (nonatomic, weak) id<AvalonEngineDelegate> delegate;
 @property (nonatomic, strong) NSMutableDictionary *deciders;
@@ -36,6 +36,8 @@
 - (NSError *)assassinatePlayer:(NSString *)playerId assassin:(NSString *)assassinId game:(AvalonGame *)game;
 
 - (NSError *)passQuest:(BOOL)vote voter:(NSString *)playerId game:(AvalonGame *)game;
+
+- (BOOL)canAddPlayer:(AvalonPlayer *)player toGame:(AvalonGame *)game;
 
 @end
 

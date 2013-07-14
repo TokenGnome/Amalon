@@ -11,6 +11,10 @@
 
 #import "AvalonEngine.h"
 
+typedef void(^QuestProposalCallback)(NSArray *);
+typedef void(^BooleanCallback)(BOOL);
+typedef void(^PlayerIdCallback)(NSString *);
+
 @protocol AvalonDecider <NSObject>
 
 - (NSArray *)questProposalForGameState:(AvalonGame *)state;
@@ -20,6 +24,18 @@
 - (BOOL)passQuestForGameState:(AvalonGame *)state;
 
 - (NSString *)playerIdToAssassinateForGameState:(AvalonGame *)state;
+
+@end
+
+@protocol AvalonAsyncDecider <NSObject>
+
+- (void)questProposalForGameState:(AvalonGame *)state callback:(QuestProposalCallback)block;
+
+- (void)acceptProposalForGameState:(AvalonGame *)state callback:(BooleanCallback)block;
+
+- (void)passQuestForGameState:(AvalonGame *)state callback:(BooleanCallback)block;
+
+- (void)playerIdToAssassinateForGameState:(AvalonGame *)state callback:(PlayerIdCallback)block;
 
 @end
 

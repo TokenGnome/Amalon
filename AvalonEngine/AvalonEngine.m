@@ -134,9 +134,10 @@ NSString *kAvalonRuleErrorDomain = @"com.tokengnome.avalon.error.rules";
 
 #pragma mark - Constructors
 
-+ (instancetype)engine
++ (instancetype)engineWithDelegate:(id<AvalonEngineDelegate>)delegate
 {
     AvalonEngine *eng = [AvalonEngine new];
+    eng.delegate = delegate;
     return eng;
 }
 
@@ -261,13 +262,10 @@ NSString *kAvalonRuleErrorDomain = @"com.tokengnome.avalon.error.rules";
 - (BOOL)canAddPlayer:(AvalonPlayer *)player toGame:(AvalonGame *)game
 {
     if (game.state >= GameStateRolesAssigned) {
-        NSLog(@"Attempting to add a player after roles are assigned is a no-op.");
         return NO;
     } else if ([game hasPlayer:player]) {
-        NSLog(@"Attempting to add a player that already exists is a no-op.");
         return NO;
     } else if ([game.players count] >= AvalonMaxPlayerCount) {
-        NSLog(@"Attempting to add a player to a full game is a no-op.");
         return NO;
     }
     return YES;

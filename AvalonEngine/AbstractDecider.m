@@ -43,3 +43,28 @@
 }
 
 @end
+
+
+@implementation AbstractAsyncDecider
+
+- (void)questProposalForGameState:(AvalonGame *)state callback:(QuestProposalCallback)block
+{
+    block([super questProposalForGameState:state]);
+}
+
+- (void)acceptProposalForGameState:(AvalonGame *)state callback:(BooleanCallback)block
+{
+    block([super acceptProposalForGameState:state]);
+}
+
+- (void)passQuestForGameState:(AvalonGame *)state callback:(BooleanCallback)block
+{
+    block([super passQuestForGameState:state]);
+}
+
+- (void)playerIdToAssassinateForGameState:(AvalonGame *)state callback:(PlayerIdCallback)block
+{
+    block([super playerIdToAssassinateForGameState:state]);
+}
+
+@end

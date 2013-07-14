@@ -24,6 +24,7 @@
 @property (nonatomic, assign, getter = isAccepted) BOOL accepted;
 @property (nonatomic, assign, getter = isComplete) BOOL complete;
 @property (nonatomic, assign, getter = isPass) BOOL passed;
+@property (nonatomic, readonly) NSUInteger numberOfPasses;
 
 - (instancetype)sanitizedForPlayer:(AvalonPlayer *)player;
 

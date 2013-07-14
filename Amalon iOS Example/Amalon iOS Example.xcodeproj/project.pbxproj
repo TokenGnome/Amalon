@@ -10,6 +10,9 @@
 		6807F3AF17910A40004281F0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6807F3AE17910A40004281F0 /* Foundation.framework */; };
 		6807F3B117910A40004281F0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6807F3B017910A40004281F0 /* CoreGraphics.framework */; };
 		6807F3B317910A40004281F0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6807F3B217910A40004281F0 /* UIKit.framework */; };
+		68AEA824179223960046D5CD /* AmalonGameController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68AEA81F179223950046D5CD /* AmalonGameController.m */; };
+		68AEA825179223960046D5CD /* GameCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68AEA821179223950046D5CD /* GameCollectionViewController.m */; };
+		68AEA826179223960046D5CD /* GameCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 68AEA823179223960046D5CD /* GameCollectionViewLayout.m */; };
 		68FE595717910B96007E2D60 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FE595517910B96007E2D60 /* AppDelegate.m */; };
 		68FE595817910B96007E2D60 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FE595617910B96007E2D60 /* main.m */; };
 		F104CE941791EA9A00750E6F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6807F3DD17910B26004281F0 /* Images.xcassets */; };
@@ -29,6 +32,12 @@
 		6807F3C717910A40004281F0 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		6807F3DD17910B26004281F0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		6807F3DE17910B26004281F0 /* iOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iOS-Info.plist"; sourceTree = "<group>"; };
+		68AEA81E179223950046D5CD /* AmalonGameController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AmalonGameController.h; sourceTree = "<group>"; };
+		68AEA81F179223950046D5CD /* AmalonGameController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AmalonGameController.m; sourceTree = "<group>"; };
+		68AEA820179223950046D5CD /* GameCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameCollectionViewController.h; sourceTree = "<group>"; };
+		68AEA821179223950046D5CD /* GameCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameCollectionViewController.m; sourceTree = "<group>"; };
+		68AEA822179223960046D5CD /* GameCollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameCollectionViewLayout.h; sourceTree = "<group>"; };
+		68AEA823179223960046D5CD /* GameCollectionViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameCollectionViewLayout.m; sourceTree = "<group>"; };
 		68FE595417910B96007E2D60 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		68FE595517910B96007E2D60 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		68FE595617910B96007E2D60 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -89,6 +98,12 @@
 		68FE595317910B96007E2D60 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				68AEA81E179223950046D5CD /* AmalonGameController.h */,
+				68AEA81F179223950046D5CD /* AmalonGameController.m */,
+				68AEA820179223950046D5CD /* GameCollectionViewController.h */,
+				68AEA821179223950046D5CD /* GameCollectionViewController.m */,
+				68AEA822179223960046D5CD /* GameCollectionViewLayout.h */,
+				68AEA823179223960046D5CD /* GameCollectionViewLayout.m */,
 				68FE595417910B96007E2D60 /* AppDelegate.h */,
 				68FE595517910B96007E2D60 /* AppDelegate.m */,
 				68FE595617910B96007E2D60 /* main.m */,
@@ -205,6 +220,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				68FE595817910B96007E2D60 /* main.m in Sources */,
+				68AEA826179223960046D5CD /* GameCollectionViewLayout.m in Sources */,
+				68AEA824179223960046D5CD /* AmalonGameController.m in Sources */,
+				68AEA825179223960046D5CD /* GameCollectionViewController.m in Sources */,
 				68FE595717910B96007E2D60 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

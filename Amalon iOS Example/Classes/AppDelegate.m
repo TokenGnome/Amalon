@@ -18,12 +18,26 @@ NSString *BundledScript(NSString *nameWithoutExtension)
     return [NSString stringWithContentsOfFile:script encoding:NSUTF8StringEncoding error:nil];
 };
 
+#import "GameCollectionViewController.h"
+#import "GameCollectionViewLayout.h"
+
+@interface AppDelegate ()
+@end
+
+@interface AMLCollectionViewConfig : NSObject
++ (instancetype)configWithController:(Class)controllerClass layout:(Class)layoutClass title:(NSString *)title;
+@property (nonatomic, assign) Class controllerClass;
+@property (nonatomic, assign) Class layoutClass;
+@property (nonatomic, copy) NSString *title;
+- (UINavigationController *)wrappedController;
+@end
+
 @implementation AppDelegate
 
 - (void)runSampleGameWithPlayerCount:(NSUInteger)size variant:(AvalonGameVariant)variant
 {
-    AvalonMultiBotGameController *controller = [[AvalonMultiBotGameController alloc] initWithEngine:[AvalonEngine engine]];
 
+    AvalonMultiBotGameController *controller = [[AvalonMultiBotGameController alloc] initWithEngine:[AvalonEngine new]];
     AvalonGame *g = [AvalonGame gameWithVariant:variant];
     for (int i = 1; i <= size; i++) {
         AvalonPlayer *p = [AvalonPlayer playerWithId:[NSString stringWithFormat:@"BOT %d", i]];
@@ -62,14 +76,41 @@ NSString *BundledScript(NSString *nameWithoutExtension)
     
 }
 
+- (NSArray *)controllerConfigs
+{
+    return
+    @[[AMLCollectionViewConfig configWithController:[GameCollectionViewController class] layout:[GameCollectionViewLayout class] title:@"Game"]
+      ];
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    [self runSampleGameWithPlayerCount:10 variant:AvalonVariantDefault];
-    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
+    self.window.rootViewController = [[self controllerConfigs][0] wrappedController];
     [self.window makeKeyAndVisible];
     return YES;
+}
+
+@end
+
+@implementation AMLCollectionViewConfig
+
++ (instancetype)configWithController:(Class)controllerClass layout:(Class)layoutClass title:(NSString *)title;
+{
+    AMLCollectionViewConfig *config = [self new];
+    config.controllerClass = controllerClass;
+    config.layoutClass = layoutClass;
+    config.title = title;
+    return config;
+}
+
+- (UINavigationController *)wrappedController;
+{
+    UICollectionViewController *collectionViewController = [[self.controllerClass alloc] initWithCollectionViewLayout:[[self.layoutClass alloc] init]];
+    collectionViewController.title = self.title;
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:collectionViewController];
+    return navController;
 }
 
 @end
