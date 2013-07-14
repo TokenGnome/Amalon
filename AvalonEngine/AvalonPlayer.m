@@ -28,6 +28,8 @@
 
 - (instancetype)sanitizedForPlayer:(AvalonPlayer *)observer
 {
+    if ([observer.playerId isEqualToString:self.playerId]) return [AvalonPlayer playerWithId:self.playerId role:self.role];
+    
     AvalonRoleType sanitizedRole = RoleAsSeenByRole(self.role.type, observer.role.type);
     return [AvalonPlayer playerWithId:self.playerId role:[AvalonRole roleWithType:sanitizedRole]];
 }

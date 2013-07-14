@@ -45,7 +45,7 @@ var proposeQuest = function(state) {
     return state.players.map(function(player) {
                              return [player.playerId, baseProbability(player, state)];
                              }).sort(function(p1, p2) {
-                                     return p2[1] - p2[0];
+                                     return p2[1] - p1[1];
                                      }).map(function(p) {
                                             return p[0];
                                             }).slice(0, state.currentQuest.playerCount);

@@ -9,7 +9,7 @@
 #import "AbstractDecider.h"
 #import "AvalonJSExports.h"
 
-@interface JavaScriptDecider : AbstractDecider
+@interface JavaScriptDecider : AbstractDecider <AvalonAsyncDecider>
 
 + (instancetype)deciderWithScript:(NSString *)script;
 

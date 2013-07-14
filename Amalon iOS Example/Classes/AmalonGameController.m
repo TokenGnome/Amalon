@@ -11,11 +11,6 @@
 @interface AmalonGameController ()
 @property (nonatomic, strong) AvalonEngine *engine;
 @property (nonatomic, strong) NSMutableDictionary *deciders;
-@property (nonatomic, strong) NSArray *pendingProposal;
-@property (nonatomic, strong) NSMutableArray *pendingVotes;
-@property (nonatomic, strong) NSMutableArray *pendingPasses;
-@property (nonatomic, strong) NSString *pendingAssassinationTargetId;
-
 @property (nonatomic, assign) BOOL steppingBlocked;
 @end
 
@@ -26,10 +21,26 @@
     self = [super init];
     if (self) {
         _engine = [AvalonEngine engineWithDelegate:self];
-        _game = [AvalonGame gameWithVariant:AvalonVariantDefault];
         _deciders = [NSMutableDictionary new];
+        [self setGame:[AvalonGame gameWithVariant:AvalonVariantDefault]];
     }
     return self;
+}
+
+- (void)dealloc
+{
+    if (self.game) [self.game removeObserver:self forKeyPath:@"state"];
+}
+
+- (void)setGame:(AvalonGame *)game
+{
+    if (_game) {
+        [_game removeObserver:self forKeyPath:@"state"];
+        _game = nil;
+    }
+    _game = game;
+    [_game addObserver:self forKeyPath:@"state" options:kNilOptions context:NULL];
+    self.deciders = [NSMutableDictionary new];
 }
 
 - (void)addPlayer:(NSString *)playerId decider:(id<AvalonAsyncDecider>)decider
@@ -48,13 +59,24 @@
 
 - (void)startNewGameWithVariant:(AvalonGameVariant)variant
 {
-    _game = [AvalonGame gameWithVariant:variant];
-    self.deciders = [NSMutableDictionary new];
+    [self setGame:[AvalonGame gameWithVariant:variant]];
 }
 
 - (void)stepGame
 {
     [self.engine step:self.game];
+}
+
+- (AvalonGame *)displayGameForPlayer:(NSString *)playerId
+{
+    return [self.engine gameStateForPlayer:playerId game:self.game];
+}
+
+#pragma mark - Game KVO
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
+{
+    [self.delegate gameStateChanged];
 }
 
 #pragma mark - AvalonEngineDelegate

@@ -65,4 +65,24 @@
     return [result toString];
 }
 
+- (void)questProposalForGameState:(AvalonGame *)state callback:(QuestProposalCallback)block
+{
+    block([self questProposalForGameState:state]);
+}
+
+- (void)acceptProposalForGameState:(AvalonGame *)state callback:(BooleanCallback)block
+{
+    block([self acceptProposalForGameState:state]);
+}
+
+- (void)passQuestForGameState:(AvalonGame *)state callback:(BooleanCallback)block
+{
+    block([self passQuestForGameState:state]);
+}
+
+- (void)playerIdToAssassinateForGameState:(AvalonGame *)state callback:(PlayerIdCallback)block
+{
+    block([self playerIdToAssassinateForGameState:state]);
+}
+
 @end

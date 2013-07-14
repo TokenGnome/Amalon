@@ -9,14 +9,25 @@
 #import <Foundation/Foundation.h>
 #import <Amalon/Avalon.h>
 
+@protocol AvalonGameDelegate;
+
 @interface AmalonGameController : NSObject <AvalonEngineDelegate>
 
 @property (nonatomic, readonly) AvalonGame *game;
+@property (nonatomic, weak) id<AvalonGameDelegate> delegate;
 
 - (void)addPlayer:(NSString *)playerId decider:(id<AvalonAsyncDecider>)decider;
 
 - (void)startNewGameWithVariant:(AvalonGameVariant)variant;
 
 - (void)stepGame;
+
+- (AvalonGame *)displayGameForPlayer:(NSString *)playerId;
+
+@end
+
+@protocol AvalonGameDelegate <NSObject>
+
+- (void)gameStateChanged;
 
 @end
